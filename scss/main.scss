@@ -3,7 +3,7 @@ $accent-color: #3e668b;
 $doc-color: #fff;
 $link-color: rgb(0, 136, 204);
 
-$header-font: Cambria, 'Merriweather', serif;
+$header-font: 'Merriweather', Cambria, serif;
 $type-font: 'Oxygen', Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
 $mobile-max: 420px;
@@ -289,6 +289,17 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $header-font;
 }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    clear: both;
+	font-family: $header-font;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    line-height: 2.5rem;
+}
+
+
 
 p, div, span, a, td {
 	font-family: $type-font;
