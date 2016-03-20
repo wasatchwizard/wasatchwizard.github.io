@@ -358,48 +358,31 @@ p, div, span, a, td {
 	}
 }
 
-.blog {
-	.main {
+.Blog {
+	@media only screen and (max-width: $small-max) {
+		article {
+		}
+
 		aside {
-			ul {
-				li {
-					a {
+		}
+	}
+
+	@media only screen and (min-width: $medium-min) {
+		article {
+			width: 80%;
+
+			header {
+				div {
+					margin-top: -20px 10px 20px 0;
+
+					.posted {
+						//display: block;
 					}
 
-					span {
+					.labels {
+						color: #888;
 					}
 				}
-			}
-		}
-
-		@media only screen and (max-width: $small-max) {
-			article {
-			}
-
-			aside {
-			}
-		}
-
-		@media only screen and (min-width: $medium-min) {
-			article {
-				width: 80%;
-
-				header {
-					div {
-						margin-top: -20px 10px 20px 0;
-
-						span.posted {
-							//display: block;
-						}
-
-						span.labels {
-							color: #888;
-						}
-					}
-				}
-			}
-
-			aside {
 			}
 		}
 	}

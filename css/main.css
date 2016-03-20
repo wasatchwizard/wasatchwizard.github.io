@@ -234,11 +234,11 @@ p, div, span, a, td {
     width: 28%; } }
 
 @media only screen and (min-width: 741px) {
-  .blog .main article {
+  .Blog article {
     width: 80%; }
-    .blog .main article header div {
+    .Blog article header div {
       margin-top: -20px 10px 20px 0; }
-      .blog .main article header div span.labels {
+      .Blog article header div .labels {
         color: #888; } }
 
 /*
