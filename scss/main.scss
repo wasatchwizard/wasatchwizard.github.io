@@ -361,9 +361,7 @@ p, div, span, a, td {
 .Blog {
 	@media only screen and (max-width: $small-max) {
 		article {
-		}
-
-		aside {
+			//width: 100%;
 		}
 	}
 
@@ -373,10 +371,11 @@ p, div, span, a, td {
 
 			header {
 				div {
-					margin-top: -20px 10px 20px 0;
+					margin: -20px 10px 0 0;
 
 					.posted {
 						//display: block;
+					    margin-right: 20px;
 					}
 
 					.labels {

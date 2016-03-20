@@ -237,7 +237,9 @@ p, div, span, a, td {
   .Blog article {
     width: 80%; }
     .Blog article header div {
-      margin-top: -20px 10px 20px 0; }
+      margin: -20px 10px 0 0; }
+      .Blog article header div .posted {
+        margin-right: 20px; }
       .Blog article header div .labels {
         color: #888; } }
 
