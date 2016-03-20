@@ -191,8 +191,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   clear: both;
   font-family: "Merriweather", Cambria, serif;
   font-weight: bold;
+  text-decoration: none; }
+
+h1, h1 a {
   font-size: 2rem;
-  text-decoration: none;
   line-height: 2.5rem; }
 
 p, div, span, a, td {
@@ -230,6 +232,14 @@ p, div, span, a, td {
   .main aside {
     float: right;
     width: 28%; } }
+
+@media only screen and (min-width: 741px) {
+  .blog .main article {
+    width: 80%; }
+    .blog .main article header div {
+      margin-top: -20px 10px 20px 0; }
+      .blog .main article header div span.labels {
+        color: #888; } }
 
 /*
     ====================
