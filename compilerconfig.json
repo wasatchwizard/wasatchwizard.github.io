@@ -1,0 +1,15 @@
+[
+  {
+    "outputFile": "css/main.css",
+    "inputFile": "scss/main.scss"
+  },
+  {
+    "outputFile": "css/site.css",
+    "inputFile": "scss/site.scss"
+  },
+  {
+    "outputFile": "css/normalize.css",
+    "inputFile": "scss/normalize.scss"
+  }
+]
+

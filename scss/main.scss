@@ -1,0 +1,393 @@
+
+$accent-color: #3e668b;
+$doc-color: #fff;
+$link-color: rgb(0, 136, 204);
+
+$header-font: Cambria, 'Merriweather', serif;
+$type-font: 'Oxygen', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+
+$mobile-max: 420px;
+$small-min: 421px;
+$small-max: 740px;
+$medium-min: 741px;
+$medium-max: 1140px;
+$large-min: 1141px;
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+body {
+	background-color: #f0f0f0;
+}
+
+.main-container {
+	background-color: $doc-color;
+}
+
+a {
+	color: $link-color;
+}
+
+/*
+    ====================
+     HEADER
+    ====================
+*/
+
+.header-img {
+	background: $accent-color !important;
+}
+
+/*.header-text {
+	margin: 0 0 -4px 0;
+	padding: 24px 0 0 0;
+	overflow: hidden;
+
+	span {
+		color: #fff;
+		font-family: $header-font;
+		font-size: 4.25rem;
+		font-weight: 900;
+		letter-spacing: -2px;
+		margin: 20px 0 0 0;
+	}
+}*/
+
+header {
+	padding: 10px 0 0 0;
+
+	img {
+		margin: 0 0 -2px -4px;
+	}
+
+	@media only screen and (max-width: $mobile-max) {
+		padding: 6px 0 0 0;
+
+		img {
+			width: 319px;
+			margin: 0 0 -1px -4px;
+		}
+	}
+
+	@media only screen and (min-width: $small-min) and (max-width: $small-max) {
+		padding: 6px 0 0 0;
+
+		img {
+			width: 95%;
+			margin: 0 0 -1px -4px;
+		}
+	}
+
+	@media only screen and (min-width: $medium-min) {
+		padding: 10px 0 0 0;
+	}
+
+	@media only screen and (min-width: $large-min) {
+		padding: 20px 0 0 0;
+	}
+}
+
+.social_links {
+	float: right;
+	width: 98px;
+	height: 24px;
+	margin: 16px 0 0 10px;
+	padding: 0;
+	text-align: left;
+
+	img {
+		width: 24px;
+		height: 24px;
+		margin: 1px;
+	}
+
+	.email {
+		position: absolute;
+		color: #fff;
+		font-family: 'Merriweather', serif;
+		font-size: 1.4rem;
+		font-weight: 900;
+		text-decoration: none;
+		margin: 0 0 1px 5px;
+	}
+
+	@media only screen and (max-width: $mobile-max) {
+		margin: 0 0 0 40px;
+
+		img {
+			width: 16px;
+			height: 16px;
+		}
+
+		.email {
+			font-size: 0.9rem;
+			font-weight: 700;
+		}
+	}
+
+	@media only screen and (min-width: $small-min) and (max-width: $small-max) {
+		margin: 4px 0 0 40px;
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+
+		.email {
+			font-size: 1.1rem;
+			font-weight: 700;
+		}
+	}
+
+	@media only screen and (min-width: $medium-min) {
+	}
+
+	@media only screen and (min-width: $large-min) {
+	}
+}
+
+/*
+    ====================
+     MAIN NAV
+    ====================
+*/
+
+.main-nav {
+	.nav-tabs {
+		ul {
+			margin: 16px 0 0 0;
+			padding: 0 10px 0 10px;
+			border-bottom: solid 1px #ddd;
+
+			li {
+				margin: 0 0 -1px 0;
+				padding: 3px 12px;
+				display: inline-block;
+				border-bottom: solid 1px #ddd;
+
+				a {
+					font-family: Helvetica, Arial, sans-serif;
+					font-size: 0.9rem;
+					margin: 0;
+					padding: 0;
+					text-decoration: none;
+				}
+			}
+
+			li.active {
+				$border-radius: 4px;
+				-moz-border-radius-topleft: $border-radius;
+				border-top-left-radius: $border-radius;
+				-moz-border-radius-topright: $border-radius;
+				border-top-right-radius: $border-radius;
+				border-left: solid 1px #ddd;
+				border-top: solid 1px #ddd;
+				border-right: solid 1px #ddd;
+				border-bottom: solid 1px #fff;
+
+				a {
+					color: #555;
+				}
+			}
+		}
+	}
+
+	.current-page {
+		padding-left: 6px;
+		padding-top: 6px;
+
+		ul {
+			margin: 0;
+			padding: 0 0 12px 0;
+
+			li {
+				margin: 0;
+				padding: 0 2px 0 10px;
+				display: inline-block;
+
+				span {
+					background: url('../img/menu-arrow.png');
+					width: 6px;
+					height: 9px;
+					top: 19px;
+					position: relative;
+					display: block;
+					margin: 0 0 2px -10px;
+				}
+
+				a {
+					font-family: 'Merriweather', serif;
+					font-weight: normal;
+					color: #555;
+					text-decoration: none;
+				}
+
+				a:hover {
+					color: #000;
+					text-decoration: none;
+				}
+			}
+
+			li.active {
+				a {
+					color: #222;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+
+/*
+    ====================
+     FOOTER
+    ====================
+*/
+
+.footer-container {
+	font-size: 1rem;
+	padding: 20px 0 16px 0;
+
+	footer {
+		color: #555;
+
+		span {
+			display: inline;
+		}
+	}
+
+	@media only screen and (max-width: $mobile-max) {
+		padding: 6px 0 4px 0;
+
+		footer {
+			span {
+				display: none;
+			}
+		}
+	}
+
+	@media only screen and (min-width: $small-min) and (max-width: $small-max) {
+		padding: 16px 0 10px 0;
+	}
+
+	@media only screen and (min-width: $medium-min) {
+		padding: 20px 0 16px 0;
+	}
+
+	@media only screen and (min-width: $large-min) {
+		padding: 26px 0 20px 0;
+	}
+}
+
+/*
+    ====================
+     TYPOGRAPHY
+    ====================
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: $header-font;
+}
+
+p, div, span, a, td {
+	font-family: $type-font;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+/*
+    ====================
+     CONTENT LAYOUT
+    ====================
+*/
+
+.main {
+	aside {
+		background-color: #fff;
+		padding: 14px 8px 14px 14px;
+		margin-left: 14px;
+		/*border-left: dashed 1px #3e668b;*/
+		border-left: dashed 1px #ddd;
+
+		ul {
+			padding: 0 0 0 20px;
+
+			li {
+
+				a {
+				}
+
+				span {
+					color: #888;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $small-max) {
+		article {
+		}
+
+		aside {
+			margin: 0;
+			padding: 2px;
+			border-left: solid 0;
+			border-bottom: dashed 1px #3e668b;
+		}
+	}
+
+	@media only screen and (min-width: $medium-min) {
+		article {
+			float: left;
+			width: 65%;
+		}
+
+		aside {
+			float: right;
+			width: 28%;
+		}
+	}
+}
+
+/*
+    ====================
+     LAYOUT HELPERS
+    ====================
+*/
+
+/* MOBILE */
+.block {
+	display: block;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: $large-min) {
+	.right {
+		float: right;
+	}
+}
+
+article {
+	section {
+		/* MOBILE */
+		.half {
+			width: 98%;
+		}
+
+		.right {
+			float: none;
+			margin-top: 0;
+		}
+		/* DESKTOP */
+		@media only screen and (min-width: $large-min) {
+			.right {
+				float: right;
+			}
+
+			.half {
+				width: 48%;
+			}
+		}
+	}
+}
