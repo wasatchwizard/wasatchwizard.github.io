@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    //
+    {
+      "name": "Launch Website",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "gostatic.exe",
+      "args": [
+        "-path",
+        "${workspaceFolder}",
+        "-port",
+        "8081",
+        "-seconds",
+        "0"
+      ],
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "internalConsoleOptions": "openOnSessionStart",
+    },
+    {
+      "name": "Launch Website (w/Browser)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "gostatic.exe",
+      "args": [
+        "-port",
+        "8081"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        // "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "internalConsoleOptions": "openOnSessionStart",
+      "launchBrowser": {
+        "enabled": true,
+        "windows": {
+          "command": "cmd.exe",
+          "args": "/C start \"\" http://localhost:8081"
+        },
+        "osx": {
+          "command": "open",
+          "args": "http://localhost:8081"
+        },
+        "linux": {
+          "command": "xdg-open",
+          "args": "http://localhost:8081"
+        }
+      }
+    }
+  ]
+}
