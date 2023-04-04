@@ -1,0 +1,12 @@
+{
+  "browsers": ["ie > 9", "iOS > 8", "Android >= 4.4", "ff > 38", "Chrome > 38"],
+  "outdir": "css", // relative path of this '.scssrc' file.
+  // Auto compile on document saved, default true
+  "compileOnSave": true,
+  // Will autoprefixer. It can be run faster when turn off. default true
+  "autoPrefixer": true,
+  // Output style. default compressed.
+  "output": "compressed",
+  // The RegExp of path what you can to ignore (the var.scss file will never be compiled).
+  "exclude": []
+}
