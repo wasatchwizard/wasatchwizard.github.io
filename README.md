@@ -64,14 +64,32 @@ pinned as the initial example.
 The Home, Blog, and Projects tabs share the same layout. Projects are ordinary
 Markdown files under `src/projects/`, with descriptive URLs derived from their
 filenames: `src/projects/gostatic.md` becomes `/projects/gostatic/`. Changing
-the title or GitHub repository name does not change that URL.
+the title keeps the URL. Filenames match repository names, such as `fixeol.md`;
+renaming a Markdown file changes its URL. Automatic repository-rename handling
+is not needed for this project.
 
 Three initial entries (dotask, FixEOL, and gostatic) were created manually from
-their public GitHub metadata. No repository synchronization script, GitHub API
-request, or scheduled refresh runs during builds or in the browser. Future
-repository synchronization belongs to dotask's `.task` functionality.
+their public GitHub metadata. Refresh project metadata explicitly with the
+native dotask task copied from dotask's `examples/github-projects/` example:
 
-Use this front-matter contract when adding entries or implementing that sync:
+```powershell
+dotask help refresh-projects
+dotask refresh-projects
+npm run verify
+```
+
+Run these commands from the website root. The existing `.dotasks.yaml` anchors
+the project; `.tasks/refresh-projects.task` defaults to public repositories owned
+by `kodybrown`, excludes forks, follows pagination, and writes `src/projects/`.
+No GitHub API request or scheduled refresh runs during Eleventy builds or in
+the browser. The refresh changes local Markdown only; commit and publish the
+reviewed changes separately.
+
+Use a dotask build supporting native HTTP/JSON workflows and front-matter file
+edits. Older builds can reject the task with an unknown `id` key error. Target
+help checks discovery and metadata without making requests or changing pages.
+
+Use this front-matter contract when adding or editing entries:
 
 ```markdown
 ---
@@ -93,18 +111,21 @@ github:
 Handwritten notes, examples, and additional images go here.
 ```
 
-Only the `github` block is intended for automated updates. Preserve all other
-front matter, comments, formatting, filenames, and Markdown body text. Match
-repositories by their stable numeric `github.id`, including after a rename.
-This ownership contract is documented here; an updater is not implemented in
-this repository.
+The task updates only the eight declared `github` fields. It initializes title,
+blank summary/screenshot, and `hidden: false` only when creating a file. Existing
+front matter, comments, formatting, and Markdown body text remain intact. The
+numeric `github.id` stays in front matter as an identity guard: a different ID
+at the same filename stops that update. It does not determine the filename.
 
 The Projects index sorts by `github.pushedAt`, newest first. Undated projects
 follow dated ones; filenames break ties. Dates must be valid date strings.
 Archived projects remain listed and are labeled Archived. Add `hidden: true`
 or `draft: true` to exclude an entry from its page, the index, and the sitemap.
-If a future sync cannot confirm that a repository remains public, it should
-hide the entry for review while preserving the file.
+The current task leaves files untouched when their repositories are absent
+from the public API response. Missing/deleted-repository reconciliation is
+future work; preserving a page as `fixeol.md.notfound` is one option. That
+extension is ignored by the current Eleventy template formats and project
+collection, so the file would not be published.
 
 Project pages support an optional local `screenshot` and descriptive
 `screenshotAlt`; put images under `src/assets/projects/`. Missing screenshots
@@ -123,6 +144,7 @@ reference, with accurate wording and functioning tracking controls.
 
 - `src/_includes/`: shared HTML layout, post layout, and post list.
 - `src/_data/site.json`: site name, canonical domain, and author details.
+- `.dotasks.yaml` and `.tasks/`: native dotask configuration and project refresh task.
 - `src/posts/`: Markdown articles.
 - `src/projects/`: Markdown project notes and separately owned GitHub metadata.
 - `src/assets/site.css`: the single hand-authored stylesheet.

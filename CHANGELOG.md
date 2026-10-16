@@ -2,6 +2,11 @@
 
 ## 2026-10-16
 
+- Added dotask's GitHub project refresh task unchanged, using the initialized
+  project configuration. Documented repository-name filenames, front-matter
+  ownership, and manual refresh commands. Verified the copy, task help with the
+  current source-built runner, and the site build; the older installed runner
+  needs updating.
 - Migrated the remaining 122 Blogger entries, bringing the published archive
   to all 124 posts from 2005–2016 with descriptive URLs and original dates.
   Preserved prose and code, restored HTML code line breaks, retained five data
