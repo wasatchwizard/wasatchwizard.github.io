@@ -7,9 +7,21 @@ section: home
   <h1>Wasatch Wizard</h1>
   <p class="intro">Technical notes, experiments, and things I'm figuring out.</p>
   <p>I'm Kody Brown. I enjoy making software, connecting wireless IoT devices, and finding simple ways to solve interesting problems.</p>
-  <section aria-labelledby="posts-heading">
-    <h2 id="posts-heading">From the blog</h2>
+  {% if collections.pinnedPosts.length %}
+  <section aria-labelledby="pinned-heading">
+    <h2 id="pinned-heading">Pinned posts</h2>
+    {% set posts = collections.pinnedPosts %}
     {% include "post-list.njk" %}
+  </section>
+  {% endif %}
+  <section aria-labelledby="recent-heading">
+    <h2 id="recent-heading">Recent posts</h2>
+    {% if collections.recentPosts.length %}
+    {% set posts = collections.recentPosts %}
+    {% include "post-list.njk" %}
+    {% else %}
+    <p>More notes and experiments are on the way.</p>
+    {% endif %}
     <p><a href="/blog/">Browse the blog</a> or <a href="/feed.xml">subscribe with RSS</a>.</p>
   </section>
   <section aria-labelledby="elsewhere-heading">

@@ -104,7 +104,7 @@ a:hover { color: #163d5a; }
   border-bottom: 1px solid #d8dde1;
   list-style: none;
 }
-.page-nav li { margin-bottom: -1px; }
+.page-nav li { margin-top: 0; margin-bottom: -1px; }
 .page-nav a {
   display: block;
   padding: 0.55rem 1rem;
@@ -136,9 +136,9 @@ li + li { margin-top: 0.35rem; }
 .intro { color: #515961; font-size: 1.2rem; }
 .post-header { margin-bottom: 2rem; }
 .post-meta { color: #59616a; font-size: 0.9rem; }
-.post-list { margin: 0; padding: 0; list-style: none; }
-.post-list > li { margin-block: 1.75rem; }
-.post-list h2, .post-list h3 { margin: 0 0 0.35rem; font-size: 1.2rem; }
+.post-list, .project-list { margin: 0; padding: 0; list-style: none; }
+.post-list > li, .project-list > li { margin-block: 1.75rem; }
+.post-list h2, .post-list h3, .project-list h2 { margin: 0 0 0.35rem; font-size: 1.2rem; }
 .post-list .post-meta { margin-bottom: 0.5rem; }
 .post-back { margin-top: 2rem; }
 .prose img { display: block; max-width: 100%; height: auto; margin-block: 1.5rem; }

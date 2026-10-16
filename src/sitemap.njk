@@ -6,7 +6,11 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>{{ site.url }}/</loc></url>
   <url><loc>{{ site.url }}/blog/</loc></url>
+  <url><loc>{{ site.url }}/projects/</loc></url>
   {% for post in collections.posts %}
   <url><loc>{{ site.url }}{{ post.url }}</loc><lastmod>{{ post.date | isoDate }}</lastmod></url>
+  {% endfor %}
+  {% for project in collections.projects %}
+  <url><loc>{{ site.url }}{{ project.url }}</loc></url>
   {% endfor %}
 </urlset>

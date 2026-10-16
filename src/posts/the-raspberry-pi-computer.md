@@ -2,6 +2,7 @@
 title: "The Raspberry Pi computer"
 date: "2012-12-20"
 summary: "The tiny, quiet Raspberry Pi computers running my media center and home servers."
+pinned: true
 topics: ["RaspberryPi","Raspian/Debian"]
 originalUrl: "https://elegantdevelopment.blogspot.com/2012/12/the-raspberry-pi-computer.html"
 bloggerId: "tag:blogger.com,1999:blog-17855063.post-339882909772887395"

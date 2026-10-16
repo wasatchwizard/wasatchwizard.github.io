@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<article class="prose">
+  <header class="post-header">
+    <h1>{{ title }}</h1>
+    {% if projectSummary %}<p class="intro">{{ projectSummary }}</p>{% endif %}
+    {% if github.pushedAt %}<p class="post-meta">Last code push: <time datetime="{{ github.pushedAt }}">{{ github.pushedAt | readableDate }}</time></p>{% endif %}
+    <p><a href="{{ github.url }}">{{ github.repository }} on GitHub</a>{% if github.language %} · {{ github.language }}{% endif %}{% if github.archived %} · Archived{% endif %}</p>
+  </header>
+  {% if screenshot %}<img src="{{ screenshot }}" alt="{{ screenshotAlt or title }}" loading="lazy" decoding="async">{% endif %}
+  {{ content | safe }}
+  <p class="post-back"><a href="/projects/">All projects</a></p>
+</article>

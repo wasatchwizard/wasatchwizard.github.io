@@ -31,6 +31,16 @@ await walk(output);
 for (const [file, document] of documents) {
   assert.equal(document.querySelectorAll("h1").length, 1, file);
   assert.equal(document.querySelectorAll("script").length, 0, file);
+  const navigation = [...document.querySelectorAll('.page-nav a')];
+  assert.deepEqual(navigation.map(link => [link.textContent, link.getAttribute("href")]),
+    [["Home", "/"], ["Blog", "/blog/"], ["Projects", "/projects/"]], file);
+  const relativeFile = path.relative(output, file).replaceAll(path.sep, "/");
+  if (relativeFile !== "404.html") {
+    const section = relativeFile.startsWith("projects/") ? "/projects/"
+      : relativeFile.startsWith("blog/") ? "/blog/" : "/";
+    assert.deepEqual(navigation.filter(link => link.hasAttribute("aria-current"))
+      .map(link => link.getAttribute("href")), [section], file);
+  }
   const pagePath = `/${path.relative(output, file).replaceAll(path.sep, "/")}`;
   for (const element of document.querySelectorAll("[href], [src]")) {
     const reference = element.getAttribute("href") || element.getAttribute("src");
@@ -44,6 +54,45 @@ for (const [file, document] of documents) {
       assert.ok(documents.get(target).getElementById(decodeURIComponent(url.hash.slice(1))), reference);
     }
   }
+}
+
+const home = documents.get(path.join(output, "index.html"));
+const blog = documents.get(path.join(output, "blog", "index.html"));
+const projectIndex = documents.get(path.join(output, "projects", "index.html"));
+assert.ok(home && blog && projectIndex, "All three tab destinations must exist");
+const postLinks = element => [...element.querySelectorAll(".post-list h2 a, .post-list h3 a")]
+  .map(link => link.getAttribute("href"));
+const blogLinks = postLinks(blog);
+const homeLinks = postLinks(home);
+assert.equal(new Set(homeLinks).size, homeLinks.length, "Home must not repeat pinned posts in Recent posts");
+for (const link of homeLinks) assert.ok(blogLinks.includes(link), "Home posts must also appear in Blog");
+const recentSection = home.querySelector("#recent-heading").parentElement;
+assert.ok(postLinks(recentSection).length <= 3, "Home shows at most three recent unpinned posts");
+const dates = [...blog.querySelectorAll(".post-list time")].map(time => time.getAttribute("datetime"));
+assert.deepEqual(dates, [...dates].sort().reverse(), "Blog remains chronological regardless of pinning");
+
+const listedProjects = [...projectIndex.querySelectorAll(".project-list > li")];
+const projectPages = [...documents.keys()].filter(file => file.startsWith(path.join(output, "projects") + path.sep)
+  && file !== path.join(output, "projects", "index.html"));
+assert.equal(listedProjects.length, projectPages.length, "Every published project must appear in the index");
+const projectDates = listedProjects.map(item => {
+  const date = item.querySelector("time")?.getAttribute("datetime");
+  const timestamp = date ? Date.parse(date) : 0;
+  assert.ok(Number.isFinite(timestamp), "Project dates must be valid");
+  return timestamp;
+});
+assert.deepEqual(projectDates, [...projectDates].sort((a, b) => b - a), "Projects show newest code pushes first");
+const sitemap = await readFile(path.join(output, "sitemap.xml"), "utf8");
+assert.ok(sitemap.includes("https://www.wasatchwizard.com/projects/"));
+for (const item of listedProjects) {
+  const link = item.querySelector("h2 a");
+  const projectPath = link.getAttribute("href");
+  assert.match(projectPath, /^\/projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/);
+  const project = documents.get(path.join(output, projectPath, "index.html"));
+  assert.equal(project.querySelector("h1").textContent, link.textContent);
+  assert.ok(sitemap.includes(`https://www.wasatchwizard.com${projectPath}`));
+  assert.ok(project.querySelector('a[href="/projects/"]'), "Projects have a return link");
+  assert.ok(project.querySelector('article header a[href^="https://github.com/"]'), "Projects link to source code");
 }
 
 for (const mapping of mappings) {
@@ -91,3 +140,4 @@ for (const privatePath of ["content-export", "scripts", "node_modules", "package
 console.log(`Verified ${documents.size} static pages, local links/assets, descriptive URLs, RSS/sitemap, and no browser scripts.`);
 console.log(`Archive: ${archive.postCount} posts; public comments: ${archive.comments.count ?? archive.comments.status}.`);
 console.log(`Imported ${mappings.length} posts: original dates, local images, and exact code text preserved.`);
+console.log(`Navigation, pinned/recent post lists, and ${listedProjects.length} project pages verified.`);

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title != site.name %}{{ title }} — {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{{ summary or site.description }}">
+  <meta name="description" content="{{ summary or projectSummary or site.description }}">
   <meta name="theme-color" content="#3f6689">
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ summary or site.description }}">
+  <meta property="og:description" content="{{ summary or projectSummary or site.description }}">
   <meta property="og:type" content="{% if isPost %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -34,6 +34,7 @@
     <ul>
       <li><a href="/"{% if section == 'home' %} aria-current="page"{% endif %}>Home</a></li>
       <li><a href="/blog/"{% if section == 'blog' %} aria-current="page"{% endif %}>Blog</a></li>
+      <li><a href="/projects/"{% if section == 'projects' %} aria-current="page"{% endif %}>Projects</a></li>
     </ul>
   </nav>
   <main id="main" class="container" tabindex="-1">

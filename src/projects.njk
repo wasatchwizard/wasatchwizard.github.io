@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Projects
+section: projects
+permalink: /projects/
+---
+<div class="prose">
+  <h1>Projects</h1>
+  <p class="intro">Software, small tools, and experiments from my workbench.</p>
+  <p>These are a few of my public projects, listed by their latest code push. My usable freeware and open-source releases also have a home at <a href="https://weekendtech.net/">WeekendTech</a>.</p>
+  {% if collections.projects.length %}
+  <ul class="project-list">
+    {% for project in collections.projects %}
+    <li>
+      <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+      <p>{{ project.data.projectSummary }}</p>
+      {% if project.data.github.language or project.data.github.pushedAt or project.data.github.archived %}
+      <p class="post-meta">{% if project.data.github.language %}{{ project.data.github.language }}{% endif %}{% if project.data.github.pushedAt %}{% if project.data.github.language %} · {% endif %}Updated <time datetime="{{ project.data.github.pushedAt }}">{{ project.data.github.pushedAt | readableDate }}</time>{% endif %}{% if project.data.github.archived %}{% if project.data.github.language or project.data.github.pushedAt %} · {% endif %}Archived{% endif %}</p>
+      {% endif %}
+      <p><a href="{{ project.data.github.url }}">Source on GitHub</a></p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>Project notes are on the way. You can also <a href="https://github.com/kodybrown?tab=repositories">browse my repositories on GitHub</a>.</p>
+  {% endif %}
+</div>

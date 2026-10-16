@@ -51,11 +51,80 @@ Use fenced code blocks with a language such as `vbnet`, `csharp`, or `javascript
 Highlighting happens during the build. Put images under `src/assets/blog/` and
 reference them with `/assets/blog/...` paths.
 
+### Pin posts on Home
+
+Add `pinned: true` to a post's front matter to feature it on Home. Pinned posts
+appear newest first, followed by up to three recent unpinned posts. Posts are
+not repeated between those two lists. The Blog tab always lists all published
+posts chronologically, regardless of pinning. The Raspberry Pi article is
+pinned as the initial example.
+
+## Project notes
+
+The Home, Blog, and Projects tabs share the same layout. Projects are ordinary
+Markdown files under `src/projects/`, with descriptive URLs derived from their
+filenames: `src/projects/gostatic.md` becomes `/projects/gostatic/`. Changing
+the title or GitHub repository name does not change that URL.
+
+Three initial entries (dotask, FixEOL, and gostatic) were created manually from
+their public GitHub metadata. No repository synchronization script, GitHub API
+request, or scheduled refresh runs during builds or in the browser. Future
+repository synchronization belongs to dotask's `.task` functionality.
+
+Use this front-matter contract when adding entries or implementing that sync:
+
+```markdown
+---
+title: "Project name"
+summary: "Optional handwritten blurb; overrides the GitHub description."
+hidden: false
+# Optional: screenshot: "/assets/projects/project-name.png"
+# Optional: screenshotAlt: "Describe what the screenshot shows."
+github:
+  id: 123456
+  repository: "kodybrown/project-name"
+  url: "https://github.com/kodybrown/project-name"
+  description: "The repository's description, used when summary is omitted."
+  pushedAt: "2026-10-16T12:00:00Z"
+  language: "Go"
+  archived: false
+---
+
+Handwritten notes, examples, and additional images go here.
+```
+
+Only the `github` block is intended for automated updates. Preserve all other
+front matter, comments, formatting, filenames, and Markdown body text. Match
+repositories by their stable numeric `github.id`, including after a rename.
+This ownership contract is documented here; an updater is not implemented in
+this repository.
+
+The Projects index sorts by `github.pushedAt`, newest first. Undated projects
+follow dated ones; filenames break ties. Dates must be valid date strings.
+Archived projects remain listed and are labeled Archived. Add `hidden: true`
+or `draft: true` to exclude an entry from its page, the index, and the sitemap.
+If a future sync cannot confirm that a repository remains public, it should
+hide the entry for review while preserving the file.
+
+Project pages support an optional local `screenshot` and descriptive
+`screenshotAlt`; put images under `src/assets/projects/`. Missing screenshots
+do not produce empty image placeholders. Wasatch Wizard holds development
+notes and experiments; link to WeekendTech for a project's usable releases.
+
+## Privacy
+
+The site currently includes no analytics, optional tracking, third-party
+embeds, or cookie-setting scripts. No consent banner is included. Reassess
+consent needs before introducing those features. If consent controls become
+necessary, use the bottom-centered Dude Stickers notice as the visual
+reference, with accurate wording and functioning tracking controls.
+
 ## Source layout
 
 - `src/_includes/`: shared HTML layout, post layout, and post list.
 - `src/_data/site.json`: site name, canonical domain, and author details.
 - `src/posts/`: Markdown articles.
+- `src/projects/`: Markdown project notes and separately owned GitHub metadata.
 - `src/assets/site.css`: the single hand-authored stylesheet.
 - `src/assets/fonts/`: local fonts, upstream licenses, and source URLs.
 - `content-export/`: the Blogger archive and imported-post URL mapping. This
@@ -120,6 +189,8 @@ old blog. Comments are archived but are not rendered as a new comments system.
 descriptive URLs, exported counts, original imported dates, image references,
 exact code text (including comments and whitespace), RSS/sitemap output, and
 the absence of browser scripts or accidentally published source directories.
+It also checks shared navigation, home-list separation, project ordering,
+project-page links, and sitemap coverage.
 Also check desktop/mobile layout, header appearance, keyboard focus, images,
 and horizontally scrolling code blocks in the browser.
 
