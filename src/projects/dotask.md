@@ -7,7 +7,7 @@ github:
   repository: "kodybrown/dotask"
   url: "https://github.com/kodybrown/dotask"
   description: "Portable project tasks, in the language of your choice, for any platform."
-  pushedAt: "2026-10-13T23:24:36Z"
+  pushedAt: "2026-10-16T20:07:30Z"
   language: "Rust"
   archived: false
 ---
