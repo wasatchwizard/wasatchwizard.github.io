@@ -65,21 +65,31 @@ a:hover { color: #163d5a; }
 .site-brand { display: block; max-width: 100%; line-height: 0; transform: translateY(2px); }
 .site-brand img { display: block; width: min(593px, 100%); height: auto; }
 .header-content nav { margin-left: auto; margin-bottom: 3px; }
-.header-profile-links { display: flex; margin: 0; padding: 0; list-style: none; }
+.header-profile-links { display: flex; gap: 0.125rem; margin: 0; padding: 0; list-style: none; }
+.header-profile-links li { margin: 0; }
 .header-profile-links a {
   display: grid;
   place-items: center;
   min-width: 2.75rem;
   min-height: 2.75rem;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 700;
   text-decoration: none;
   border-radius: 0.25rem;
+  opacity: 0.85;
 }
 .header-profile-links a:hover,
-.header-profile-links a:focus-visible { background: #ffffff14; }
-.header-profile-links img { display: block; width: 24px; height: 24px; }
+.header-profile-links a:focus-visible { background: #ffffff14; opacity: 1; }
+.header-profile-links img {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  /* External SVGs cannot inherit the link color; match the reference site's white icons. */
+  filter: brightness(0) invert(1);
+}
+.header-profile-links .email-icon {
+  /* The @ asset includes more internal space than the brand icons. */
+  width: 1.75rem;
+  height: 1.75rem;
+}
 .site-header :focus-visible { outline-color: #fff; }
 
 .skip-link {

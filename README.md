@@ -9,6 +9,10 @@ published site. The original blue header, wordmark, and profile-link layout are
 retained. Headings use Merriweather and body text uses Oxygen, matching the
 existing public site; licensed WOFF2 files are served locally.
 
+The header contact/profile icons match kodybrown.com: Email, Stack Overflow,
+GitHub, LinkedIn, then X. Identical local SVGs, their source notes, and the upstream
+MIT license are in `src/assets/social/`. Email uses this site's configured address.
+
 ## Develop and preview
 
 Use Node.js 24 LTS (Node 22 or newer is supported) and npm:

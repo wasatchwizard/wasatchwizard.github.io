@@ -44,7 +44,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("rssDate", value => new Date(value).toUTCString());
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   // Publish only active assets; source files and the complete export stay out of the site output.
-  for (const asset of ["img/header.png", "img/octo.png", "img/stackoverflow_white.png",
+  for (const asset of ["img/header.png",
     "img/apple-touch-icon.png", "favicon.ico", "favicon.png", "CNAME"]) {
     eleventyConfig.addPassthroughCopy(asset);
   }

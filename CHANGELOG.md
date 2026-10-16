@@ -2,6 +2,15 @@
 
 ## 2026-10-16
 
+- Matched kodybrown.com's header icons and order: Email, Stack Overflow, GitHub,
+  LinkedIn, then X. Duplicated the five SVGs and their upstream MIT license/source
+  notes, matched white icon sizing and spacing, and retained this site's email.
+  Verified byte-identical assets, matching headers on all 186 rendered pages,
+  desktop/320-pixel mobile layout, keyboard focus, and 44-pixel link targets.
+  `npm run verify` passed on a temporary copy of committed content plus this
+  change (131 pages). Working-checkout verification is blocked by the existing
+  project URL rule rejecting `/projects/kodybrown.github.io/`; all 59 existing
+  project source files were verified unchanged. Git whitespace checks passed.
 - Added dotask's GitHub project refresh task unchanged, using the initialized
   project configuration. Documented repository-name filenames, front-matter
   ownership, and manual refresh commands. Verified the copy, task help with the
