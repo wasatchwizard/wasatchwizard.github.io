@@ -43,23 +43,53 @@ steps:
             directory: {parameter: output}
             name: {item: repo.name}
 
-      - file:
-          operation: frontmatter
-          path: {result: documentPath.text}
-          create-if-missing: true
-          initial:
-            title: {item: repo.name}
-            summary: ""
-            screenshot: ""
-            hidden: false
-          # A name reused by another repository must not overwrite this page.
-          match-existing:
-            github.id: {item: repo.id}
-          set:
-            github.id: {item: repo.id}
-            github.repository: {item: repo.full_name}
-            github.url: {item: repo.html_url}
-            github.description: {item: repo.description}
-            github.pushedAt: {item: repo.pushed_at}
-            github.language: {item: repo.language}
-            github.archived: {item: repo.archived}
+      - id: disabledPath
+        text:
+          template: "{{path}}.disabled"
+          values:
+            path: {result: documentPath.text}
+
+      - id: disabledDocument
+        file:
+          operation: read
+          path: {result: disabledPath.text}
+          optional: true
+
+      # A disabled file keeps receiving metadata updates. Select its filename
+      # before writing so a refresh never recreates the publishing .md file.
+      - id: selectedDocument
+        json:
+          operation: filter
+          input:
+            - path: {result: documentPath.text}
+              disabled: false
+            - path: {result: disabledPath.text}
+              disabled: true
+          where:
+            field: disabled
+            equals: {result: disabledDocument.exists}
+
+      - foreach:
+          items: {result: selectedDocument.data}
+          as: document
+        steps:
+          - file:
+              operation: frontmatter
+              path: {item: document.path}
+              create-if-missing: true
+              initial:
+                title: {item: repo.name}
+                summary: ""
+                screenshot: ""
+                hidden: false
+              # A name reused by another repository must not overwrite this page.
+              match-existing:
+                github.id: {item: repo.id}
+              set:
+                github.id: {item: repo.id}
+                github.repository: {item: repo.full_name}
+                github.url: {item: repo.html_url}
+                github.description: {item: repo.description}
+                github.pushedAt: {item: repo.pushed_at}
+                github.language: {item: repo.language}
+                github.archived: {item: repo.archived}

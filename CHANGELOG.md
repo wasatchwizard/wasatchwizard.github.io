@@ -2,6 +2,15 @@
 
 ## 2026-10-16
 
+- Added `.md.disabled` project support to the local refresh task: metadata
+  updates target the disabled filename without recreating a published Markdown
+  page. Documented disabling/re-enabling by renaming and verified ignored pages,
+  catalog entries, and sitemap entries with an Eleventy fixture.
+- Allowed GitHub repository names with uppercase letters, dots, and underscores
+  in project URL verification. The full working site now passes verification
+  with 186 pages, including all 58 project pages. Native task fixtures verified
+  creation, disabled/enabled updates, handwritten content and encoding/line-end
+  preservation, identity refusal, fork exclusion, and unchanged-refresh timestamps.
 - Matched kodybrown.com's header icons and order: Email, Stack Overflow, GitHub,
   LinkedIn, then X. Duplicated the five SVGs and their upstream MIT license/source
   notes, matched white icon sizing and spacing, and retained this site's email.

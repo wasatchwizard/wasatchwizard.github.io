@@ -96,7 +96,8 @@ assert.ok(sitemap.includes("https://www.wasatchwizard.com/projects/"));
 for (const item of listedProjects) {
   const link = item.querySelector("h2 a");
   const projectPath = link.getAttribute("href");
-  assert.match(projectPath, /^\/projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/);
+  // Project filenames follow GitHub repository names, including case, dots, and underscores.
+  assert.match(projectPath, /^\/projects\/(?!\.{1,2}\/)[A-Za-z0-9._-]+\/$/);
   const project = documents.get(path.join(output, projectPath, "index.html"));
   assert.equal(project.querySelector("h1").textContent, link.textContent);
   assert.ok(sitemap.includes(`https://www.wasatchwizard.com${projectPath}`));

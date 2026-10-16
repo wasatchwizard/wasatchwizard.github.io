@@ -85,6 +85,8 @@ npm run verify
 Run these commands from the website root. The existing `.dotasks.yaml` anchors
 the project; `.tasks/refresh-projects.task` defaults to public repositories owned
 by `kodybrown`, excludes forks, follows pagination, and writes `src/projects/`.
+The local task additionally recognizes disabled project filenames as described
+below; the upstream example remains unchanged.
 No GitHub API request or scheduled refresh runs during Eleventy builds or in
 the browser. The refresh changes local Markdown only; commit and publish the
 reviewed changes separately.
@@ -120,6 +122,20 @@ blank summary/screenshot, and `hidden: false` only when creating a file. Existin
 front matter, comments, formatting, and Markdown body text remain intact. The
 numeric `github.id` stays in front matter as an identity guard: a different ID
 at the same filename stops that update. It does not determine the filename.
+
+### Disable a project
+
+Rename `GitVersion.md` to `GitVersion.md.disabled` to exclude it from the site.
+The refresh task first checks for `<repo-name>.md.disabled` and updates its
+GitHub metadata in place instead of creating `<repo-name>.md` again. The title,
+summary, screenshots, comments, and Markdown body remain preserved. Disabled
+files are ignored by Eleventy's configured template formats and project glob,
+so they have no page, index entry, or sitemap entry.
+
+To re-enable a project, rename it back to `<repo-name>.md`. Run `npm run build`
+or `npm run verify` after renaming so the clean build removes any old page.
+Keep only one of the two filenames for each repository; a disabled file does
+not suppress a separate `.md` file if both exist.
 
 The Projects index sorts by `github.pushedAt`, newest first. Undated projects
 follow dated ones; filenames break ties. Dates must be valid date strings.
