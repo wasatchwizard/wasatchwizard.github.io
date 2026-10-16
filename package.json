@@ -1,0 +1,21 @@
+{
+  "name": "wasatchwizard.com",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/clean.mjs && eleventy",
+    "watch": "node scripts/clean.mjs && eleventy --watch",
+    "verify": "node scripts/clean.mjs && eleventy && node scripts/verify.mjs",
+    "export:blogger": "node scripts/export-blogger.mjs",
+    "import:blogger": "node scripts/import-blogger.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
+    "linkedom": "0.18.12",
+    "turndown": "7.2.4"
+  }
+}

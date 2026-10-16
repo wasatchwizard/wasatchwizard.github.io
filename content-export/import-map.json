@@ -1,0 +1,21 @@
+[
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-339882909772887395",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2012/12/the-raspberry-pi-computer.html",
+    "newPath": "/blog/the-raspberry-pi-computer/",
+    "source": "src/posts/the-raspberry-pi-computer.md",
+    "images": [
+      {
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqP424M5WsAq-lEAARJ4GmceXul9q4Gs2fp68ao4wGLC2Zok4LEej22xL9k_9PtdiwIYvRBHBwqVYlMLW_arAAD7FxFeBClMHQ_j3qkdP70tn8lNU7cRQfqbIOcgOlX6Y9ox2x/s1600/7513051848_9a6ef2feb8_o-1024x682.jpg",
+        "publicPath": "/assets/blog/the-raspberry-pi-computer/7513051848_9a6ef2feb8_o-1024x682.jpg"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-5612619033480411083",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2011/06/visual-studio-macro-to-hideshow-output.html",
+    "newPath": "/blog/visual-studio-macro-to-hide-show-the-output-window-after-a-build/",
+    "source": "src/posts/visual-studio-macro-to-hide-show-the-output-window-after-a-build.md",
+    "images": []
+  }
+]

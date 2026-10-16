@@ -1,0 +1,23 @@
+{
+  "cssUrl": "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Oxygen:wght@400;700&display=swap",
+  "faces": [
+    {
+      "family": "Merriweather",
+      "weight": "700",
+      "file": "merriweather-700.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/merriweather/v33/u-4e0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiSeqqJ-k.woff2"
+    },
+    {
+      "family": "Oxygen",
+      "weight": "400",
+      "file": "oxygen-400.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/oxygen/v16/2sDfZG1Wl4LcnbuKjk0m.woff2"
+    },
+    {
+      "family": "Oxygen",
+      "weight": "700",
+      "file": "oxygen-700.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/oxygen/v16/2sDcZG1Wl4LcnbuCNWgzaGW5.woff2"
+    }
+  ]
+}

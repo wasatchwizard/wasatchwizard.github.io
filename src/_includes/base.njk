@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title != site.name %}{{ title }} — {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ summary or site.description }}">
+  <meta name="theme-color" content="#3f6689">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ summary or site.description }}">
+  <meta property="og:type" content="{% if isPost %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="site-brand" href="/" aria-label="Wasatch Wizard home"><img src="/img/header.png" width="593" height="57" alt="wasatchwizard.com"></a>
+      <nav aria-label="Contact and profiles">
+        <ul class="header-profile-links">
+          <li><a href="https://github.com/kodybrown" aria-label="GitHub" title="GitHub"><img src="/img/octo.png" width="24" height="24" alt=""></a></li>
+          <li><a href="https://stackoverflow.com/users/139793/kodybrown" aria-label="Stack Overflow" title="Stack Overflow"><img src="/img/stackoverflow_white.png" width="24" height="24" alt=""></a></li>
+          <li><a href="mailto:{{ site.email }}" aria-label="Email Kody Brown" title="Email Kody Brown">@</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="page-nav container" aria-label="Main navigation">
+    <ul>
+      <li><a href="/"{% if section == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="/blog/"{% if section == 'blog' %} aria-current="page"{% endif %}>Blog</a></li>
+    </ul>
+  </nav>
+  <main id="main" class="container" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer container">
+    <p>© {{ site.author }} · Online since 1994 · <a href="/feed.xml">RSS</a> · <a href="https://www.kodybrown.com/">kodybrown.com</a> · <a href="https://weekendtech.net/">WeekendTech</a></p>
+    <p>Hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+  </footer>
+</body>
+</html>
