@@ -17,5 +17,1434 @@
     "newPath": "/blog/visual-studio-macro-to-hide-show-the-output-window-after-a-build/",
     "source": "src/posts/visual-studio-macro-to-hide-show-the-output-window-after-a-build.md",
     "images": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-3978525577947525981",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2016/02/easily-switch-between-experience-editor.html",
+    "newPath": "/blog/easily-switch-between-the-experience-editor-and-normal-mode-in-sitecore/",
+    "source": "src/posts/easily-switch-between-the-experience-editor-and-normal-mode-in-sitecore.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "173c09f1530723c882ced6b9db818d5e2832730707898bb3c71329a9628f1ee7",
+        "language": "javascript"
+      },
+      {
+        "sha256": "29d85a442d9ee5ae225ccb3f49c236e436d5b7d717e0fd65c95e4b8949f21871",
+        "language": "javascript"
+      },
+      {
+        "sha256": "c9025f0a70cd677960c2545fc4d0d9a6f74f8e553ad73e958e63b56926af2b06",
+        "language": "javascript"
+      }
+    ],
+    "notes": [
+      "Bookmarklet source is preserved below; original draggable links are shown as text."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2469248305579492132",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2015/12/changing-your-skype-avatar-on-windows-10.html",
+    "newPath": "/blog/changing-your-skype-avatar-on-windows-10/",
+    "source": "src/posts/changing-your-skype-avatar-on-windows-10.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-197493201690660065",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2014/09/los-cucos-is-my-favorite-place-to-eat.html",
+    "newPath": "/blog/los-cucos-is-my-favorite-place-to-eat/",
+    "source": "src/posts/los-cucos-is-my-favorite-place-to-eat.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4419463281402391436",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/12/what-is-windows-81-dvd-label.html",
+    "newPath": "/blog/what-is-the-windows-8-1-dvd-label/",
+    "source": "src/posts/what-is-the-windows-8-1-dvd-label.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1509269350282091756",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/12/regions-in-visual-studio.html",
+    "newPath": "/blog/region-s-in-visual-studio/",
+    "source": "src/posts/region-s-in-visual-studio.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "882854bd53d983bf16487a7e42a1caac1e5b97d2a13741964b9a3da370e593b2",
+        "language": "xml"
+      }
+    ],
+    "linkChanges": [
+      {
+        "originalUrl": "http://elegantdevelopment.blogspot.com/2013/01/i-miss-macros-in-visual-studio-2012.html",
+        "newUrl": "/blog/i-miss-macros-in-visual-studio-2012/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2417074495352115745",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/06/editlinksvbs-week-25.html",
+    "newPath": "/blog/editlinks-vbs-week-25/",
+    "source": "src/posts/editlinks-vbs-week-25.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "aba5e00782d6eb3925d124b3011e23f6ea0c0ba9443344caa3dcae1685710b44",
+        "language": "text"
+      },
+      {
+        "sha256": "f54312cc744039d2132fc047ac1e1498fb579eb677a3c972619da4e86dd3c379",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2332876471737908465",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/06/attrexe-week-24.html",
+    "newPath": "/blog/attr-exe-week-24/",
+    "source": "src/posts/attr-exe-week-24.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "e1d0f42dba20e90f04a92f21f4d7e7ced379496b588de778527fea1298e666a7",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6303645052522984214",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/06/createpwexe-week-23.html",
+    "newPath": "/blog/createpw-exe-week-23/",
+    "source": "src/posts/createpw-exe-week-23.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "e5cf310f21a1ecbf05e050a47ad4afd40dcba2b577c3dcf53ad18aa1eb2a271a",
+        "language": "text"
+      },
+      {
+        "sha256": "c3865d49f59d91774ae8560203bc209ec05d9550cf4af72bf2048c024276cb73",
+        "language": "text"
+      },
+      {
+        "sha256": "ab34fe6769f26abd602cdc9b24bcea738608c37ab67f6b3fc2a6ab1d7db4a18a",
+        "language": "text"
+      },
+      {
+        "sha256": "6f8a91fc308ba2aa2d4035ef129ef27d9be88dfb911382c562cb97c0423cee11",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-5050685415197052411",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/05/sortxml-week-22.html",
+    "newPath": "/blog/sortxml-week-22/",
+    "source": "src/posts/sortxml-week-22.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "088947a634cab8600da670ae707ac55c41dd0a61417970c2da8fb85510b4721b",
+        "language": "text"
+      },
+      {
+        "sha256": "2839d70603de3525aa3012fc258fb2ddee0e13f823fa35d94b4df08fbccfd96e",
+        "language": "text"
+      },
+      {
+        "sha256": "4ea692c690476a78f878a7bfa25881345004ca373dabb7524080a9e7ef816bc7",
+        "language": "text"
+      },
+      {
+        "sha256": "c8d37b020c9e9f93619630692d60c29ec4b9546ce213e377a3bbef7c298c89d9",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1962343777232917904",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/05/jquerydeepshow.html",
+    "newPath": "/blog/jquery-deepshow/",
+    "source": "src/posts/jquery-deepshow.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "1729b32ef4a6e96efdacec1f5fa64f0ffc59027c4288b000b312d252742b2c34",
+        "language": "javascript"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-7432357357868262481",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/05/menustack-week-21.html",
+    "newPath": "/blog/menustack-week-21/",
+    "source": "src/posts/menustack-week-21.md",
+    "images": [
+      {
+        "originalSourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifP03cwl5qgqsNeSUki5vbR-986xnDEEWG6jXeBINgY6Ofq6BNKPdXNQiZ46Go0kj3agGaN-c4nBJn2tleGK9tlCysRciwbyJI2YGP5vyo7JW7znbaTumd9ByGNoFahFJ6stKm/?imgmax=800",
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEik6uSPGdLND_WTZxvJm7dWcLwMLAmRVxgNMHaovtA3l6llW5Jk_zodYuklKIkxV8YBRSmwVw49gHF1M1HbcqIbFmK2mbKJ6WGohl1haXvLtsmOYA2yT7of_QgKwnp1rnR8x2-I/s1600/menustack%25255B3%25255D.png",
+        "publicPath": "/assets/blog/menustack-week-21/menustack-255B3-255D.png"
+      }
+    ],
+    "codeBlocks": [
+      {
+        "sha256": "4d315272e4d8d7bc910c434a3b6dccdcfc4cc1db64f5a52d32eb1cde8b5e3a3f",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-275843766735698557",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/05/sortini-week-20.html",
+    "newPath": "/blog/sortini-week-20/",
+    "source": "src/posts/sortini-week-20.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6800084294117483783",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/05/sublimecyclewhitespace-week-19.html",
+    "newPath": "/blog/sublimecyclewhitespace-week-19/",
+    "source": "src/posts/sublimecyclewhitespace-week-19.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "0688f56073c1090715202362ec3868665976cf033a5469ebed78bd5df073d915",
+        "language": "json"
+      },
+      {
+        "sha256": "140fcb3a5a55b57822d8f7d988a59207a317fc88590f4bf9fccb733fb8e92d63",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-3758473314530250914",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/04/app-of-week-18-encryptbat-decryptbat.html",
+    "newPath": "/blog/encrypt-decrypt-week-18/",
+    "source": "src/posts/encrypt-decrypt-week-18.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "57eb897d7320e14be7ccbdf2d80596cd344b3ab36991a3672cf66c40c992c639",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-5608625884590247521",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-17-fcopyexe.html",
+    "newPath": "/blog/fcopy-week-17/",
+    "source": "src/posts/fcopy-week-17.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "3f5f1ff359ff9a2db850422f91221497698f1c497ac8ca242109ac5b4a0ece8e",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-7362034892880702259",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-16-facsexe.html",
+    "newPath": "/blog/facs-week-16/",
+    "source": "src/posts/facs-week-16.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "3fcf2e260bcb008cf4d9920409cdd1bb9b288af43d818de033f6e1eaa364d872",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-176770119672482521",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-15-fixeolexe.html",
+    "newPath": "/blog/fixeol-week-15/",
+    "source": "src/posts/fixeol-week-15.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "0fd51cda5b3ece816828750edabd090abb81a873ac88235601383652ff154891",
+        "language": "text"
+      },
+      {
+        "sha256": "112409477231ade45e8e5571a7af2564ab1672168b9399e4a02fd93c6bb54523",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8128162659839098829",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-14-relocexe.html",
+    "newPath": "/blog/reloc-week-14/",
+    "source": "src/posts/reloc-week-14.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "117ec946a3b5f2a734ef7aaf43f51a4f8c7f0b65358e618e6111a0e273b283ce",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8111734628705936719",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-13-pcolorexe.html",
+    "newPath": "/blog/pcolor-week-13/",
+    "source": "src/posts/pcolor-week-13.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "2408e8f94250b95cbf2200846babba8e5da4d2ee3e20ba08b3a444a743406549",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1969106512253052022",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-12-sethexe.html",
+    "newPath": "/blog/seth-week-12/",
+    "source": "src/posts/seth-week-12.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "8de5e08d04030437f1c34aa7a17ac9c1f19361aa4bdbc540f90e1dc2bc3ac812",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-7616886442188498324",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/11/app-of-week-11-asciiexe.html",
+    "newPath": "/blog/ascii-week-11/",
+    "source": "src/posts/ascii-week-11.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "d3d31f8943d85aad3fbfe3ee282b4c98ab89bafd0b7a09902e0ae1793819a15d",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1524994845071043193",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/03/your-organizations-policies.html",
+    "newPath": "/blog/your-organization-s-policies/",
+    "source": "src/posts/your-organization-s-policies.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4293789098870805601",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/06/app-of-week-10-centerexe.html",
+    "newPath": "/blog/center-week-10/",
+    "source": "src/posts/center-week-10.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://elegantdevelopment.blogspot.com/2013/03/app-of-week-7-shrink-simple-dos-command.html",
+        "newUrl": "/blog/shrink-week-7/"
+      },
+      {
+        "originalUrl": "http://elegantdevelopment.blogspot.com/2013/03/app-of-week-8-enlarge-simple-dos.html",
+        "newUrl": "/blog/enlarge-week-8/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8645072019874542497",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/03/app-of-week-9-gitversion-gitversion.html",
+    "newPath": "/blog/gitversion-msbuild-dll-week-9/",
+    "source": "src/posts/gitversion-msbuild-dll-week-9.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "ef2a7ac66378a164e4305ac4129e2229f8a9c433cd51d19fb015f85970769395",
+        "language": "xml"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-5013619666062882368",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/03/app-of-week-8-enlarge-simple-dos.html",
+    "newPath": "/blog/enlarge-week-8/",
+    "source": "src/posts/enlarge-week-8.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6831711197133505000",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/03/app-of-week-7-shrink-simple-dos-command.html",
+    "newPath": "/blog/shrink-week-7/",
+    "source": "src/posts/shrink-week-7.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4535164631299169867",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/02/cldesc-week-6.html",
+    "newPath": "/blog/cldesc-week-6/",
+    "source": "src/posts/cldesc-week-6.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "9695064f692f4aca78c239c6cd4330f148e5fcf61d6fcde5672e4e554f4d1b47",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-3857343313998548492",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/03/app-of-week-5-ebookcompiler-this-is.html",
+    "newPath": "/blog/ebook-compiler-week-5/",
+    "source": "src/posts/ebook-compiler-week-5.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "8537ae9e635e0f36f149919a1855678179c00e79dcb60304e49c6e89e1d58a65",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2781215233347459874",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/i-miss-macros-in-visual-studio-2012.html",
+    "newPath": "/blog/i-miss-macros-in-visual-studio-2012/",
+    "source": "src/posts/i-miss-macros-in-visual-studio-2012.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2239041486454999664",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/app-of-week-2013-week-4-minecraft.html",
+    "newPath": "/blog/minecraft-launcher-week-4/",
+    "source": "src/posts/minecraft-launcher-week-4.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6087511167122784634",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/8-bit-retro-games-basiccheesy-graphics.html",
+    "newPath": "/blog/8-bit-retro-games-basic-cheesy-graphics-super-high-end-expensive-graphics-card/",
+    "source": "src/posts/8-bit-retro-games-basic-cheesy-graphics-super-high-end-expensive-graphics-card.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-671188775717942895",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/application-of-week-2013-week-3.html",
+    "newPath": "/blog/gitstatus-week-3/",
+    "source": "src/posts/gitstatus-week-3.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-7533824491500963264",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/application-of-week-2013-week-2-wifian_19.html",
+    "newPath": "/blog/wifian-week-2/",
+    "source": "src/posts/wifian-week-2.md",
+    "images": [
+      {
+        "originalSourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgIyCpkKFU40CkmE9fmi3q4AymSZNaEX9VEAvsKhK7Fp3HQitXVIrAnAwkJt3v6zESdv6d1c8RkklfHv3ZPjBwPdxWETLuU2Wfq8tRpv0aNKs9vcydczGCD6gLK-FWXUuWZ4-I/s400/wifian.png",
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgIyCpkKFU40CkmE9fmi3q4AymSZNaEX9VEAvsKhK7Fp3HQitXVIrAnAwkJt3v6zESdv6d1c8RkklfHv3ZPjBwPdxWETLuU2Wfq8tRpv0aNKs9vcydczGCD6gLK-FWXUuWZ4-I/s1600/wifian.png",
+        "publicPath": "/assets/blog/wifian-week-2/wifian.png"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8047814165365556573",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/application-of-week-2013-week-1-editpath.html",
+    "newPath": "/blog/editpath-week-1/",
+    "source": "src/posts/editpath-week-1.md",
+    "images": [
+      {
+        "originalSourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCqjU2qens6SbmOEb6RA-h9AweFl6lkhT_OELrHwNFnjWFosaou1fmyecZ_GV8kqdyEn0pcMRdC-t9F6CWBGzG2BxWf2IiSlElN-PjjG2Vdpqj6tlVLw7591GxHd2hQXqpmA4z/s1600/editpath.png",
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCqjU2qens6SbmOEb6RA-h9AweFl6lkhT_OELrHwNFnjWFosaou1fmyecZ_GV8kqdyEn0pcMRdC-t9F6CWBGzG2BxWf2IiSlElN-PjjG2Vdpqj6tlVLw7591GxHd2hQXqpmA4z/s1600/editpath.png",
+        "publicPath": "/assets/blog/editpath-week-1/editpath.png"
+      }
+    ],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://elegantdevelopment.blogspot.com/2013/01/new-years-resolution.html",
+        "newUrl": "/blog/new-year-s-resolution/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6292757437231342251",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2013/01/new-years-resolution.html",
+    "newPath": "/blog/new-year-s-resolution/",
+    "source": "src/posts/new-year-s-resolution.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-965020620403040366",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2010/10/how-to-ensure-outlook-is-already.html",
+    "newPath": "/blog/how-to-ensure-outlook-is-always-running/",
+    "source": "src/posts/how-to-ensure-outlook-is-always-running.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "f1aed04556f21fefa494ea0e3fe4fc20720f36339dd541ea7878c745145b29e4",
+        "language": "autohotkey"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-777693948778938492",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/09/customize-how-search-results-are.html",
+    "newPath": "/blog/customize-how-search-results-are-displayed/",
+    "source": "src/posts/customize-how-search-results-are-displayed.md",
+    "images": [
+      {
+        "originalSourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9SYxV-ReJg_QcqoiVFqZgKw4G-Hh_jb1RcbL-JayYQofJ3trK1BCSmUzN3Z6qbH7sjESbOkYDW2jdblvki5NaoyKowF25gCGSuG3Z1KPvW31aSEHMREVXz17YxEGZaud5oAr0/?imgmax=800",
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXrm1Wwd1MnTxFXUjapn70hiDnzBHaBhOPnuO4Tdn5zFie_yqGHBDJ-ozzMVNIE-K0WfQG8uHUmF9rc9S_sSZkj6H4EtT1jgxlA6HkxHqZ5xw229dCNuIp5b3WgEzlUq_-7QyY/s1600/VSFindResultsEditor8.png",
+        "publicPath": "/assets/blog/customize-how-search-results-are-displayed/VSFindResultsEditor8.png"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6424754533289098285",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/09/excellent-visual-studio-tips-roundup-by.html",
+    "newPath": "/blog/excellent-visual-studio-tips-roundup-by-sara-ford/",
+    "source": "src/posts/excellent-visual-studio-tips-roundup-by-sara-ford.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4211038107678591060",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/09/build-macro-for-web-projects.html",
+    "newPath": "/blog/build-macro-for-web-projects/",
+    "source": "src/posts/build-macro-for-web-projects.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "83360dca2edfc4bdbec3adf132ede62d45e8c9c88c39b6e995497f154095b6c7",
+        "language": "batch"
+      },
+      {
+        "sha256": "159d652b8125d2e6b7bd3e6ccebd04083df94c1d5458cf4c8b01624ae56a3bed",
+        "language": "vbnet"
+      },
+      {
+        "sha256": "559d436a0e12d063dc1f20fa51c5b5382d0bd8fd8675efbf913500a5fbd42404",
+        "language": "vbnet"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4523674407276598818",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/09/visual-studio-2008-macro-fun.html",
+    "newPath": "/blog/visual-studio-2008-macro-fun/",
+    "source": "src/posts/visual-studio-2008-macro-fun.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "5486771e666bcbab45f4b9172a71300c05fab979458d40aef0c65c6b97dd2542",
+        "language": "text"
+      },
+      {
+        "sha256": "0daf83badb2ea43e67e8cfc7de34684780fd3ae843bd9cea5316840c51977cf9",
+        "language": "vbnet"
+      },
+      {
+        "sha256": "07f68d35238ec8390c2dfb23a370544b4acd8216c0d29b305310653fea1002fe",
+        "language": "vbnet"
+      },
+      {
+        "sha256": "b4c8d02c2ab4b27737d5a62d7fa3733a16a28b1674ccb80297857826d4127be7",
+        "language": "vbnet"
+      },
+      {
+        "sha256": "27187a522a619accb15c02b208bf25c6adecf00e533ae5abdddff5a9d934c6ca",
+        "language": "vbnet"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2308350240700206610",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/07/simple-visual-studio-2005-regular.html",
+    "newPath": "/blog/simple-visual-studio-2005-regular-expression-to-swap-variable-assignments/",
+    "source": "src/posts/simple-visual-studio-2005-regular-expression-to-swap-variable-assignments.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1530961070604295072",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/07/collapse-folders-and-projects-in-visual.html",
+    "newPath": "/blog/collapse-folders-and-projects-in-visual-studio/",
+    "source": "src/posts/collapse-folders-and-projects-in-visual-studio.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "2e87fc6ebc297d6be158e48eb44a3b54d7c8f48b4abc0691addedb8cee73b4dd",
+        "language": "vbnet"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-101551136341028857",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2009/01/scrum-vs-waterfall.html",
+    "newPath": "/blog/scrum-vs-waterfall/",
+    "source": "src/posts/scrum-vs-waterfall.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-5007103512395655506",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2008/10/obama-vs-christians.html",
+    "newPath": "/blog/obama-vs-christians/",
+    "source": "src/posts/obama-vs-christians.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2905112575576240306",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2008/10/powercommands-for-visual-studio-2008.html",
+    "newPath": "/blog/powercommands-for-visual-studio-2008/",
+    "source": "src/posts/powercommands-for-visual-studio-2008.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2762620762072319168",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2008/09/integrating-tortoisesvn-with-visual.html",
+    "newPath": "/blog/integrating-tortoisesvn-with-visual-studio/",
+    "source": "src/posts/integrating-tortoisesvn-with-visual-studio.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-3603366983260406491",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2008/02/my-iram-drive-finally-running.html",
+    "newPath": "/blog/my-iram-drive-finally-running/",
+    "source": "src/posts/my-iram-drive-finally-running.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8888307879714833374",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/09/letter-to-google.html",
+    "newPath": "/blog/letter-to-google/",
+    "source": "src/posts/letter-to-google.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6851687621442456621",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/08/just-had-funny-thought.html",
+    "newPath": "/blog/just-had-a-funny-thought/",
+    "source": "src/posts/just-had-a-funny-thought.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2676852773623078584",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/08/important-differences-between.html",
+    "newPath": "/blog/important-differences-between-the-javascript-null-and-undefined/",
+    "source": "src/posts/important-differences-between-the-javascript-null-and-undefined.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "e8677e1bcb957ce80f6d56607d7d4a8a9cfc6041ac1998834a0a7696c217f008",
+        "language": "text"
+      },
+      {
+        "sha256": "9632e29d9fceb99256720fe89cf991feb7d812a32df5c169c9ecb7559c38905f",
+        "language": "javascript"
+      },
+      {
+        "sha256": "78962aa6c7b51639797274e6cb96043f8ddbef8c3ee78ee91d883f28c6047946",
+        "language": "javascript"
+      },
+      {
+        "sha256": "801bb44186cb65b50e2783a2047111cdae8370ccbf7701416f377b2d27ce3d93",
+        "language": "text"
+      },
+      {
+        "sha256": "b4b31ece7654499b542b8e687d182ea8d22693088ca2a8a8c9fd14854abc1b93",
+        "language": "javascript"
+      },
+      {
+        "sha256": "dce89be14c2129d951ee36e453fff7437e9653e8837cef5ed7e86da5c69be384",
+        "language": "javascript"
+      },
+      {
+        "sha256": "1efffde2671f21672bf70d5dc5bbed699e808da580eaebb6fe8b5019d496a34c",
+        "language": "javascript"
+      },
+      {
+        "sha256": "d3fd433710e88b253007b9131bc9ad3e611d5325d38fea3d3db7b1737ab31e83",
+        "language": "javascript"
+      },
+      {
+        "sha256": "463462b6e05421dad15af7d09aa94db0f3ecbafd2fdb320082cd5f03356c7302",
+        "language": "javascript"
+      }
+    ],
+    "notes": [
+      "The original interactive demo buttons are preserved as source examples instead of runnable demos."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6113928170507109505",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/08/targeting-firefox-ie-7-and-ie-6-and.html",
+    "newPath": "/blog/targeting-firefox-ie-7-and-ie-6-and-older-browsers-via-css/",
+    "source": "src/posts/targeting-firefox-ie-7-and-ie-6-and-older-browsers-via-css.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6651535756161337381",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/08/how-many-blogs-are-you-subscribed-to.html",
+    "newPath": "/blog/how-many-blogs-are-you-subscribed-to/",
+    "source": "src/posts/how-many-blogs-are-you-subscribed-to.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-6003024793962535211",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/07/getting-things-done.html",
+    "newPath": "/blog/getting-things-done/",
+    "source": "src/posts/getting-things-done.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2090390527870430454",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/07/google-maps-stopped-working-few-days.html",
+    "newPath": "/blog/google-maps-stopped-working-a-few-days-ago/",
+    "source": "src/posts/google-maps-stopped-working-a-few-days-ago.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-449399569130947479",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/07/great-quote-from-ann-coulter.html",
+    "newPath": "/blog/great-quote-from-ann-coulter/",
+    "source": "src/posts/great-quote-from-ann-coulter.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8876647043414254908",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/output-namevalues-of-enum.html",
+    "newPath": "/blog/output-name-values-of-an-enum/",
+    "source": "src/posts/output-name-values-of-an-enum.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "ad1843d6ed4f24b3e6aac9e349337595d7bd18ac776ed3a95a44f4716a236e4d",
+        "language": "csharp"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4835997505173012762",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/windows-vista-uac.html",
+    "newPath": "/blog/the-windows-vista-uac/",
+    "source": "src/posts/the-windows-vista-uac.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "d6c5dff95a62f3001d20ac4d9f11bd68a05ef05ef28d136e4bb992ceed64e3da",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8065018071773351441",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/saving-as-drafts-instead-of-posts.html",
+    "newPath": "/blog/saving-as-drafts-instead-of-posts/",
+    "source": "src/posts/saving-as-drafts-instead-of-posts.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8092578772018818136",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/windows-vista-command-prompt-from-here.html",
+    "newPath": "/blog/windows-vista-command-prompt-from-here/",
+    "source": "src/posts/windows-vista-command-prompt-from-here.md",
+    "images": [
+      {
+        "originalSourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFWE-wK3nt-21BmJZGK6sZORU9C-wpG0RVM_mT1lRJ6pulS9a54av2moW6JRes2jAH9u9M4tVCnsFyxcANWEqbyJ8TSQkyL2BwxChMMmn6BNK2lCFtNlS-H4Gi48k6UCK17-Hn/s400/right-click-dos-prompt.jpg",
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFWE-wK3nt-21BmJZGK6sZORU9C-wpG0RVM_mT1lRJ6pulS9a54av2moW6JRes2jAH9u9M4tVCnsFyxcANWEqbyJ8TSQkyL2BwxChMMmn6BNK2lCFtNlS-H4Gi48k6UCK17-Hn/s1600/right-click-dos-prompt.jpg",
+        "publicPath": "/assets/blog/windows-vista-command-prompt-from-here/right-click-dos-prompt.jpg"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-7306438696327049896",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/visual-studio-file-comparison-settings.html",
+    "newPath": "/blog/visual-studio-file-comparison-settings/",
+    "source": "src/posts/visual-studio-file-comparison-settings.md",
+    "images": [
+      {
+        "originalSourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEittvcbjLeum0gIvwCaQVkhFBMp1ZzppS59zatAtV9IA7HEe-pyRSlp-8phB-3SYwRrQtQyPmQUBTVuqZ-xhfusR9_XXDIYPYr82XZn-05uBZ1zNLNb1AJAF5OplNrT0X8ZX7Da/s400/config-user-tools.jpg",
+        "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEittvcbjLeum0gIvwCaQVkhFBMp1ZzppS59zatAtV9IA7HEe-pyRSlp-8phB-3SYwRrQtQyPmQUBTVuqZ-xhfusR9_XXDIYPYr82XZn-05uBZ1zNLNb1AJAF5OplNrT0X8ZX7Da/s1600/config-user-tools.jpg",
+        "publicPath": "/assets/blog/visual-studio-file-comparison-settings/config-user-tools.jpg"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-5437270979488306060",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/use-reflection-to-compare-class.html",
+    "newPath": "/blog/use-reflection-to-compare-class-properties-with-enum-element-names/",
+    "source": "src/posts/use-reflection-to-compare-class-properties-with-enum-element-names.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "06764aee745a6b29b51f98265b0ca52532c046a8ee09ebfd4716cfb1d6b9097f",
+        "language": "csharp"
+      },
+      {
+        "sha256": "83c642164732114600be79eb46006e7e5322ef6cab9c5065919a1415f6be9021",
+        "language": "csharp"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8001441388174923051",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/03/universal-charging-pad.html",
+    "newPath": "/blog/universal-charging-pad/",
+    "source": "src/posts/universal-charging-pad.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-4595457524508839179",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/02/wish-list-for-google-docs-spreadsheets.html",
+    "newPath": "/blog/wish-list-for-google-docs-spreadsheets/",
+    "source": "src/posts/wish-list-for-google-docs-spreadsheets.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://elegantdevelopment.blogspot.com/2007/02/why-google-docs-spreadsheets-doesnt.html",
+        "newUrl": "/blog/why-google-docs-spreadsheets-doesn-t-work/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1605973119375727920",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/02/why-google-docs-spreadsheets-doesnt.html",
+    "newPath": "/blog/why-google-docs-spreadsheets-doesn-t-work/",
+    "source": "src/posts/why-google-docs-spreadsheets-doesn-t-work.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-122007716677388690",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/02/visual-studio-clipboard-ring-and-other.html",
+    "newPath": "/blog/visual-studio-clipboard-ring-and-other-keyboard-shortcuts/",
+    "source": "src/posts/visual-studio-clipboard-ring-and-other-keyboard-shortcuts.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-2633463652034231914",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/02/top-tv-shows.html",
+    "newPath": "/blog/top-tv-shows/",
+    "source": "src/posts/top-tv-shows.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-7991476774637055401",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/02/word-2007-blogging.html",
+    "newPath": "/blog/word-2007-blogging/",
+    "source": "src/posts/word-2007-blogging.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-1978544385345844971",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/01/disable-those-annoying-uac-popups-in.html",
+    "newPath": "/blog/disable-those-annoying-uac-popups-in-vista/",
+    "source": "src/posts/disable-those-annoying-uac-popups-in-vista.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-8804777988969999631",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/01/new-ui-formulaiting.html",
+    "newPath": "/blog/new-ui-formulating/",
+    "source": "src/posts/new-ui-formulating.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://www.wasatchwizard.com/",
+        "newUrl": "/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-116951717151729610",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2007/01/url-css-property-and-other-frequent.html",
+    "newPath": "/blog/the-url-css-property-and-other-frequent-css-pitfalls/",
+    "source": "src/posts/the-url-css-property-and-other-frequent-css-pitfalls.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-116534162562993596",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/12/search-for-kim-family-and-google-maps.html",
+    "newPath": "/blog/the-search-for-the-kim-family-and-google-maps/",
+    "source": "src/posts/the-search-for-the-kim-family-and-google-maps.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-116525644788627595",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/12/irs-wants-to-tax-online-gaming-virtual.html",
+    "newPath": "/blog/irs-wants-to-tax-online-gaming-virtual-assets/",
+    "source": "src/posts/irs-wants-to-tax-online-gaming-virtual-assets.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-116525791447992841",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/12/100-crack-for-blackberry-is-crap.html",
+    "newPath": "/blog/the-100-crack-for-blackberry-is-crap/",
+    "source": "src/posts/the-100-crack-for-blackberry-is-crap.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-116421781773845968",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/11/google-stars.html",
+    "newPath": "/blog/google-stars/",
+    "source": "src/posts/google-stars.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115894179597560913",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/09/rory-really-rocks.html",
+    "newPath": "/blog/rory-really-rocks/",
+    "source": "src/posts/rory-really-rocks.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115876944156151995",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/09/online-phonebooks.html",
+    "newPath": "/blog/online-phonebooks/",
+    "source": "src/posts/online-phonebooks.md",
+    "images": [
+      {
+        "originalSourceUrl": "http://www.wasatchwizard.com/personal/blog/images/Smiley.png",
+        "unavailable": true,
+        "alt": "8^)"
+      }
+    ],
+    "codeBlocks": [],
+    "notes": [
+      "The original smiley image is unavailable; its original text alternative is preserved."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115809516359311459",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/09/javascript-based-xml-parser.html",
+    "newPath": "/blog/javascript-based-xml-parser/",
+    "source": "src/posts/javascript-based-xml-parser.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://www.wasatchwizard.com/dev/JavaScript/XmlParser/Default.aspx",
+        "newUrl": "https://web.archive.org/web/*/http://www.wasatchwizard.com/dev/JavaScript/XmlParser/Default.aspx"
+      }
+    ],
+    "notes": [
+      "Links to retired Wasatch Wizard pages open the Internet Archive."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115591472851983632",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/08/media-players.html",
+    "newPath": "/blog/media-players/",
+    "source": "src/posts/media-players.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115576702485742961",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/08/found-this-list-of-good-interview.html",
+    "newPath": "/blog/found-this-list-of-good-interview-questions/",
+    "source": "src/posts/found-this-list-of-good-interview-questions.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115514206277075568",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/08/time-breakdown-of-modern-web.html",
+    "newPath": "/blog/time-breakdown-of-modern-web-development/",
+    "source": "src/posts/time-breakdown-of-modern-web-development.md",
+    "images": [
+      {
+        "originalSourceUrl": "http://photos1.blogger.com/blogger/3901/50/400/6a00c2251d2492f21900c225207881f219.png",
+        "sourceUrl": "https://photos1.blogger.com/blogger/3901/50/1600/6a00c2251d2492f21900c225207881f219.gif",
+        "publicPath": "/assets/blog/time-breakdown-of-modern-web-development/6a00c2251d2492f21900c225207881f219.gif"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115460792384141990",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/08/returning-dynamic-xml-from-c-web.html",
+    "newPath": "/blog/returning-dynamic-xml-from-c-web-services/",
+    "source": "src/posts/returning-dynamic-xml-from-c-web-services.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "13cee6d72d3be3297245740f636628790ee4be34c73f2afeca9676c736a100f3",
+        "language": "csharp"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115460924935289850",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/07/from-casual-looker-to-new-employee.html",
+    "newPath": "/blog/from-casual-looker-to-new-employee/",
+    "source": "src/posts/from-casual-looker-to-new-employee.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115460850078126953",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/07/monster-response.html",
+    "newPath": "/blog/monster-response/",
+    "source": "src/posts/monster-response.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115460743469267859",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/07/looking-for-new-job.html",
+    "newPath": "/blog/looking-for-a-new-job/",
+    "source": "src/posts/looking-for-a-new-job.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115213208269922465",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/07/windows-ce-file-scanner.html",
+    "newPath": "/blog/windows-ce-file-scanner/",
+    "source": "src/posts/windows-ce-file-scanner.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://www.wasatchwizard.com/downloads/ScanFiles.aspx",
+        "newUrl": "https://web.archive.org/web/*/http://www.wasatchwizard.com/downloads/ScanFiles.aspx"
+      }
+    ],
+    "notes": [
+      "Links to retired Wasatch Wizard pages open the Internet Archive."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115144204986941453",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/dealing-with-systemwindowsformsnumeric.html",
+    "newPath": "/blog/dealing-with-the-system-windows-forms-numericupdown/",
+    "source": "src/posts/dealing-with-the-system-windows-forms-numericupdown.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "3509a778f44caca951b19bc1ded108e76551641f0f52802e5e60bb5d169a8834",
+        "language": "csharp"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115142078293637956",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/cvs-commands.html",
+    "newPath": "/blog/cvs-commands/",
+    "source": "src/posts/cvs-commands.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115460688419204397",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/csbatch-c-based-windows-batch-file.html",
+    "newPath": "/blog/csbatch-a-c-based-windows-batch-file-preprocessor/",
+    "source": "src/posts/csbatch-a-c-based-windows-batch-file-preprocessor.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://www.wasatchwizard.com/downloads/CSBatch.aspx",
+        "newUrl": "https://web.archive.org/web/*/http://www.wasatchwizard.com/downloads/CSBatch.aspx"
+      }
+    ],
+    "notes": [
+      "Links to retired Wasatch Wizard pages open the Internet Archive."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115135875742392187",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/folderexists.html",
+    "newPath": "/blog/folderexists/",
+    "source": "src/posts/folderexists.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "260caaebb8657e736ed324032a744c68e79c2e7eab4513fc807acb2d54e58986",
+        "language": "cpp"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115030548407732171",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/show-tasks-in-windows-ce.html",
+    "newPath": "/blog/show-tasks-in-windows-ce/",
+    "source": "src/posts/show-tasks-in-windows-ce.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://www.wasatchwizard.com/downloads/ShowTasks.aspx",
+        "newUrl": "https://web.archive.org/web/*/http://www.wasatchwizard.com/downloads/ShowTasks.aspx"
+      }
+    ],
+    "notes": [
+      "Links to retired Wasatch Wizard pages open the Internet Archive."
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115031130509375413",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/blog-websites-only-show-me-unread.html",
+    "newPath": "/blog/blog-websites-only-show-me-unread-posts/",
+    "source": "src/posts/blog-websites-only-show-me-unread-posts.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-115030891674777640",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/devreadinessorg.html",
+    "newPath": "/blog/devreadiness-org/",
+    "source": "src/posts/devreadiness-org.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114952002996153793",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/beos-still-ranked-in-seventh-place.html",
+    "newPath": "/blog/beos-still-ranked-in-seventh-place/",
+    "source": "src/posts/beos-still-ranked-in-seventh-place.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114955398733321833",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/06/c-desktop-programming-assessment.html",
+    "newPath": "/blog/c-desktop-programming-assessment/",
+    "source": "src/posts/c-desktop-programming-assessment.md",
+    "images": [
+      {
+        "originalSourceUrl": "http://photos1.blogger.com/blogger/3901/50/320/cs-assessment.png",
+        "sourceUrl": "https://photos1.blogger.com/blogger/3901/50/1600/cs-assessment.png",
+        "publicPath": "/assets/blog/c-desktop-programming-assessment/cs-assessment.png"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114862319699848715",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/05/excellent-sidebar-content-for-web.html",
+    "newPath": "/blog/excellent-sidebar-content-for-web-developers/",
+    "source": "src/posts/excellent-sidebar-content-for-web-developers.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114848414755164211",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/05/file-permissions-for-normal-users-vs.html",
+    "newPath": "/blog/file-permissions-for-normal-users-vs-locked-down-users/",
+    "source": "src/posts/file-permissions-for-normal-users-vs-locked-down-users.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114773008396722047",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/05/using-shared-c-source-files-between.html",
+    "newPath": "/blog/using-shared-c-source-files-between-multiple-visual-studio-net-2003-projects/",
+    "source": "src/posts/using-shared-c-source-files-between-multiple-visual-studio-net-2003-projects.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114773137555348024",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/05/disable-built-in-support-for-zip-files.html",
+    "newPath": "/blog/disable-built-in-support-for-zip-files-in-windows/",
+    "source": "src/posts/disable-built-in-support-for-zip-files-in-windows.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114773176493288221",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/04/atlas-tasks-project-walk-through.html",
+    "newPath": "/blog/atlas-tasks-project-walk-through/",
+    "source": "src/posts/atlas-tasks-project-walk-through.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-114773067439156028",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2006/03/updated-my-personal-site-ui.html",
+    "newPath": "/blog/updated-my-personal-site-ui/",
+    "source": "src/posts/updated-my-personal-site-ui.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://www.wasatchwizard.com/",
+        "newUrl": "/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113514571105346361",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/12/create-virtual-directories-in-iis.html",
+    "newPath": "/blog/create-virtual-directories-in-iis-using-vbscript/",
+    "source": "src/posts/create-virtual-directories-in-iis-using-vbscript.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "d1727c1f828fdada3858922b8fede79fe2b3a1d93b548b0e692bfc88ac2e586b",
+        "language": "vbnet"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113457814756937881",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/12/landesk-handheld-manager.html",
+    "newPath": "/blog/landesk-handheld-manager/",
+    "source": "src/posts/landesk-handheld-manager.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113458253212817323",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/customizing-tools-menu-in-ldms.html",
+    "newPath": "/blog/customizing-the-tools-menu-in-ldms/",
+    "source": "src/posts/customizing-the-tools-menu-in-ldms.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "85c201b40b7752cb1300a9d6d61d57b43b8d335fecf1b338d2a7e10bbadf139e",
+        "language": "xml"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113114685864819152",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/agent-less-ldms-inventory-using.html",
+    "newPath": "/blog/agent-less-ldms-inventory-using-lddiscover-exe/",
+    "source": "src/posts/agent-less-ldms-inventory-using-lddiscover-exe.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "889f69ba3cde2f1d2645b5b6e5f4ea426ec532cc369d96c555174d51e6a5c2f1",
+        "language": "text"
+      },
+      {
+        "sha256": "84261941657378ccfad5de3f6d29aae95828273dbb39b9c9dfc0834f064ff5e1",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113143856401199991",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/cross-platform-development.html",
+    "newPath": "/blog/cross-platform-development/",
+    "source": "src/posts/cross-platform-development.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113142591494503559",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/google-classifieds.html",
+    "newPath": "/blog/google-classifieds/",
+    "source": "src/posts/google-classifieds.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113143854629071997",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/computers-of-future.html",
+    "newPath": "/blog/computers-of-the-future/",
+    "source": "src/posts/computers-of-the-future.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113114133539322451",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/bookmarks-application-and-search.html",
+    "newPath": "/blog/bookmarks-application-and-search/",
+    "source": "src/posts/bookmarks-application-and-search.md",
+    "images": [],
+    "codeBlocks": [],
+    "linkChanges": [
+      {
+        "originalUrl": "http://elegantdevelopment.blogspot.com/2005/11/online-favorites-and-bookmarks.html",
+        "newUrl": "/blog/online-favorites-and-bookmarks/"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113113154065037085",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/online-favorites-and-bookmarks.html",
+    "newPath": "/blog/online-favorites-and-bookmarks/",
+    "source": "src/posts/online-favorites-and-bookmarks.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113095253122577418",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/handheld-devices.html",
+    "newPath": "/blog/handheld-devices/",
+    "source": "src/posts/handheld-devices.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113096162334826998",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/setting-up-pocket-pc-2002-development.html",
+    "newPath": "/blog/setting-up-a-pocket-pc-2002-development-environment/",
+    "source": "src/posts/setting-up-a-pocket-pc-2002-development-environment.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113095179740003102",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/sony-drm-part-ii.html",
+    "newPath": "/blog/sony-drm-part-ii/",
+    "source": "src/posts/sony-drm-part-ii.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113095049369584461",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/11/sony-drm.html",
+    "newPath": "/blog/sony-drm/",
+    "source": "src/posts/sony-drm.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113043293178941901",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/10/difference-between-varchar-and.html",
+    "newPath": "/blog/the-difference-between-varchar-and-nvarchar/",
+    "source": "src/posts/the-difference-between-varchar-and-nvarchar.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "c744efae4505fe246b77f7a5838231f0c4c7ed7760202d6168bb43c831e6c34a",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-112930431341618262",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/10/future-of-web.html",
+    "newPath": "/blog/the-future-of-the-web/",
+    "source": "src/posts/the-future-of-the-web.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113114584081774511",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/09/build-wish-list.html",
+    "newPath": "/blog/build-wish-list/",
+    "source": "src/posts/build-wish-list.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113114567208420519",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/09/state-of-builds.html",
+    "newPath": "/blog/the-state-of-builds/",
+    "source": "src/posts/the-state-of-builds.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113113601733274811",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/08/google-desktop-search-2-beta-2-and.html",
+    "newPath": "/blog/google-desktop-search-2-beta-2-and-sidebar/",
+    "source": "src/posts/google-desktop-search-2-beta-2-and-sidebar.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113113577201705879",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/08/google-talk.html",
+    "newPath": "/blog/google-talk/",
+    "source": "src/posts/google-talk.md",
+    "images": [
+      {
+        "originalSourceUrl": "http://photos1.blogger.com/blogger/3901/50/320/GoogleTalk.gif",
+        "sourceUrl": "https://photos1.blogger.com/blogger/3901/50/1600/GoogleTalk.gif",
+        "publicPath": "/assets/blog/google-talk/GoogleTalk.gif"
+      },
+      {
+        "originalSourceUrl": "http://photos1.blogger.com/blogger/3901/50/320/GoogleTalk2.gif",
+        "sourceUrl": "https://photos1.blogger.com/blogger/3901/50/1600/GoogleTalk2.gif",
+        "publicPath": "/assets/blog/google-talk/GoogleTalk2.gif"
+      }
+    ],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113113948686168848",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/08/productivity-lost.html",
+    "newPath": "/blog/productivity-lost/",
+    "source": "src/posts/productivity-lost.md",
+    "images": [],
+    "codeBlocks": []
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113114434814718432",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/08/wscriptshell-expandenvironmentstrings.html",
+    "newPath": "/blog/wscript-shell-expandenvironmentstrings/",
+    "source": "src/posts/wscript-shell-expandenvironmentstrings.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "182c73d0473ceb0ce4a47ebdde7f9363941981432388c4e89280459c8b890a63",
+        "language": "text"
+      },
+      {
+        "sha256": "2f25104e791c32af9e3e6506295558bf976569d956cb23bbd674f2fdb704e357",
+        "language": "text"
+      }
+    ]
+  },
+  {
+    "bloggerId": "tag:blogger.com,1999:blog-17855063.post-113088631274258727",
+    "originalUrl": "https://elegantdevelopment.blogspot.com/2005/07/problems-with-pocket-pc-event.html",
+    "newPath": "/blog/problems-with-pocket-pc-event-notifications-using-cerunappatevent-cerunappattime-and-cesetusernotificationex/",
+    "source": "src/posts/problems-with-pocket-pc-event-notifications-using-cerunappatevent-cerunappattime-and-cesetusernotificationex.md",
+    "images": [],
+    "codeBlocks": [
+      {
+        "sha256": "a3290e93ec2bb9b7c16dca10d48d957e86a0bd148544bae586f9c79634c7dfbf",
+        "language": "text"
+      }
+    ]
   }
 ]

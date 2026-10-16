@@ -9,6 +9,7 @@
     "build": "node scripts/clean.mjs && eleventy",
     "watch": "node scripts/clean.mjs && eleventy --watch",
     "verify": "node scripts/clean.mjs && eleventy && node scripts/verify.mjs",
+    "verify:migration": "node scripts/clean.mjs && eleventy && node scripts/verify.mjs --migration",
     "export:blogger": "node scripts/export-blogger.mjs",
     "import:blogger": "node scripts/import-blogger.mjs"
   },

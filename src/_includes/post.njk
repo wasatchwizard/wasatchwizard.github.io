@@ -6,6 +6,7 @@ layout: base.njk
     <h1>{{ title }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>{% if topics.length %} · {{ topics | join(' · ') }}{% endif %}</p>
   </header>
+  {% if migrationNote %}<p class="migration-note">{{ migrationNote }}</p>{% endif %}
   {{ content | safe }}
   <p class="post-back"><a href="/blog/">All posts</a></p>
 </article>

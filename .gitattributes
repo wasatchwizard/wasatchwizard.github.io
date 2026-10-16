@@ -52,8 +52,9 @@ Dockerfile     text
 ## DOCUMENTATION
 *.markdown   text
 *.md         text
-# Preserve the historical macro's original code whitespace, including two line-end spaces.
-src/posts/visual-studio-macro-to-hide-show-the-output-window-after-a-build.md whitespace=-blank-at-eol
+# Imported Markdown uses intentional hard-break spaces and preserves historical
+# code whitespace. Do not strip either during Git whitespace checks.
+src/posts/*.md whitespace=-blank-at-eol
 *.mdwn       text
 *.mdown      text
 *.mkd        text

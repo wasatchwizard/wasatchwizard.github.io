@@ -14,7 +14,13 @@ function projectTimestamp(project) {
 }
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, { errorOnInvalidLanguage: true });
+  eleventyConfig.amendLibrary("md", markdown => {
+    const highlight = markdown.options.highlight;
+    // The plugin's explicit `text` branch returns unescaped HTML. Let Markdown
+    // escape plain-text fences, including XML examples and <file> placeholders.
+    markdown.set({ highlight: (code, language) => language === "text" ? "" : highlight(code, language) });
+  });
   eleventyConfig.setNunjucksEnvironmentOptions({ autoescape: true });
   // Code samples are content, not Liquid templates. Leave their braces alone.
   eleventyConfig.setTemplateFormats(["njk", "md"]);

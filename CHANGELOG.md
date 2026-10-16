@@ -2,6 +2,21 @@
 
 ## 2026-10-16
 
+- Migrated the remaining 122 Blogger entries, bringing the published archive
+  to all 124 posts from 2005–2016 with descriptive URLs and original dates.
+  Preserved prose and code, restored HTML code line breaks, retained five data
+  tables, and downloaded all 11 available original images. The unavailable
+  decorative smiley keeps its original text alternative.
+- Converted legacy interactive examples to readable static code, linked related
+  posts locally, and routed four retired Wasatch Wizard links to archive lookups.
+  Added resumable, non-overwriting bulk import and explicit provenance notes.
+- Fixed plain-text code escaping so XML and angle-bracket placeholders render
+  as text. Added a separate full migration audit to preserve future Markdown
+  editing, and verified all 124 articles against the original archive.
+- Verified 66 rendered code blocks, all article links and assets, RSS/sitemap
+  coverage, repeat-import preservation, overwrite refusal, and later-edit
+  behavior. Reviewed desktop/mobile output, local screenshots, and keyboard
+  scrolling of wide tables without page overflow.
 - Added Home / Blog / Projects navigation, Markdown-controlled pinned home
   posts, and up to three recent unpinned posts. Kept the complete blog archive
   chronological and pinned the Raspberry Pi article as the initial example.

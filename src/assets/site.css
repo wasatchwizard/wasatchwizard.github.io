@@ -166,6 +166,10 @@ pre {
 .token.operator, .token.punctuation { color: #515961; }
 table { border-collapse: collapse; }
 th, td { padding: 0.5rem; border: 1px solid #d8dde1; text-align: left; }
+/* Historical data tables scroll within the article instead of widening the page. */
+.table-scroll { max-width: 100%; overflow-x: auto; margin-block: 1.5rem; }
+.table-scroll p:last-child { margin-bottom: 0; }
+.migration-note { padding-left: 1rem; border-left: 3px solid #d8dde1; color: #59616a; font-size: 0.9rem; }
 
 .site-footer {
   margin-top: 3rem;

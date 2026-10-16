@@ -160,12 +160,30 @@ the completed snapshot before replacing the old one. If comments cannot be
 retrieved, their status is recorded as unavailable rather than zero comments.
 Exports are not fetched during normal builds or GitHub publishing.
 
-The first two posts are the Raspberry Pi article from December 2012 and the
-Visual Studio Output window macro from June 2011. Their dates, original prose,
-and code comments are retained. The Raspberry Pi image is downloaded locally;
-the macro's code is extracted from its old line-number table without changing
-the code text. Only these two entries are published initially; the remaining
-posts and comments stay in the archive for later migration.
+All **124 posts**, published between July 2005 and February 2016, are migrated
+to editable Markdown with descriptive URLs, original dates, labels, prose, and
+code. The original Raspberry Pi and Visual Studio macro entries retain their
+handwritten summaries and pin setting. The archive includes personal posts as
+well as technical articles; no entries have been silently filtered out.
+
+Eleven original images are stored locally. The small smiley in “Online
+phonebooks” returns 404 and has no available Internet Archive capture; its
+original `8^)` alternative is preserved instead of a broken image. The original
+HTML and image URL remain in the JSON archive and import mapping.
+
+Legacy code line numbers and font styles are replaced by fenced code blocks,
+restoring HTML line breaks and using ordinary spaces for nonbreaking-space
+indentation. Code comments and internal whitespace are retained. Five data
+tables use cleaned HTML within their Markdown files to preserve cells, links,
+and column spans; wide tables scroll within the article.
+
+The JavaScript null/undefined article's demo scripts are displayed as code;
+the original buttons are removed. The Sitecore bookmarklet source is retained
+as code with a note about its retired draggable links. Links between migrated
+Blogger posts point to the new local URLs. Four retired Wasatch Wizard download
+or application links open Internet Archive lookups, with a note in each article;
+this does not guarantee that those old downloads have been captured. Other
+external links remain as originally published and may have aged or disappeared.
 
 To import another post from the saved snapshot:
 
@@ -174,11 +192,21 @@ npm run import:blogger -- https://elegantdevelopment.blogspot.com/YEAR/MONTH/ori
 npm run verify
 ```
 
+To import all unmapped entries from a refreshed snapshot:
+
+```powershell
+npm run import:blogger -- --all
+```
+
 The importer creates editable Markdown, downloads linked images, and records
 the original URL and new descriptive path in `content-export/import-map.json`.
-It refuses to overwrite existing Markdown or images; edit imported posts
-directly. Embedded scripts/media, data tables, and ambiguous code tables require
-manual conversion. Review conversions before committing.
+It refuses to overwrite existing Markdown or images. Bulk mode skips entries
+already in the mapping, preserving later edits; running it again is a no-op.
+The mapping also records image provenance, converted code hashes, link changes,
+and migration notes. External scripts, embedded media, ambiguous code tables,
+and substantive images that cannot be downloaded still require manual review.
+Review conversions before committing. Normal builds need neither Blogger nor
+access to the original image hosts.
 Original Blogger URL paths are not retained as new routes. The mapping is for
 the future redirect work on Blogger; publishing this site does not modify the
 old blog. Comments are archived but are not rendered as a new comments system.
@@ -186,13 +214,20 @@ old blog. Comments are archived but are not rendered as a new comments system.
 ## Verify
 
 `npm run verify` performs a clean build and checks local page/asset references,
-descriptive URLs, exported counts, original imported dates, image references,
-exact code text (including comments and whitespace), RSS/sitemap output, and
+descriptive URLs, archive/mapping completeness, image references, RSS/sitemap output, and
 the absence of browser scripts or accidentally published source directories.
 It also checks shared navigation, home-list separation, project ordering,
 project-page links, and sitemap coverage.
 Also check desktop/mobile layout, header appearance, keyboard focus, images,
 and horizontally scrolling code blocks in the browser.
+
+`npm run verify:migration` additionally compares each imported article's date,
+title, complete visible prose, data-table cells, original code with restored
+line breaks, converted code hashes, and image counts against the saved archive.
+This stricter audit passed for the completed migration. It is deliberately
+separate from normal build verification so subsequent handwritten content edits
+do not require changing the historical archive. Existing later edits can make
+the historical-parity audit fail even when the site itself is valid.
 
 ## Publish
 
