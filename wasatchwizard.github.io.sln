@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "waswiz", "C:\Users\kodyb\Documents\Development\Websites\wasatchwizard\Websites\wasatchwizard.github.io", "{76D3F03C-0261-45F4-AFBD-8119C60C69D7}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "waswiz", "C:\Users\kodyb\Documents\Development\Websites\wasatchwizard\wasatchwizard.com (wasatchwizard.github.io)", "{76D3F03C-0261-45F4-AFBD-8119C60C69D7}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51372"
-		Debug.AspNetCompiler.PhysicalPath = "C:\Users\kodyb\Documents\Development\Websites\wasatchwizard\Websites\wasatchwizard.github.io"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Users\kodyb\Documents\Development\Websites\wasatchwizard\wasatchwizard.com (wasatchwizard.github.io)"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51372\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
