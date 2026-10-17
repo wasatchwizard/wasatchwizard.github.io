@@ -23,6 +23,26 @@ if (archive.comments.status === "exported") {
   assert.equal(archive.comments.count, archive.comments.entries.length);
   assert.equal(Number(archive.comments.metadata.openSearch$totalResults.$t), archive.comments.count);
 }
+async function isFile(file) {
+  try { return (await stat(file)).isFile(); }
+  catch (error) {
+    if (error.code === "ENOENT") return false;
+    throw error;
+  }
+}
+
+// Archive mappings remain historical records when a post is disabled. Require
+// an explicit disabled source so an accidentally missing file still fails.
+const disabledPosts = new Set();
+for (const mapping of mappings) {
+  const [active, disabled] = await Promise.all([
+    isFile(mapping.source), isFile(`${mapping.source}.disabled`),
+  ]);
+  assert.ok(active || disabled, `Missing mapped post source: ${mapping.source} (or .disabled)`);
+  assert.ok(!(active && disabled), `Both active and disabled post sources exist: ${mapping.source}`);
+  if (disabled) disabledPosts.add(mapping.newPath);
+}
+
 const documents = new Map();
 async function walk(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -71,7 +91,15 @@ assert.ok(home && blog && projectIndex, "All three tab destinations must exist")
 const postLinks = element => [...element.querySelectorAll(".post-list h2 a, .post-list h3 a")]
   .map(link => link.getAttribute("href"));
 const blogLinks = postLinks(blog);
-for (const mapping of mappings) assert.ok(blogLinks.includes(mapping.newPath), `Missing from Blog: ${mapping.newPath}`);
+for (const mapping of mappings) {
+  if (disabledPosts.has(mapping.newPath)) {
+    assert.ok(!blogLinks.includes(mapping.newPath), `Disabled post appears in Blog: ${mapping.newPath}`);
+    assert.ok(!documents.has(path.join(output, mapping.newPath, "index.html")),
+      `Disabled post must not be built: ${mapping.newPath}`);
+  } else {
+    assert.ok(blogLinks.includes(mapping.newPath), `Missing from Blog: ${mapping.newPath}`);
+  }
+}
 const homeLinks = postLinks(home);
 assert.equal(new Set(homeLinks).size, homeLinks.length, "Home must not repeat pinned posts in Recent posts");
 for (const link of homeLinks) assert.ok(blogLinks.includes(link), "Home posts must also appear in Blog");
@@ -109,6 +137,8 @@ for (const mapping of mappings) {
   assert.match(mapping.newPath, /^\/blog\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/);
   const original = archive.posts.find(post => post.id.$t === mapping.bloggerId);
   assert.ok(original, mapping.originalUrl);
+  // Disabled sources are retained, but have no rendered page to migration-audit.
+  if (disabledPosts.has(mapping.newPath)) continue;
   const source = await readFile(mapping.source, "utf8");
   const built = documents.get(path.join(output, mapping.newPath, "index.html"));
   assert.ok(built, mapping.newPath);
@@ -177,6 +207,10 @@ for (const name of ["feed.xml", "sitemap.xml"]) {
   const doc = new DOMParser().parseFromString(xml, "text/xml");
   assert.ok(doc.documentElement);
   if (name === "feed.xml") assert.equal(doc.querySelectorAll("item").length, blogLinks.length);
+  for (const disabledPath of disabledPosts) {
+    assert.ok(!xml.includes(`https://www.wasatchwizard.com${disabledPath}`),
+      `Disabled post appears in ${name}: ${disabledPath}`);
+  }
 }
 const css = await readFile("src/assets/site.css", "utf8");
 assert.ok(!/@import|https?:\/\//.test(css), "Styles and fonts must load locally");
@@ -189,6 +223,6 @@ for (const privatePath of ["content-export", "scripts", "node_modules", "package
 }
 console.log(`Verified ${documents.size} static pages, local links/assets, descriptive URLs, RSS/sitemap, and no browser scripts.`);
 console.log(`Archive: ${archive.postCount} posts; public comments: ${archive.comments.count ?? archive.comments.status}.`);
-console.log(`Mapped ${mappings.length} imported posts to published pages.`);
-if (auditMigration) console.log("Migration audit: original dates, titles, prose, tables, images, and code text verified against the archive.");
+console.log(`Mapped ${mappings.length} imported posts: ${mappings.length - disabledPosts.size} published, ${disabledPosts.size} disabled.`);
+if (auditMigration) console.log("Migration audit: published mapped posts retain their original dates, titles, prose, tables, images, and code text.");
 console.log(`Navigation, pinned/recent post lists, and ${listedProjects.length} project pages verified.`);

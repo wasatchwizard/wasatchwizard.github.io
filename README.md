@@ -62,6 +62,20 @@ Use fenced code blocks with a language such as `vbnet`, `csharp`, or `javascript
 Highlighting happens during the build. Put images under `src/assets/blog/` and
 reference them with `/assets/blog/...` paths.
 
+### Disable a post
+
+Rename `src/posts/example.md` to `src/posts/example.md.disabled` to stop
+publishing it. Remove `.disabled` to publish it again at its original URL.
+Eleventy excludes it from its page, Home, Blog, RSS, and the sitemap. Keep only
+one filename; verification rejects duplicate active/disabled sources for imported posts.
+
+Imported posts keep their original archive and mapping records. Verification
+accepts an explicitly disabled source, checks that it is not published, and
+still rejects a missing source file. The optional migration audit compares
+published imported posts with the archive; disabled posts have no rendered page
+to compare. Re-importing the full archive skips mapped posts, so it does not
+recreate a disabled entry.
+
 ### Pin posts on Home
 
 Add `pinned: true` to a post's front matter to feature it on Home. Pinned posts

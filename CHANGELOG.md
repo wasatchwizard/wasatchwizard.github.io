@@ -2,6 +2,13 @@
 
 ## 2026-10-17
 
+- Allowed `.md.disabled` imported blog posts during verification while retaining
+  every archive/mapping record. Disabled posts must be absent from rendered
+  pages, listings, RSS, and the sitemap; missing sources and active/disabled
+  duplicates still fail. Disabled the Los Cucos entry by filename only.
+  Verified 183 pages with 123 published/1 disabled imported posts, the full
+  published-post migration audit, re-enabling, stale-output refusal, missing
+  and duplicate source refusals, and unchanged disabled-source bytes.
 - Unified blog entries and project details under one shared layout and styles
   for the upper return link, title, summary, metadata, and body spacing. Moved
   "All posts" above blog titles and retained the approved project source icon.
