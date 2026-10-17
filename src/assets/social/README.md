@@ -8,6 +8,8 @@ They are served locally as images. The site does not load Bootstrap CSS,
 JavaScript, an icon font, or an external icon service.
 
 The project catalog also uses the GitHub silhouette inline in `src/projects.njk`,
-with an added arrow pointing up and right to mark the external repository link.
+with an arrow overlaid on its upper-right corner to mark the external repository
+link. A thick white stroke separates the arrow from the silhouette in the compact
+20-pixel icon.
 
 The upstream MIT license is included in `LICENSE`.
