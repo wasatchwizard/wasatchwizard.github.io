@@ -1,0 +1,5 @@
+{% macro projectMeta(github) %}
+{% if github.language or github.pushedAt or github.archived %}
+<p class="post-meta">{% if github.language %}{{ github.language }}{% endif %}{% if github.pushedAt %}{% if github.language %} · {% endif %}Updated <time datetime="{{ github.pushedAt }}">{{ github.pushedAt | readableDate }}</time>{% endif %}{% if github.archived %}{% if github.language or github.pushedAt %} · {% endif %}Archived{% endif %}</p>
+{% endif %}
+{% endmacro %}

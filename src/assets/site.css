@@ -150,7 +150,13 @@ li + li { margin-top: 0.35rem; }
 .post-list > li, .project-list > li { margin-block: 1.75rem; }
 .post-list h2, .post-list h3, .project-list h2 { margin: 0 0 0.35rem; font-size: 1.2rem; }
 .post-list .post-meta { margin-bottom: 0.5rem; }
-.project-heading { display: flex; align-items: center; gap: 0.35rem; }
+/* Keep each catalog entry compact, with space between projects rather than between its lines. */
+.project-list h2, .project-list p { margin-bottom: 0; }
+.project-heading { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.75rem; }
+.project-heading h1 { min-width: 0; margin-bottom: 0; }
+.project-detail .intro { margin-bottom: 0.35rem; }
+.project-detail .post-meta { margin-bottom: 0; }
+.project-back { margin-bottom: 1.25rem; }
 .project-source-link {
   display: inline-flex;
   flex-shrink: 0;

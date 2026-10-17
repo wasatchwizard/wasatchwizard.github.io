@@ -2,6 +2,13 @@
 
 ## 2026-10-16
 
+- Matched the approved project layouts: compact title/summary/metadata entries
+  in the catalog, and an upper "All projects" link, title-adjacent GitHub icon,
+  summary, and single metadata line on individual pages. Shared the optional
+  language/date/archive markup and retained the approved SVG, fonts, header,
+  readable width, and handwritten project content. Verified 184 static pages
+  and 56 projects, desktop/320-pixel layouts, navigation, keyboard focus, and
+  browser errors; recorded the visual comparison in `design-qa.md`.
 - Replaced the Projects catalog's separate "Source on GitHub" text links with
   a compact 20-pixel Octocat SVG beside each project title. Overlaid the
   external-link arrow on the upper-right corner with a thick white outline.
