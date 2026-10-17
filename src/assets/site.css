@@ -150,6 +150,18 @@ li + li { margin-top: 0.35rem; }
 .post-list > li, .project-list > li { margin-block: 1.75rem; }
 .post-list h2, .post-list h3, .project-list h2 { margin: 0 0 0.35rem; font-size: 1.2rem; }
 .post-list .post-meta { margin-bottom: 0.5rem; }
+.project-heading { display: flex; align-items: center; gap: 0.35rem; }
+.project-source-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border-radius: 0.25rem;
+}
+.project-source-link:hover, .project-source-link:focus-visible { background: #f3f5f7; }
+.project-source-link svg { display: block; }
 .post-back { margin-top: 2rem; }
 .prose img { display: block; max-width: 100%; height: auto; margin-block: 1.5rem; }
 blockquote { margin: 1.5rem 0; padding-left: 1.25rem; border-left: 3px solid #d8dde1; color: #515961; }

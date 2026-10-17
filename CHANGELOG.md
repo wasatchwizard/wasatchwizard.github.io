@@ -2,6 +2,11 @@
 
 ## 2026-10-16
 
+- Replaced the Projects catalog's separate "Source on GitHub" text links with
+  an Octocat SVG and external-link arrow beside each project title. Kept
+  project-specific accessible labels, tooltips, visible keyboard focus, and
+  44-pixel link targets. Verified the desktop preview without horizontal
+  overflow and passed `npm run verify` (184 pages, 56 published projects).
 - Added `.md.disabled` project support to the local refresh task: metadata
   updates target the disabled filename without recreating a published Markdown
   page. Documented disabling/re-enabling by renaming and verified ignored pages,
