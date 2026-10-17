@@ -2,6 +2,18 @@
 
 ## 2026-10-17
 
+- Added `dotask rebuild`: refresh GitHub project Markdown, then clean, build,
+  and verify the complete Eleventy site using Node directly. It does not access
+  Blogger, commit, push, or deploy, and stops at the first failing step.
+- Added `.md.unpublished` as a blog publication alias alongside `.md.disabled`.
+  Shared source-variant handling between verification and the archival importer,
+  preserving unpublished files and rejecting conflicting copies or missing sources.
+- Verified metadata-only task help, rebuilds from a source subdirectory, failure
+  before build on HTTP 503, authored-content preservation, fork exclusion,
+  unpublished-page exclusion, guarded historical imports, and re-enabling.
+  A real GitHub rebuild and migration audit passed (183 pages, 123 published
+  posts, 1 disabled); refreshed metadata for tcmd-plugins and the still-disabled
+  kodybrown project. Used the existing newer source-built dotask runner.
 - Allowed `.md.disabled` imported blog posts during verification while retaining
   every archive/mapping record. Disabled posts must be absent from rendered
   pages, listings, RSS, and the sitemap; missing sources and active/disabled

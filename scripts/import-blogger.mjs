@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import path from "node:path";
 import TurndownService from "turndown";
 import { parseHTML } from "linkedom";
+import { postSourceVariants } from "./post-sources.mjs";
 
 const archive = JSON.parse(await readFile("content-export/blogger.json", "utf8"));
 const args = process.argv.slice(2);
@@ -74,8 +75,11 @@ for (const entry of entries) {
   const title = titleFor(entry);
   const slug = slugFor(entry);
   const output = `src/posts/${slug}.md`;
-  try { await access(output); throw new Error(`Already exists; edit Markdown directly: ${output}`); }
-  catch (error) { if (error.code !== "ENOENT") throw error; }
+  // An explicit historical import must not republish an intentionally hidden post.
+  for (const existing of postSourceVariants(output)) {
+    try { await access(existing); throw new Error(`Already exists; edit Markdown directly: ${existing}`); }
+    catch (error) { if (error.code !== "ENOENT") throw error; }
+  }
   const originalUrl = originalUrlFor(entry);
   // A mistyped CODE opener in one article would otherwise swallow its prose.
   const html = entry.content.$t.replace(/<cod>([^<]*)<\/code>/gi, "<code>$1</code>");

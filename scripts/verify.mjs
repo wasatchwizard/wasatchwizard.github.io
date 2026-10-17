@@ -3,6 +3,7 @@ import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { parseHTML, DOMParser } from "linkedom";
+import { postSourceVariants } from "./post-sources.mjs";
 
 const output = path.resolve("_site");
 // Exact archive parity is a migration audit, not a permanent ban on editing posts.
@@ -31,16 +32,16 @@ async function isFile(file) {
   }
 }
 
-// Archive mappings remain historical records when a post is disabled. Require
-// an explicit disabled source so an accidentally missing file still fails.
+// Archive mappings remain historical records when a post is unpublished. Require
+// one explicit source variant so missing files and conflicting copies still fail.
 const disabledPosts = new Set();
 for (const mapping of mappings) {
-  const [active, disabled] = await Promise.all([
-    isFile(mapping.source), isFile(`${mapping.source}.disabled`),
-  ]);
-  assert.ok(active || disabled, `Missing mapped post source: ${mapping.source} (or .disabled)`);
-  assert.ok(!(active && disabled), `Both active and disabled post sources exist: ${mapping.source}`);
-  if (disabled) disabledPosts.add(mapping.newPath);
+  const variants = postSourceVariants(mapping.source);
+  const exists = await Promise.all(variants.map(isFile));
+  const present = variants.filter((_, index) => exists[index]);
+  assert.ok(present.length, `Missing mapped post source: expected one of ${variants.join(", ")}`);
+  assert.equal(present.length, 1, `Conflicting post source variants: ${present.join(", ")}`);
+  if (!exists[0]) disabledPosts.add(mapping.newPath);
 }
 
 const documents = new Map();

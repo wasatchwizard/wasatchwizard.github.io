@@ -1,0 +1,15 @@
+description: Refresh GitHub project pages, then build and verify the complete static website.
+
+steps:
+  - run: refresh-projects
+  # Run the same clean/build/verify sequence as npm run verify. Calling Node
+  # directly also works on Windows without an npm.cmd shell wrapper.
+  - exec:
+      executable: node
+      arguments: [scripts/clean.mjs]
+  - exec:
+      executable: node
+      arguments: [node_modules/@11ty/eleventy/cmd.cjs]
+  - exec:
+      executable: node
+      arguments: [scripts/verify.mjs]

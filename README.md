@@ -36,6 +36,27 @@ or choose a free port such as 8090. Serve `_site`, not the source checkout.
 `npm run watch` rebuilds as content changes; run gostatic in a second terminal.
 The watcher does not inject live-reload JavaScript into the site.
 
+## Rebuild everything
+
+Run `dotask rebuild` from the website root. It calls `refresh-projects`, then
+runs the same clean/Eleventy-build/verification sequence as `npm run verify`.
+All local blog Markdown is compiled during that build; no separate blog refresh
+or Blogger access is needed. The first failing step stops the workflow.
+
+The task updates project source files and generates verified `_site` output.
+Review and commit those source changes yourself; pushing master triggers the
+existing GitHub Pages deployment. The task does not commit, push, or deploy.
+For an offline rebuild without refreshing GitHub metadata, use `npm run verify`.
+Dependencies must already be installed with `npm ci`.
+
+This needs the same recent dotask runner as `refresh-projects` below. If PATH
+still resolves to the older installed runner, use the existing source build:
+
+```powershell
+cd C:\Users\kodyb\Projects\WasatchWizard.com\www.wasatchwizard.com
+& C:\tmp\_rust\dotask\target\release\dotask.exe rebuild
+```
+
 ## Write a post
 
 Create `src/posts/a-descriptive-title.md`:
@@ -64,17 +85,21 @@ reference them with `/assets/blog/...` paths.
 
 ### Disable a post
 
-Rename `src/posts/example.md` to `src/posts/example.md.disabled` to stop
-publishing it. Remove `.disabled` to publish it again at its original URL.
+Rename `src/posts/example.md` to either `src/posts/example.md.disabled` or
+`src/posts/example.md.unpublished` to stop publishing it. Both suffixes have the
+same effect. Remove the suffix to publish it again at its original URL.
 Eleventy excludes it from its page, Home, Blog, RSS, and the sitemap. Keep only
-one filename; verification rejects duplicate active/disabled sources for imported posts.
+one source variant; verification rejects conflicting variants of imported posts.
+These suffixes control website publication, not access to committed source files
+in the public GitHub repository.
 
 Imported posts keep their original archive and mapping records. Verification
 accepts an explicitly disabled source, checks that it is not published, and
 still rejects a missing source file. The optional migration audit compares
 published imported posts with the archive; disabled posts have no rendered page
 to compare. Re-importing the full archive skips mapped posts, so it does not
-recreate a disabled entry.
+recreate an unpublished entry. Explicit historical imports also refuse to create
+a publishing `.md` file when either unpublished variant already exists.
 
 ### Pin posts on Home
 
