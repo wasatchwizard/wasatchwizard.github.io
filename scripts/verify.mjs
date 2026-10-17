@@ -165,7 +165,8 @@ for (const mapping of mappings) {
     if (/^\s*\d+(?:\s+\d+)*\s*$/.test(pre.textContent)) pre.remove();
   }
   const article = built.querySelector("article").cloneNode(true);
-  for (const node of article.querySelectorAll("header, .post-back, .migration-note")) node.remove();
+  // Shared detail navigation and migration notes are not original Blogger prose.
+  for (const node of article.querySelectorAll("header, .detail-back, .migration-note")) node.remove();
   assert.equal(article.textContent.replace(/\s/g, ""), originalDocument.body.textContent.replace(/\s/g, ""),
     `All original prose and code must survive conversion: ${mapping.newPath}`);
   assert.ok(sitemap.includes(`https://www.wasatchwizard.com${mapping.newPath}`));

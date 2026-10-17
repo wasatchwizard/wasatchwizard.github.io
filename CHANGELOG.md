@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-17
+
+- Unified blog entries and project details under one shared layout and styles
+  for the upper return link, title, summary, metadata, and body spacing. Moved
+  "All posts" above blog titles and retained the approved project source icon.
+  Updated the historical-prose audit to exclude the shared navigation.
+- Added content-versioned stylesheet links to prevent stale browser CSS from
+  separating the project title and icon. Verified version changes during an
+  actual watch rebuild, the shared shell and CSS URL on all 180 detail pages,
+  desktop/320-pixel layouts and return navigation, and the complete migration
+  audit (184 pages, 124 posts, 56 projects; original prose/code/images retained).
+
 ## 2026-10-16
 
 - Matched the approved project layouts: compact title/summary/metadata entries

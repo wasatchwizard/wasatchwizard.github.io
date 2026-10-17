@@ -1,4 +1,6 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 function publishedPosts(api) {
   return api.getFilteredByGlob("./src/posts/*.md")
@@ -42,6 +44,13 @@ export default function (eleventyConfig) {
   }).format(new Date(value)));
   eleventyConfig.addFilter("isoDate", value => new Date(value).toISOString().slice(0, 10));
   eleventyConfig.addFilter("rssDate", value => new Date(value).toUTCString());
+  // Version asset requests by their contents so new markup does not reuse stale browser CSS.
+  // Read during rendering rather than config initialization so watch rebuilds see CSS edits.
+  eleventyConfig.addFilter("assetVersion", asset => {
+    const bytes = readFileSync(new URL(`./src${asset}`, import.meta.url));
+    const version = createHash("sha256").update(bytes).digest("hex").slice(0, 12);
+    return `${asset}?v=${version}`;
+  });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   // Publish only active assets; source files and the complete export stay out of the site output.
   for (const asset of ["img/header.png",

@@ -1,0 +1,13 @@
+{# Blog and project layouts share this shell; child blocks supply their own metadata and body. #}
+<article class="prose detail">
+  <p class="detail-back"><a href="{{ detailIndexUrl }}">{{ detailIndexLabel }}</a></p>
+  <header class="detail-header">
+    <div class="detail-heading">
+      <h1>{{ title }}</h1>
+      {% block detailTitleExtra %}{% endblock %}
+    </div>
+    {% block detailSummary %}{% endblock %}
+    {% block detailMeta %}{% endblock %}
+  </header>
+  {% block detailContent %}{% endblock %}
+</article>

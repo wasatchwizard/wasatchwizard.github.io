@@ -13,6 +13,13 @@ The header contact/profile icons match kodybrown.com: Email, Stack Overflow,
 GitHub, LinkedIn, then X. Identical local SVGs, their source notes, and the upstream
 MIT license are in `src/assets/social/`. Email uses this site's configured address.
 
+Blog entries and individual project pages extend `src/_includes/detail.njk`.
+It owns the return link above the title and the shared heading, summary,
+metadata, and body spacing; child layouts supply their specific content.
+Stylesheet links include a content-based version so CSS edits request a fresh
+browser copy, including during watch rebuilds. The site still serves static
+files and does not need browser JavaScript for this.
+
 ## Develop and preview
 
 Use Node.js 24 LTS (Node 22 or newer is supported) and npm:

@@ -144,7 +144,13 @@ p { margin: 0 0 1rem; }
 section { margin-top: 2rem; }
 li + li { margin-top: 0.35rem; }
 .intro { color: #515961; font-size: 1.2rem; }
-.post-header { margin-bottom: 2rem; }
+/* One shared detail layout keeps blog entries and project pages aligned. */
+.detail-back { margin-bottom: 1.25rem; }
+.detail-header { margin-bottom: 2rem; }
+.detail-heading { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.75rem; }
+.detail-heading h1 { min-width: 0; margin-bottom: 0; }
+.detail-header .intro { margin-bottom: 0.35rem; }
+.detail-header .post-meta { margin-bottom: 0; }
 .post-meta { color: #59616a; font-size: 0.9rem; }
 .post-list, .project-list { margin: 0; padding: 0; list-style: none; }
 .post-list > li, .project-list > li { margin-block: 1.75rem; }
@@ -152,11 +158,6 @@ li + li { margin-top: 0.35rem; }
 .post-list .post-meta { margin-bottom: 0.5rem; }
 /* Keep each catalog entry compact, with space between projects rather than between its lines. */
 .project-list h2, .project-list p { margin-bottom: 0; }
-.project-heading { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.75rem; }
-.project-heading h1 { min-width: 0; margin-bottom: 0; }
-.project-detail .intro { margin-bottom: 0.35rem; }
-.project-detail .post-meta { margin-bottom: 0; }
-.project-back { margin-bottom: 1.25rem; }
 .project-source-link {
   display: inline-flex;
   flex-shrink: 0;
@@ -168,7 +169,6 @@ li + li { margin-top: 0.35rem; }
 }
 .project-source-link:hover, .project-source-link:focus-visible { background: #f3f5f7; }
 .project-source-link svg { display: block; }
-.post-back { margin-top: 2rem; }
 .prose img { display: block; max-width: 100%; height: auto; margin-block: 1.5rem; }
 blockquote { margin: 1.5rem 0; padding-left: 1.25rem; border-left: 3px solid #d8dde1; color: #515961; }
 blockquote p:last-child { margin-bottom: 0; }
@@ -222,7 +222,7 @@ th, td { padding: 0.5rem; border: 1px solid #d8dde1; text-align: left; }
 }
 
 @media print {
-  .site-header, .page-nav, .skip-link, .site-footer, .post-back { display: none; }
+  .site-header, .page-nav, .skip-link, .site-footer, .detail-back { display: none; }
   :root { color: #000; font-size: 10pt; }
   .container { width: 100%; }
   .prose { max-width: none; }

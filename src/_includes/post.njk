@@ -1,12 +1,13 @@
 ---
 layout: base.njk
+detailIndexUrl: /blog/
+detailIndexLabel: All posts
 ---
-<article class="prose">
-  <header class="post-header">
-    <h1>{{ title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>{% if topics.length %} · {{ topics | join(' · ') }}{% endif %}</p>
-  </header>
-  {% if migrationNote %}<p class="migration-note">{{ migrationNote }}</p>{% endif %}
-  {{ content | safe }}
-  <p class="post-back"><a href="/blog/">All posts</a></p>
-</article>
+{% extends "detail.njk" %}
+{% block detailMeta %}
+<p class="post-meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>{% if topics.length %} · {{ topics | join(' · ') }}{% endif %}</p>
+{% endblock %}
+{% block detailContent %}
+{% if migrationNote %}<p class="migration-note">{{ migrationNote }}</p>{% endif %}
+{{ content | safe }}
+{% endblock %}
