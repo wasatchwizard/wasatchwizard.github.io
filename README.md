@@ -20,6 +20,75 @@ Stylesheet links include a content-based version so CSS edits request a fresh
 browser copy, including during watch rebuilds. The site still serves static
 files and does not need browser JavaScript for this.
 
+## Site roles and planning
+
+Agreed direction as of October 18, 2026. This section records site responsibilities
+and future work; it does not describe changes already made to the published sites.
+
+### Responsibilities
+
+- **WasatchWizard (WW):** technical writing, experiments, tinkering, and the broader
+  collection of personal projects, apps, and developer utilities. Keep the Projects
+  section here. Projects do not move to WeekendTech simply because they are free.
+- **WeekendTech (WT):** curated tools and practical guidance for the weekend
+  warrior: the person friends and family call for help with computers and everyday
+  technology. Audience and usefulness determine inclusion, rather than price,
+  repository visibility, or source availability. It is not a catalog of every
+  free tool or every private-source project.
+- **Dedicated product websites:** products with paid editions or distinct hosted
+  services have their own product home. They can still be mentioned or recommended
+  on WW or WT when relevant; their product documentation and services live there.
+- **kodybrown.com:** personal introduction, professional background, resume, and
+  links to the other sites.
+
+### Current app placement
+
+- GroundZero 7, WeekendExplorer, and Timekeeper Assistant belong on WeekendTech.
+- Image Viewer goes with WeekendExplorer. A new version of Bricksoft Viewer is
+  planned as a simple, very fast, read-only CSV/TAB viewer. "Weekend Image Viewer"
+  and "Weekend Data Viewer" are tentative names, not settled product names.
+- Dashtrics, klocs, and MergeStyles belong with the broader WasatchWizard projects.
+  Making their repositories public is intended, not completed by this plan.
+- PCSentinel will have its own domain for its planned Pro/cloud-synced version.
+- Plain-Text Suite already has its dedicated home at plaintextsuite.com.
+- KIT is currently hosted at memreca.com; keep-in-touch.org is the intended new
+  app/domain home. This note does not imply that the domain move has happened.
+- Placement of gitx and FormFiller remains undecided.
+
+### WeekendTech publishing and hosting direction
+
+Preserve the existing WeekendTech layout and structure while moving toward
+Eleventy-generated static HTML/CSS with minimal browser JavaScript. Host the
+static website on GitHub Pages, following WW and kodybrown.com. No purchases are
+planned on WeekendTech itself.
+
+Add a Markdown blog using WW's publishing conventions. It should cover practical
+tech-help workflows and useful third-party tools as well as original WeekendTech
+apps. A recommendation does not require the tool to have been created here.
+
+### Shared basic analytics direction
+
+Use one small browser script for page views and download-link activations across
+WW, WT, and kodybrown.com. Only aggregate event totals are needed, not unique
+visitors, sessions, download completion, or installation tracking. The collector
+should neither create nor use tracking cookies or persistent visitor identifiers.
+
+The existing ProShop droplet can receive events through a proposed minimal
+endpoint, with exact allowed-origin checks and site-specific counts. A separate
+endpoint is preferred over invoking the current consent/visitor-cookie helper.
+Downloads and navigation must continue independently of event delivery. Endpoint,
+storage, privacy-notice, and reporting details still need implementation review;
+this plan does not establish a blanket consent exemption or deploy analytics.
+
+### WasatchWizard homepage ideas to revisit
+
+- Remove the visible label from the pinned-post area.
+- Reconsider the pin indicator/treatment; its replacement is not selected yet.
+- Consider removing the Recent posts section entirely; this is not yet a decision.
+- Make it possible to highlight selected apps on the WW homepage while preserving
+  the site's broader technical/project role. The content model and layout for
+  those highlights remain to be designed.
+
 ## Develop and preview
 
 Use Node.js 24 LTS (Node 22 or newer is supported) and npm:

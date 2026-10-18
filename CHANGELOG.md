@@ -2,6 +2,11 @@
 
 ## 2026-10-18
 
+- Recorded the agreed responsibilities of WasatchWizard, WeekendTech, personal,
+  and dedicated product sites, current app placements, and the shared publishing
+  and basic-analytics direction in the README. Separated undecided homepage ideas
+  from implemented behavior. Verified documentation diff and whitespace; no site
+  code, generated output, deployment, or existing project edits were changed.
 - Extended the declarative refresh-projects task to seed an entire GitHub README
   into whitespace-only project bodies, omitting the first Markdown H1. No README
   requests are made for authored text, comments, or code. Missing READMEs are
