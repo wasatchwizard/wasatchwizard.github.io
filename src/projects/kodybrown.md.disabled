@@ -11,4 +11,12 @@ github:
   pushedAt: "2026-10-16T23:10:57Z"
   language: null
   archived: false
+  readmeUrl: "https://github.com/kodybrown/kodybrown/blob/main/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/kodybrown/main/README.md"
 ---
+
+### Hi, I'm Kody 👋
+
+I build desktop apps, web services, developer tools, and business software with C#/.NET, Avalonia, Rust, Angular, Vue, and Bash/PowerShell. I like keyboard shortcuts, fast feedback, and tools that respect your time and your data. I use Windows 10 and Void Linux.
+
+Most of my projects start with "this should be easier" and grow from there.

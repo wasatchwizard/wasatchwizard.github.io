@@ -1,6 +1,7 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
+import { createProjectReadmeRenderer } from "./scripts/project-readme.mjs";
 
 function publishedPosts(api) {
   return api.getFilteredByGlob("./src/posts/*.md")
@@ -22,6 +23,11 @@ export default function (eleventyConfig) {
     // The plugin's explicit `text` branch returns unescaped HTML. Let Markdown
     // escape plain-text fences, including XML examples and <file> placeholders.
     markdown.set({ highlight: (code, language) => language === "text" ? "" : highlight(code, language) });
+    const renderReadme = createProjectReadmeRenderer(highlight);
+    const render = markdown.render.bind(markdown);
+    markdown.render = (source, data) => data?.github?.readmeUrl
+      ? renderReadme(source, data.github)
+      : render(source, data);
   });
   eleventyConfig.setNunjucksEnvironmentOptions({ autoescape: true });
   // Code samples are content, not Liquid templates. Leave their braces alone.

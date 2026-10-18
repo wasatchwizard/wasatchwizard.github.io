@@ -11,4 +11,9 @@ github:
   pushedAt: "2013-06-07T20:58:34Z"
   language: "C#"
   archived: false
+  readmeUrl: "https://github.com/kodybrown/center/blob/master/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/center/master/README.md"
 ---
+
+
+A simple DOS/CLI utility that centers the current command prompt window.

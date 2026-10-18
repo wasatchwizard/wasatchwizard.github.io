@@ -8,15 +8,19 @@
   "scripts": {
     "build": "node scripts/clean.mjs && eleventy",
     "watch": "node scripts/clean.mjs && eleventy --watch",
-    "verify": "node scripts/clean.mjs && eleventy && node scripts/verify.mjs",
-    "verify:migration": "node scripts/clean.mjs && eleventy && node scripts/verify.mjs --migration",
+    "test": "node --test scripts/project-readme.test.mjs",
+    "verify": "node --test scripts/project-readme.test.mjs && node scripts/clean.mjs && eleventy && node scripts/verify.mjs",
+    "verify:migration": "node --test scripts/project-readme.test.mjs && node scripts/clean.mjs && eleventy && node scripts/verify.mjs --migration",
     "export:blogger": "node scripts/export-blogger.mjs",
     "import:blogger": "node scripts/import-blogger.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
+    "github-slugger": "2.0.0",
     "linkedom": "0.18.12",
+    "markdown-it": "14.3.3",
+    "sanitize-html": "2.18.1",
     "turndown": "7.2.4"
   }
 }

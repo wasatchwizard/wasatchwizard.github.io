@@ -11,4 +11,139 @@ github:
   pushedAt: "2026-10-16T18:02:43Z"
   language: "HTML"
   archived: false
+  readmeUrl: "https://github.com/kodybrown/kodybrown.github.io/blob/master/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/kodybrown.github.io/master/README.md"
 ---
+
+
+A small, static personal website, hosted on GitHub Pages at
+[www.kodybrown.com](https://www.kodybrown.com/).
+
+## Editing
+
+- `index.html` is the personal introduction and links to my other sites.
+- `resume.html` embeds `KodyBrown-Resume.pdf` in the page using the browser's
+  native PDF viewer. It also includes an expandable HTML text version; update
+  both versions together when changing résumé content.
+- `css/personal.css` is the hand-authored stylesheet used by both pages.
+- Both page headers include the same contact and profile links; update them
+  together.
+  Local SVG icons and their upstream license are in `images/social/`.
+- `resume_cover.html` and `resume_print.html` forward existing bookmarks to
+  `resume.html`; Home and Résumé are the only content pages in the navigation.
+
+The active pages have no JavaScript, framework, external fonts, package install,
+or build step. Edit the HTML and `css/personal.css` directly. The retired Sass,
+Bootstrap, JavaScript, and build configuration files have been removed; their
+committed versions remain available in Git history.
+
+## Site direction and future plans
+
+The current Home and Résumé site meets its intended scope: a small personal
+introduction, professional background, and links to the other sites. Keep it
+low-maintenance, with occasional résumé updates. The generator choices below
+are future plans; this checkout currently remains plain HTML and CSS.
+
+| Site | Purpose | Planned generator |
+| --- | --- | --- |
+| kodybrown.com | Personal information, résumé, and links; a future personal blog for nontechnical writing | Eleventy when adding the blog |
+| wasatchwizard.com | Technical writing, experiments, snippets, and tinkering | Eleventy, replacing the Blogger blog |
+| weekendtech.net | A browsable catalog of usable freeware and open-source releases, with summaries, screenshots, downloads, and GitHub links | Astro |
+
+### Markdown publishing
+
+- Store posts and project descriptions as Markdown with front matter for their
+  titles, dates, summaries, and other metadata.
+- Allow authoring directly in the repository through GitHub's web editor.
+  Configure GitHub Actions to build and publish static HTML after a publishing
+  commit, so readers do not need JavaScript to render Markdown.
+- Generate post lists and archives from content files instead of maintaining a
+  separate master list. Include an RSS feed for each blog.
+- Keep interactive catalog search and filtering on WeekendTech compatible with
+  static hosting; Astro can add Vue components where useful.
+- Give most original GitHub projects a short write-up and screenshot: usable
+  releases belong on WeekendTech; experiments and snippets belong on Wasatch
+  Wizard. Link between related entries rather than duplicating the write-ups.
+
+### Wasatch Wizard blog migration
+
+The existing Wasatch Wizard source links to
+[Elegant Development on Blogger](https://elegantdevelopment.blogspot.com/).
+Plan to bring that technical blog into Wasatch Wizard using Eleventy. Before
+switching links, export and review the existing posts, preserve their dates and
+images, and map old post URLs to their new destinations. Verify what redirects
+or notices the old Blogger site can support so existing links remain useful.
+
+## Favicon artwork
+
+The browser favicon uses the hand-edited `favicon16.png`, `favicon24.png`,
+`favicon32.png`, and `favicon64.png`. Each PNG supplies its own size inside
+`favicon.ico` without resizing. Both pages also link directly to `favicon64.png`.
+
+To rebuild the ICO from those four drawings:
+
+```powershell
+magick favicon16.png favicon24.png favicon32.png favicon64.png favicon.ico
+```
+
+All other icon images derive from `favicon64.png`. `favicon.png` is an identical
+copy; the larger icons use nearest-neighbor scaling to preserve the drawing's
+pixel edges and colors. `images/favicon-master.png` is a 512-pixel export for the
+manifest, not an independent source drawing. Edit the hand-drawn PNGs first.
+
+To rebuild the remaining images with ImageMagick:
+
+```powershell
+Copy-Item -LiteralPath favicon64.png -Destination favicon.png
+magick favicon64.png -filter point -resize 192x192 -strip icon.png
+magick favicon64.png -filter point -resize 180x180 -strip apple-touch-icon.png
+magick favicon64.png -filter point -resize 512x512 -strip images/favicon-master.png
+magick favicon64.png -filter point -resize 558x558 -strip tile.png
+magick favicon64.png -filter point -resize 256x256 -gravity center -background none -extent 558x270 -strip tile-wide.png
+```
+
+## Preview
+
+From PowerShell:
+
+```powershell
+cd C:\Users\kodyb\Projects\KodyBrown.com\www.kodybrown.com
+gostatic.exe -path . -port 8081
+```
+
+Open <http://localhost:8081/>. If a preview server is already running on 8081,
+use that server instead of starting another one.
+
+## Verification
+
+```powershell
+git diff --check
+```
+
+Also check both pages at desktop and narrow mobile widths, follow the Home and
+Résumé tabs, verify the embedded PDF and its download link, open the text
+version, check the old résumé URLs, and use Tab to check the skip link and
+visible focus. The text version and navigation work without site JavaScript;
+embedded PDF support depends on the browser's native viewer. The download and
+text version remain available when embedding is unsupported.
+
+## Publishing
+
+The integration branch is `master`. Publish the repository root through the
+existing GitHub Pages configuration; there is no generated output to deploy.
+
+`publish.bat` stages all changes in this checkout, including untracked files and
+deletions, commits when needed, and pushes `master` to `origin/master`. Review
+`git status --short` first. This is the manual publishing workflow, not a scoped
+agent commit command.
+
+```powershell
+.\publish.bat "Describe the website update"
+```
+
+The message is optional; both quoted messages and unquoted multi-word messages
+work. The script runs from its own directory, requires `master`, and stops on
+in-progress Git operations or errors.
+It can push an existing local commit when there are no new file changes. A push
+rejection leaves the local commit intact; it does not pull, merge, or force-push.
+

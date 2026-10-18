@@ -11,4 +11,6 @@ github:
   pushedAt: "2013-06-10T19:55:23Z"
   language: null
   archived: false
+  readmeUrl: "https://github.com/kodybrown/snippets/blob/master/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/snippets/master/README.md"
 ---

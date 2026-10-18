@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-10-18
+
+- Extended the declarative refresh-projects task to seed an entire GitHub README
+  into whitespace-only project bodies, omitting the first Markdown H1. No README
+  requests are made for authored text, comments, or code. Missing READMEs are
+  skipped; other errors stop the task. Identity and SHA-256 guards protect edits
+  made during a download, and disabled filenames remain disabled.
+- Seeded 51 project bodies, including two disabled projects. Preserved the exact
+  existing bodies of dotask, FixEOL, and gostatic. Three repositories lack a README
+  and one has a title-only README; their bodies remain empty. Source README URLs
+  are recorded for build-time link/image resolution. Older Windows-1252 text is
+  decoded through an explicit fallback without altering valid UTF-8.
+- Rendered README heading anchors, relative links/images, indented code, and
+  unknown code-fence languages as static HTML. Later H1s display as H2s under the
+  page title; executable raw HTML is stripped. Wide tables use the existing
+  keyboard-focusable scrolling container. README source text stays literal.
+- Added four focused rendering tests to normal verification and dotask rebuild.
+  Verified the full refresh/rebuild fixture, repeat preservation, 404/503 behavior,
+  and concurrent-edit refusal; the live rebuild and migration audit passed
+  (183 pages, 56 published projects, 123 published/1 disabled blog posts).
+  A default repeat rebuild retained exact bytes and mtimes for all 58 project
+  Markdown files.
+  Reviewed desktop and 320-pixel layouts, code overflow, table focus, and loaded
+  README images. npm audit reported no vulnerabilities. The newer source-built
+  dotask runner was used; its PATH installation and the live site are unchanged.
+
 ## 2026-10-17
 
 - Added `dotask rebuild`: refresh GitHub project Markdown, then clean, build,

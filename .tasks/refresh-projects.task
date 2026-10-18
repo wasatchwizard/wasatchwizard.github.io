@@ -73,7 +73,8 @@ steps:
           items: {result: selectedDocument.data}
           as: document
         steps:
-          - file:
+          - id: projectDocument
+            file:
               operation: frontmatter
               path: {item: document.path}
               create-if-missing: true
@@ -93,3 +94,51 @@ steps:
                 github.pushedAt: {item: repo.pushed_at}
                 github.language: {item: repo.language}
                 github.archived: {item: repo.archived}
+
+          # A one-item scope avoids every README request for nonempty bodies.
+          # Check again inside the guarded file update before seeding any content.
+          - when: {result: projectDocument.body-empty}
+            foreach:
+              items: [{item: document.path}]
+              as: emptyDocument
+            steps:
+              - id: readmeEndpoint
+                text:
+                  template: "{{repository}}/readme"
+                  values:
+                    repository: {item: repo.url}
+
+              - id: readmeMetadata
+                http:
+                  method: GET
+                  url: {result: readmeEndpoint.text}
+                  headers:
+                    Accept: application/vnd.github+json
+                  response-format: json
+                  optional: true
+                  timeout-seconds: 30
+
+              - id: readmeContent
+                when: {result: readmeMetadata.found}
+                http:
+                  method: GET
+                  url: {result: readmeMetadata.data.download_url}
+                  response-format: text
+                  # A few old READMEs use ANSI table characters. Prefer UTF-8;
+                  # permit this explicit legacy encoding only when UTF-8 fails.
+                  fallback-encoding: windows-1252
+                  timeout-seconds: 30
+
+              - when: {result: readmeMetadata.found}
+                file:
+                  operation: frontmatter
+                  path: {item: emptyDocument}
+                  expected-sha256: {result: projectDocument.sha256}
+                  match-existing:
+                    github.id: {item: repo.id}
+                  set:
+                    github.readmeUrl: {result: readmeMetadata.data.html_url}
+                    github.readmeDownloadUrl: {result: readmeMetadata.data.download_url}
+                  body-if-empty:
+                    content: {result: readmeContent.data}
+                    strip-first-h1: true

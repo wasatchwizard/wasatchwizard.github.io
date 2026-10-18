@@ -2,8 +2,11 @@ description: Refresh GitHub project pages, then build and verify the complete st
 
 steps:
   - run: refresh-projects
-  # Run the same clean/build/verify sequence as npm run verify. Calling Node
+  # Run the same test/clean/build/verify sequence as npm run verify. Calling Node
   # directly also works on Windows without an npm.cmd shell wrapper.
+  - exec:
+      executable: node
+      arguments: [--test, scripts/project-readme.test.mjs]
   - exec:
       executable: node
       arguments: [scripts/clean.mjs]

@@ -11,4 +11,9 @@ github:
   pushedAt: "2017-01-09T22:46:00Z"
   language: "Smalltalk"
   archived: false
+  readmeUrl: "https://github.com/kodybrown/cat.dos/blob/master/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/cat.dos/master/README.md"
 ---
+
+
+A dos-based file driver for cat.exe. Currently, only Batch files are supported.

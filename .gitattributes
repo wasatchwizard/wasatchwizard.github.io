@@ -55,6 +55,9 @@ Dockerfile     text
 # Imported Markdown uses intentional hard-break spaces and preserves historical
 # code whitespace. Do not strip either during Git whitespace checks.
 src/posts/*.md whitespace=-blank-at-eol
+# README imports preserve Markdown breaks, code whitespace and trailing lines.
+src/projects/*.md whitespace=-blank-at-eol,-blank-at-eof
+src/projects/*.md.disabled whitespace=-blank-at-eol,-blank-at-eof
 *.mdwn       text
 *.mdown      text
 *.mkd        text

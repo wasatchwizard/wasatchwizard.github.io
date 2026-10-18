@@ -39,7 +39,7 @@ The watcher does not inject live-reload JavaScript into the site.
 ## Rebuild everything
 
 Run `dotask rebuild` from the website root. It calls `refresh-projects`, then
-runs the same clean/Eleventy-build/verification sequence as `npm run verify`.
+runs the same tests/clean/Eleventy-build/verification sequence as `npm run verify`.
 All local blog Markdown is compiled during that build; no separate blog refresh
 or Blogger access is needed. The first failing step stops the workflow.
 
@@ -163,18 +163,43 @@ github:
 Handwritten notes, examples, and additional images go here.
 ```
 
-The task updates only the eight declared `github` fields. It initializes title,
+The task refreshes the eight declared GitHub metadata fields. It initializes title,
 blank summary/screenshot, and `hidden: false` only when creating a file. Existing
 front matter, comments, formatting, and Markdown body text remain intact. The
 numeric `github.id` stays in front matter as an identity guard: a different ID
 at the same filename stops that update. It does not determine the filename.
 
+If the body outside front matter contains only whitespace, the task also copies
+the repository's entire README, removing its first Markdown H1 (ATX or Setext).
+Everything else stays in the Markdown source, including badges, examples, later
+headings, and images. A comment, code sample, or any other non-whitespace body
+prevents the download and replacement; once seeded, that body belongs to you.
+Delete the complete body to opt into a fresh copy on a later refresh. A missing
+README (404) is skipped normally; other download failures stop the task. Blank
+or title-only READMEs leave the body empty and can be checked again next time.
+UTF-8 is preferred, with an explicit Windows-1252 fallback for older READMEs.
+
+Seeded entries record `github.readmeUrl` and `github.readmeDownloadUrl` so the
+build can resolve relative links and images against their GitHub source. Keep
+those fields when editing imported content; use full absolute URLs for
+your own additions. Heading anchors work locally when present; links to removed
+or GitHub-only anchors point to the original README. Later H1s display as H2s
+under the project's page title. Rendering preserves static formatting and
+escapes unknown code-fence languages, stripping executable raw HTML. This is
+all build-time processing; there is still no browser JavaScript. README images
+are loaded from their original hosts and may change or become unavailable.
+
+This workflow requires a dotask runner supporting text HTTP responses, optional
+404s, and `body-if-empty` front-matter updates. The source-built runner shown
+above includes these actions; the older PATH installation has not been changed.
+
 ### Disable a project
 
 Rename `GitVersion.md` to `GitVersion.md.disabled` to exclude it from the site.
 The refresh task first checks for `<repo-name>.md.disabled` and updates its
-GitHub metadata in place instead of creating `<repo-name>.md` again. The title,
-summary, screenshots, comments, and Markdown body remain preserved. Disabled
+GitHub metadata in place instead of creating `<repo-name>.md` again. Empty bodies
+can receive the README too. The title, summary, screenshots, comments, and any
+nonempty Markdown body remain preserved. Disabled
 files are ignored by Eleventy's configured template formats and project glob,
 so they have no page, index entry, or sitemap entry.
 

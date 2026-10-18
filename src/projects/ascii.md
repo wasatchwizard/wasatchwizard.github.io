@@ -11,4 +11,9 @@ github:
   pushedAt: "2013-07-06T07:36:55Z"
   language: "C#"
   archived: false
+  readmeUrl: "https://github.com/kodybrown/ascii/blob/master/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/ascii/master/README.md"
 ---
+
+
+Displays the ascii characters from command-line

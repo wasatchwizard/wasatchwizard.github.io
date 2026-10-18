@@ -11,4 +11,9 @@ github:
   pushedAt: "2013-11-15T05:33:40Z"
   language: "C#"
   archived: false
+  readmeUrl: "https://github.com/kodybrown/fcopy/blob/master/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/fcopy/master/README.md"
 ---
+
+
+Simple utility that will copy newer and/or missing files from the source folder to the destination folder. 
