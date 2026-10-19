@@ -2,6 +2,12 @@
 
 ## 2026-10-19
 
+- Added "A High-Level Plan Is Not a Blank Check," dated January 11, 2021, as a
+  follow-up on incomplete architecture proposals, decision authority, and
+  evaluating alternatives. Linked the earlier industry-standards post and
+  removed identities, private business plans, and unverified performance claims.
+  Verified with `npm run verify` and focused anonymization, rendered-title/date,
+  previous-post-link, blog-listing, RSS, and sitemap checks.
 - Added "Permission to Disagree Has to Mean Something," dated January 6, 2021,
   using the approved anonymized draft about responding to objections and
   supporting colleagues who speak up. Omitted identities and employer details.
