@@ -2,6 +2,15 @@
 
 ## 2026-10-19
 
+- Added two posts dated February 23, 2021: "Your Testers Need a Reset Button,"
+  grounded in recurring test-account cleanup and test-data preparation, and
+  "When Good People Leave, Ask What They Were Carrying," an anonymized reflection
+  on losing a valued employee. Used the confirmed account-cleanup date for the
+  latter's publication date without asserting it was the departure date.
+  Omitted private identifiers and internal links; distinguished personal
+  assessments from the employee's own reasons. Verified with `npm run verify`
+  and focused rendered-date/title, anonymization, blog-listing, RSS, and sitemap
+  checks, including publication of both posts.
 - Added Older/Newer navigation below each blog post, with neighboring titles
   beneath the labels, a thin divider, desktop left/right alignment, and stacked
   mobile links. Eleventy's published collection supplies chronological neighbors,
