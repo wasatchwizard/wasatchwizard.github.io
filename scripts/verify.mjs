@@ -109,6 +109,32 @@ assert.ok(postLinks(recentSection).length <= 3, "Home shows at most three recent
 const dates = [...blog.querySelectorAll(".post-list time")].map(time => time.getAttribute("datetime"));
 assert.deepEqual(dates, [...dates].sort().reverse(), "Blog remains chronological regardless of pinning");
 
+// Use the published archive as the expected sequence, including same-date ties.
+// This also detects links accidentally pointing to drafts or disabled sources.
+for (const [index, postPath] of blogLinks.entries()) {
+  const post = documents.get(path.join(output, postPath, "index.html"));
+  const navigation = post.querySelectorAll(".post-navigation");
+  assert.equal(navigation.length, blogLinks.length > 1 ? 1 : 0, postPath);
+  if (!navigation.length) continue;
+  assert.equal(navigation[0].getAttribute("aria-label"), "Adjacent blog posts");
+  for (const [direction, neighborPath, label] of [
+    ["older", blogLinks[index + 1], "← Older"],
+    ["newer", blogLinks[index - 1], "Newer →"],
+  ]) {
+    const link = navigation[0].querySelector(`.post-navigation-${direction}`);
+    if (!neighborPath) {
+      assert.ok(!link, `${postPath}: no ${direction} link beyond the archive`);
+      continue;
+    }
+    assert.equal(link?.getAttribute("href"), neighborPath, `${postPath}: ${direction} target`);
+    assert.equal(link.querySelector(".post-navigation-label")?.textContent, label);
+    const neighbor = documents.get(path.join(output, neighborPath, "index.html"));
+    assert.equal(link.querySelector(".post-navigation-title")?.textContent, neighbor.querySelector("h1").textContent);
+  }
+  assert.equal(navigation[0].querySelectorAll("a").length, (index > 0 ? 1 : 0) + (index + 1 < blogLinks.length ? 1 : 0));
+  assert.equal(post.querySelector("article").lastElementChild, navigation[0], "Adjacent links follow the post content");
+}
+
 const listedProjects = [...projectIndex.querySelectorAll(".project-list > li")];
 const projectPages = [...documents.keys()].filter(file => file.startsWith(path.join(output, "projects") + path.sep)
   && file !== path.join(output, "projects", "index.html"));
@@ -129,6 +155,7 @@ for (const item of listedProjects) {
   assert.match(projectPath, /^\/projects\/(?!\.{1,2}\/)[A-Za-z0-9._-]+\/$/);
   const project = documents.get(path.join(output, projectPath, "index.html"));
   assert.equal(project.querySelector("h1").textContent, link.textContent);
+  assert.equal(project.querySelectorAll(".post-navigation").length, 0, "Adjacent blog links belong only on posts");
   assert.ok(sitemap.includes(`https://www.wasatchwizard.com${projectPath}`));
   assert.ok(project.querySelector('a[href="/projects/"]'), "Projects have a return link");
   assert.ok(project.querySelector('article header a[href^="https://github.com/"]'), "Projects link to source code");
@@ -196,8 +223,8 @@ for (const mapping of mappings) {
     if (/^\s*\d+(?:\s+\d+)*\s*$/.test(pre.textContent)) pre.remove();
   }
   const article = built.querySelector("article").cloneNode(true);
-  // Shared detail navigation and migration notes are not original Blogger prose.
-  for (const node of article.querySelectorAll("header, .detail-back, .migration-note")) node.remove();
+  // Detail/post navigation and migration notes are not original Blogger prose.
+  for (const node of article.querySelectorAll("header, .detail-back, .migration-note, .post-navigation")) node.remove();
   assert.equal(article.textContent.replace(/\s/g, ""), originalDocument.body.textContent.replace(/\s/g, ""),
     `All original prose and code must survive conversion: ${mapping.newPath}`);
   assert.ok(sitemap.includes(`https://www.wasatchwizard.com${mapping.newPath}`));
@@ -227,3 +254,4 @@ console.log(`Archive: ${archive.postCount} posts; public comments: ${archive.com
 console.log(`Mapped ${mappings.length} imported posts: ${mappings.length - disabledPosts.size} published, ${disabledPosts.size} disabled.`);
 if (auditMigration) console.log("Migration audit: published mapped posts retain their original dates, titles, prose, tables, images, and code text.");
 console.log(`Navigation, pinned/recent post lists, and ${listedProjects.length} project pages verified.`);
+console.log(`Older/Newer links and neighboring titles verified across ${blogLinks.length} published posts.`);

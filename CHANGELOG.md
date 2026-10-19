@@ -2,6 +2,18 @@
 
 ## 2026-10-19
 
+- Added Older/Newer navigation below each blog post, with neighboring titles
+  beneath the labels, a thin divider, desktop left/right alignment, and stacked
+  mobile links. Eleventy's published collection supplies chronological neighbors,
+  independent of pinning, without browser JavaScript or new metadata. Unavailable
+  directions are omitted; a single published post has no links.
+- Extended verification across published post neighbors, titles, archive
+  boundaries, placement, and project-page exclusion. Kept navigation text out of
+  the historical Blogger prose audit. The full migration audit and temporary-copy
+  checks passed, including drafts, disabled/unpublished sources, a disabled pinned
+  post, and a single-post archive. Reviewed desktop/320-pixel layouts, keyboard
+  focus, and both directions using a fresh gostatic preview. Preserved existing
+  project edits and separately committed posts.
 - Added "New Icons for Vutility Link," dated January 19, 2021, using the approved
   post and all five supplied PNGs. Displayed original-size icons with captions
   and descriptive alt text in a wrapping gallery without changing shared styles.

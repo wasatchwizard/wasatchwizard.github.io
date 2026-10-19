@@ -152,6 +152,20 @@ li + li { margin-top: 0.35rem; }
 .detail-header .intro { margin-bottom: 0.35rem; }
 .detail-header .post-meta { margin-bottom: 0; }
 .post-meta { color: #59616a; font-size: 0.9rem; }
+.post-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #d8dde1;
+}
+.post-navigation a { display: block; min-height: 2.75rem; padding-block: 0.25rem; text-decoration: none; }
+.post-navigation-label { display: block; font-weight: 700; text-decoration: underline; text-underline-offset: 0.18em; }
+.post-navigation-title { display: block; margin-top: 0.35rem; }
+/* Explicit columns keep either end of the archive on its usual side. */
+.post-navigation-older { grid-column: 1; }
+.post-navigation-newer { grid-column: 2; text-align: right; }
 .post-list, .project-list { margin: 0; padding: 0; list-style: none; }
 .post-list > li, .project-list > li { margin-block: 1.75rem; }
 .post-list h2, .post-list h3, .project-list h2 { margin: 0 0 0.35rem; font-size: 1.2rem; }
@@ -218,6 +232,8 @@ th, td { padding: 0.5rem; border: 1px solid #d8dde1; text-align: left; }
   .container, .header-content { width: calc(100% - 2rem); }
   .page-nav { margin-top: 1.25rem; }
   main { padding-top: 1.5rem; }
+  .post-navigation { grid-template-columns: minmax(0, 1fr); }
+  .post-navigation-newer { grid-column: 1; text-align: left; }
   .site-footer { line-height: 1.9; }
 }
 

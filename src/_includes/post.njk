@@ -10,4 +10,23 @@ detailIndexLabel: All posts
 {% block detailContent %}
 {% if migrationNote %}<p class="migration-note">{{ migrationNote }}</p>{% endif %}
 {{ content | safe }}
+{# Posts are newest first: the next collection item is the older article. #}
+{% set older = collections.posts | getNextCollectionItem(page) %}
+{% set newer = collections.posts | getPreviousCollectionItem(page) %}
+{% if older or newer %}
+<nav class="post-navigation" aria-label="Adjacent blog posts">
+  {% if older %}
+  <a class="post-navigation-older" href="{{ older.url }}">
+    <span class="post-navigation-label">← Older</span>
+    <span class="post-navigation-title">{{ older.data.title }}</span>
+  </a>
+  {% endif %}
+  {% if newer %}
+  <a class="post-navigation-newer" href="{{ newer.url }}">
+    <span class="post-navigation-label">Newer →</span>
+    <span class="post-navigation-title">{{ newer.data.title }}</span>
+  </a>
+  {% endif %}
+</nav>
+{% endif %}
 {% endblock %}
