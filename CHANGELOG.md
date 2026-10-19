@@ -2,6 +2,12 @@
 
 ## 2026-10-19
 
+- Added "Microsoft, I Want to Love Your Phone," dated January 7, 2021, as a
+  humorous personal account of disconnects and stalled notifications. Retained
+  the period product name and focused the complaint on trust and reliability
+  without asserting an unverified technical cause or present-day behavior.
+  Verified with `npm run verify` and focused rendered-title/date, blog-listing,
+  RSS, and sitemap checks.
 - Added "Before You Replace PostgreSQL, Show Me the Workload," dated January 7,
   2021, as an anonymized objection to an unevaluated IoT measurement-store
   migration. Distinguished graph use cases from raw telemetry, cited period
