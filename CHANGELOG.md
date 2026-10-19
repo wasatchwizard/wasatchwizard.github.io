@@ -2,6 +2,12 @@
 
 ## 2026-10-19
 
+- Added "New Icons for Vutility Link," dated January 19, 2021, using the approved
+  post and all five supplied PNGs. Displayed original-size icons with captions
+  and descriptive alt text in a wrapping gallery without changing shared styles.
+  Verified with `npm run verify` and focused checks for the date/title, labels,
+  alt text, exact source-image bytes and dimensions, generated asset copies,
+  blog listing, RSS, and sitemap.
 - Added "Microsoft, I Want to Love Your Phone," dated January 7, 2021, as a
   humorous personal account of disconnects and stalled notifications. Retained
   the period product name and focused the complaint on trust and reliability
