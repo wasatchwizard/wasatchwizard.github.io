@@ -2,6 +2,13 @@
 
 ## 2026-10-19
 
+- Added "When the Fix Brings Back the Problem," dated January 4, 2020, following
+  the source note's heading and filename. Generalized the incident and removed
+  names, organization context, system details, and distinctive event references.
+  Discussed possible reasons for uninformed reversals, unfinished handoffs, and
+  recurring maintenance exhaustion without assigning motives to individuals.
+  Verified with `npm run verify` and focused anonymization, rendered-date,
+  blog-listing, RSS, and sitemap checks.
 - Added "One Flag, Three Prefixes. I'm Done Guessing." with the publication date
   September 16, 2025, matching the first appearance of Resty's flag-prefix note
   in README commit `842cc09`. Explained interchangeable prefixes and the deliberate
