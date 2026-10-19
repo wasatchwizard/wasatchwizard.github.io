@@ -2,6 +2,14 @@
 
 ## 2026-10-19
 
+- Added four April 2021 posts: Commodore 64 nostalgia and the confirmed Pi1541
+  purchase (April 11), C64Net exploration without claiming ownership (April 12),
+  evidence-based retirement of older device support (April 14), and additive
+  versus replacement registration semantics in a particular SignalR integration
+  (April 21). Kept work incidents anonymous and used fictional device examples
+  without copying scripts, credentials, customer identifiers, or logs.
+  Verified with `npm run verify` and focused title/date, privacy, archive/search,
+  RSS, sitemap, cross-link, ownership wording, and example-table checks.
 - Added five March 2021 posts: a sensor-reading time tree (March 8), measurement
   versus reception timestamps (March 11), discussion of absent colleagues
   (March 17), Star Wars ASCIIMATION (March 19), and mobile/backend feature
