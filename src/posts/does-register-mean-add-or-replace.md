@@ -1,5 +1,5 @@
 ---
-title: "Does ‘Register’ Mean Add—or Replace?"
+title: "Does ‘Register’ Mean Add or Replace?"
 date: "2021-04-21"
 summary: "Customers were told they could add devices with successive registration calls. The implementation replaced the previous set. That difference belongs in the instructions and the tests."
 topics: ["Development", "APIs", "Testing", "Documentation"]

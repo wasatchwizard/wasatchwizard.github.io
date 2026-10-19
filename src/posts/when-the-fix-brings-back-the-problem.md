@@ -1,7 +1,7 @@
 ---
 title: "When the Fix Brings Back the Problem"
 date: "2020-01-04"
-summary: "Reverting a change can feel safer than understanding it. But familiar code can bring an old problem back—and leave someone else doing the cleanup again."
+summary: "Reverting a change can feel safer than understanding it. But familiar code can bring an old problem back, and leave someone else doing the cleanup again."
 topics: ["Development", "Maintenance", "Teamwork"]
 ---
 

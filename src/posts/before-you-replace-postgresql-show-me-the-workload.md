@@ -43,7 +43,7 @@ Here is the comparison I want before we authorize a migration:
 2. Test ingestion while users are querying, including late readings and corrections where those occur.
 3. Measure query latency, resource use, storage growth, and operating cost on stated configurations.
 4. Demonstrate retention, backup and restore, failure recovery, and the proposed migration path.
-5. Identify the result that would justify the change—and the result that would make us reject it.
+5. Identify the result that would justify the change **and** the result that would make us reject it.
 
 I don’t need every future question answered. I need enough evidence to believe we are solving a real problem without creating a larger one.
 

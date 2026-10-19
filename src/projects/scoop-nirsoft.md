@@ -18,9 +18,9 @@ github:
 
 This repo is no longer one of the "known" buckets for scoop. :-)
 
-Please run this:
+Please run this to remove the old bucket and add the new "official" bucket:
 
-```
+```powershell
 PS> scoop bucket rm nirsoft
 PS> scoop update
 PS> scoop bucket add nirsoft
@@ -28,7 +28,7 @@ PS> scoop bucket add nirsoft
 
 To make sure you're on the latest, you can run this and verify the output:
 
-```
+```powershell
 PS> scoop bucket list
 Name       Source                                             Updated              Manifests
 ----       ------                                             -------              ---------
@@ -39,15 +39,17 @@ nirsoft    https://github.com/ScoopInstaller/Nirsoft          6/7/2024 10:24:26 
                  This should read 'ScoopInstaller/NirSoft' instead of 'kodybrown/scoop-nirsoft'
 ```
 
-# scoop-nirsoft
+## scoop-nirsoft
 
 A [Scoop](http://scoop.sh) bucket of useful [NirSoft](https://www.nirsoft.net/) utilities.
 
 To make it easy to install apps from this bucket, run:
 
-    > scoop bucket add nirsoft
+```powershell
+scoop bucket add nirsoft
+```
 
-## Why does this exist?
+### Why does this exist?
 
 For an app to be acceptable for the main bucket, it should be:
 

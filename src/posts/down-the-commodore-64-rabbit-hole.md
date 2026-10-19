@@ -5,7 +5,7 @@ summary: "Revisiting my Commodore 64 has led to emulators, cartridges, and a Pi1
 topics: ["Retrocomputing", "Commodore 64", "Raspberry Pi"]
 ---
 
-Apparently, spending my working day with computers isn’t enough. I’ve been spending my spare time playing with a Commodore 64—and remembering how much fun computers can be.
+Apparently, spending my working day with computers isn’t enough. I’ve been spending my spare time playing with a Commodore 64, and remembering how much fun computers can be.
 
 It started as a bit of nostalgia. Then I started following links.
 

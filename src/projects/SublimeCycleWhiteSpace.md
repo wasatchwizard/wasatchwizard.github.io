@@ -15,18 +15,16 @@ github:
   readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/SublimeCycleWhiteSpace/master/README.md"
 ---
 
-
-
 Cycle's through Sublime Text's three options for displaying white space: none, selection, and all.
 
-# Features
+## Features
 
  * One shortcut key to cycle through the three possible modes of showing whitespace.
  * Configure which options to cycle through in the settings.
  * Provides a Whitespace menu (under View) to change whitespace.
 
 
-# Installation
+## Installation
 
 ## Install The Plugin
 
@@ -41,9 +39,9 @@ OR, use Package Control, `Cycle Through Whitespace`.
  * I don't know if it works with Sublime Text 2 or not.
 
 
-# Configuration
+## Configuration
 
-## CycleThroughWhitespace.sublime-settings
+### CycleThroughWhitespace.sublime-settings
 
 Turn each option on or off here. If you want to alternate all three view options from your shortcut key, then set each to `true`. If you only want to alternate between `selection` and `all`, set only those two properties to `true`.
 
@@ -52,7 +50,7 @@ Turn each option on or off here. If you want to alternate all three view options
         "cycle_whitespace": [ "none", "selection", "all" ]
     }
 
-## Default (Windows).sublime-keymap
+### Default (Windows).sublime-keymap
 
 My default key bindings mirror that of Visual Studio. Feel free to change it to whatever you want.
 

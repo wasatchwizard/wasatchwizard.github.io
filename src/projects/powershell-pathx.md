@@ -25,8 +25,8 @@ Windows-Only
 This only works on Windows. Sorry, I haven't tried any PowerShell on Linux nor OSX yet!
 
 
-Installation:
--------------
+Installation
+------------
 
 Put the `pathx` directory in `%UserProfile%\Documents\WindowsPowerShell\Modules`.
 
@@ -42,15 +42,15 @@ Reload your Profile (or restart your console):
     PS> . $PROFILE
 
 
-Command-line Usage:
--------------------
+Command-line Usage
+------------------
 
     PS> Show-Path [SearchExpr]
     PS> Edit-Path [--insert|--add|--remove|--enable|--disable] [--force] "C:\NewDir" ... [--user|--machine|--both]
 
 
-Commands:
----------
+Commands
+--------
 
 *Show-Path*: Shows the current path envar, one directory per line. Directories that do not exist are highlighted in red. (alias: pathx)
 
@@ -63,31 +63,21 @@ Multiple directories can be specified.
     PS> edit-path --insert "C:\NewDir" "C:\Additional\Dir" ...
 
 
-Flags:
-------
+Flags
+-----
 
-*-q*|*--quiet*: Reduces the console output.
+- *-q*|*--quiet*: Reduces the console output.
+- *-a*|*--add*|*--append*: Append the specified directory (or directories) to the end of the PATH.
+- *-i*|*--insert*: Insert the specified directory (or directories) to the beginning of the PATH.
+- *-rm*|*--remove*: Removes the specified directory (or directories) from the PATH.
+- *--disable*: Disables the specified directory (or directories) in the PATH.
+- *--enable*: Enables the specified directory (or directories) in the PATH.
+- *--force*: Allows removing a protected directory (see notes below in 'Adding and Removing' section). Also, used to allow adding (or inserting) a directory that does not exist.
+- *-u*|*--user*: also make the change to the HKCU Registry hive.
+- *-m*|*--machine*: also make the change to the HKLM Registry hive.
+- *--both*: also make the change to both the HKCU and HKLM Registry hives.
 
-*-a*|*--add*|*--append*: Append the specified directory (or directories) to the end of the PATH.
-
-*-i*|*--insert*: Insert the specified directory (or directories) to the beginning of the PATH.
-
-*-rm*|*--remove*: Removes the specified directory (or directories) from the PATH.
-
-*--disable*: Disables the specified directory (or directories) in the PATH.
-
-*--enable*: Enables the specified directory (or directories) in the PATH.
-
-*--force*: Allows removing a protected directory (see notes below in 'Adding and Removing' section). Also, used to allow adding (or inserting) a directory that does not exist.
-
-*-u*|*--user*: also make the change to the HKCU Registry hive.
-
-*-m*|*--machine*: also make the change to the HKLM Registry hive.
-
-*--both*: also make the change to both the HKCU and HKLM Registry hives.
-
->Note: The `-` and `/` are (mostly) interchangeable. As are using `-` or `--`. 
-
+> Note: The `-` and `/` are (mostly) interchangeable. As are using `-` or `--`.
 
 Adding and Removing
 -------------------
@@ -95,7 +85,6 @@ Adding and Removing
 If the directory being added or inserted does not exist a warning will be displayed; use `--force` to override it.
 
 Also, in order to remove the `C:\Bin`, `C:\Windows`, or `C:\Windows\System32` directories, you must also specify the `--force` flag.
-
 
 ## Examples
 

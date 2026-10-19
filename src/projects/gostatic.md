@@ -11,12 +11,9 @@ github:
   pushedAt: "2019-06-12T19:22:42Z"
   language: "Go"
   archived: false
+  readmeUrl: "https://github.com/kodybrown/gostatic/blob/develop/README.md"
+  readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/gostatic/develop/README.md"
 ---
 
-I built gostatic years ago and still use it to serve simple websites locally, including this one.
 
-Eleventy builds the pages; gostatic serves the generated files:
-
-```powershell
-gostatic.exe -path .\_site -port 8080
-```
+A **very** simple static file HTTP server written in Go.

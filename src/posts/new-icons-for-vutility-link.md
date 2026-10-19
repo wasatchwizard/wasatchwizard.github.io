@@ -32,7 +32,7 @@ A small visual update for Link, our mobile provisioning app: new icons for campu
 
 I like how these work together. The campus uses a group of buildings, the building stands on its own, and the floor highlights a level within that same building shape. The zone gets a map and location marker, while the gateway gets a wireless signal.
 
-They share the same basic appearance without making every item look identical. The floor’s small yellow highlight is a particularly nice touch—it gives that icon a distinction without abandoning the rest of the set.
+They share the same basic appearance without making every item look identical. The floor’s small yellow highlight is a particularly nice touch. It gives that icon a distinction without abandoning the rest of the set.
 
 Provisioning involves enough details already. These are the kinds of visual cues I want in the app: something that helps you recognize what you’re looking at while the labels provide the precise meaning.
 

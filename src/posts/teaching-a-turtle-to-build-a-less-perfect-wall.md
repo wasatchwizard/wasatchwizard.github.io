@@ -9,7 +9,7 @@ A wall made entirely from one kind of block can look a little too perfect for wh
 
 I want some variation in the stonework. And since I’m already using ComputerCraft to help with construction, choosing the materials is another part of the job I can give to a turtle.
 
-Two of my helpers, `dg3` and `dg4`, approach that choice differently. Both scripts are dated March 19, 2012.
+Two of my helpers, `dg3` and `dg4`, approach that choice differently. Both are based on the same digging-and-placing idea, but they differ in how they select which block to place.
 
 The idea behind `dg3` is straightforward: dig downward, then place blocks underneath the turtle as it comes back up. Choose an inventory slot randomly for each placement.
 

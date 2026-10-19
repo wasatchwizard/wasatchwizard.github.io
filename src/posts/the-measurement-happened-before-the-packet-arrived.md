@@ -36,8 +36,6 @@ I would want tests that make the distinction difficult to accidentally erase:
 3. Changing the order of independent fields doesn’t change their timestamps.
 4. Multiple measurements with different ages don’t inherit one another’s adjusted time.
 
-The screenshot in my private debugging notes is useful to me, but it contains implementation details that don’t belong in a public post. This invented example carries the lesson without reproducing that code or claiming to document the entire failure.
-
 When a chart looks wrong, it is tempting to start with the chart or the query. Sometimes the more useful question is much earlier in the pipeline:
 
 What, exactly, does this timestamp say happened?

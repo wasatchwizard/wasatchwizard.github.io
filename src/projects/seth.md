@@ -18,8 +18,8 @@ github:
 
 Displays the environment variables in a nicely formatted list, with new options!
 
-Usage:
-------
+Usage
+-----
 
     >seth /?
     seth.exe v1.3.19.51115
@@ -71,8 +71,8 @@ Usage:
                   (such as '^', '(', ')', '<', '>', etc.), you must wrap them in
                   quotes, for instance `seth --regex "^AppData"`.
 
-Example output:
----------------
+Example output
+--------------
 
 This was run with the console width to 80. (I also removed a bunch of lines.)
 
@@ -104,6 +104,5 @@ This was run with the console width to 80. (I also removed a bunch of lines.)
     ProgramFiles(x86) = C:\Program Files (x86)
     PROMPT           = $P$G
     SystemRoot       = C:\Windows
-
 
 > The [GitVersion MSBuild](https://github.com/kodybrown/GitVersion) assembly is required to compile this util (or you can remove the custom attributes in `seth.csproj`).

@@ -1,7 +1,7 @@
 ---
 title: "Permission to Disagree Has to Mean Something"
 date: "2021-01-06"
-summary: "Welcoming feedback means leaving room for uncomfortable objections—and answering the concern someone actually raised."
+summary: "Welcoming feedback means leaving room for uncomfortable objections and answering the concern someone actually raised."
 topics: ["Development", "Teamwork", "Leadership"]
 ---
 
@@ -13,7 +13,7 @@ What happens next?
 
 Do you answer the concern? Ask questions? Explain the tradeoff?
 
-Or does the discussion drift into what you personally prefer, why another job requires something different, or how everyone should be flexible—until the original concern disappears without an answer?
+Or does the discussion drift into what you personally prefer, why another job requires something different, or how everyone should be flexible? By then the original concern disappears without an answer...
 
 You can end a conversation politely and still leave someone feeling unheard.
 

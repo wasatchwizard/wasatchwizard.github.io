@@ -18,7 +18,7 @@ Different measurements, distinct colors, a consistent appearance, and a lot of i
 
 But look closely at the left edges of the plotting areas.
 
-Some measurements have short axis labels. Others have much longer numbers. The space needed for those labels changes where each plot begins—even though the charts cover the same time range.
+Some measurements have short axis labels. Others have much longer numbers. The space needed for those labels changes where each plot begins, even though the charts cover the same time range.
 
 That makes comparing events between charts more work than it needs to be. Follow a vertical line down the page, and you aren’t necessarily looking at the same moment.
 

@@ -21,11 +21,11 @@ Windows shortcut (.lnk) properties.
 
 ## Contents
 
-| Path | Purpose |
-| --- | --- |
-| [`shortcuts_vbs/shortcuts.vb`](shortcuts_vbs/shortcuts.vb) | VBScript that reads a Windows shortcut and formats its properties for display. |
+| Path                                                         | Purpose                                                                                                                           |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| [`shortcuts_vbs/shortcuts.vb`](shortcuts_vbs/shortcuts.vb)   | VBScript that reads a Windows shortcut and formats its properties for display.                                                    |
 | [`shortcuts_vbs/shortcuts.wlx`](shortcuts_vbs/shortcuts.wlx) | Bundled 32-bit Lister plugin that hosts the script; a renamed copy of Ivan / Atlanoff's `wlx_vbscript` loader, version `0.5.1.0`. |
-| [`LICENSE`](LICENSE) | MIT license for Kody Brown's work in this repository. |
+| [`LICENSE`](LICENSE)                                         | MIT license for Kody Brown's work in this repository.                                                                             |
 
 `shortcuts_vbs` is the only plugin directory currently included. There is no
 installer, build project, automated test suite, or source code for the bundled
