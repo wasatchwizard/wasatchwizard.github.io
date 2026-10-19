@@ -2,6 +2,13 @@
 
 ## 2026-10-19
 
+- Corrected "Star Wars, One Character at a Time" to describe renewed appreciation
+  rather than a first discovery, preserving its March 19, 2021 date. Added the
+  ComputerCraft adaptation with separate credit for Simon Jansen's animation
+  and dan200's player. Confirmed the archived film data matches the official
+  program, with only a display-clearing difference in the player. Verified with
+  `npm run verify` and focused wording, date, attribution-link, search, and feed
+  checks. No archived scripts or movie data were republished or modified.
 - Added "Building Castles with Code in ComputerCraft" (April 11, 2021), including
   the author's dozens of helper scripts and large castle builds with an
   illustrative custom wall-building command. Added "A Little Windows 7
