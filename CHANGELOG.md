@@ -2,6 +2,14 @@
 
 ## 2026-10-19
 
+- Added five March 2021 posts: a sensor-reading time tree (March 8), measurement
+  versus reception timestamps (March 11), discussion of absent colleagues
+  (March 17), Star Wars ASCIIMATION (March 19), and mobile/backend feature
+  dependencies (confirmed publication date March 26). Used invented technical
+  examples and public sources without copying proprietary code, screenshots,
+  logs, identifiers, or internal links. Kept the workplace reflections anonymous.
+  Verified all ten tests and the site with `npm run verify`, plus focused checks
+  for each title/date, source privacy, archive/search entries, RSS, and sitemap.
 - Paginated the Blog archive into static 25-post pages with Older/Newer links,
   page counts, distinct canonical URLs, and complete sitemap coverage. Ordinary
   browsing works without scripts and does not render the complete archive DOM.
