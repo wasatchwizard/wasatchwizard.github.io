@@ -2,6 +2,22 @@
 
 ## 2026-10-19
 
+- Paginated the Blog archive into static 25-post pages with Older/Newer links,
+  page counts, distinct canonical URLs, and complete sitemap coverage. Ordinary
+  browsing works without scripts and does not render the complete archive DOM.
+- Added optional title/description search that downloads a metadata-only JSON
+  index on the first nonblank query and reuses it in memory. It renders all
+  matches without pagination, highlights literal case-insensitive terms safely,
+  and supports query URLs, Back/Forward, clearing, no matches, and retryable
+  failures. Static entries remain available if search cannot load. Article and
+  project pages still have no browser scripts; no framework or backend was added.
+- Added six search tests to npm verification and dotask rebuild, and extended
+  output checks across every archive page and search-index field. Ten tests and
+  the full migration audit passed (201 pages, 136 published posts, six archive
+  pages). Disposable fixtures verified publication exclusions and archives of
+  0, 1, 25, 26, and 50 posts. Reviewed desktop/320-pixel layouts, archive links,
+  highlights, all 116 matches for a broad query, history restoration, clearing,
+  and no-match feedback. Existing project edits were preserved.
 - Added "Certified in Neo4j, Still Questioning the Fit," dated March 30, 2021,
   with the original certification screenshot and its 92% result. Distinguished
   commitment to implementing the decision from agreement with the migration,

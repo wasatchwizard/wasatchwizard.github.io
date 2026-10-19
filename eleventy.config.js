@@ -50,6 +50,13 @@ export default function (eleventyConfig) {
   }).format(new Date(value)));
   eleventyConfig.addFilter("isoDate", value => new Date(value).toISOString().slice(0, 10));
   eleventyConfig.addFilter("rssDate", value => new Date(value).toUTCString());
+  // Search downloads metadata only. Article bodies stay on their own static pages.
+  eleventyConfig.addFilter("postSearchIndex", posts => JSON.stringify(posts.map(post => ({
+    url: post.url,
+    title: post.data.title,
+    summary: post.data.summary || "",
+    date: post.date.toISOString().slice(0, 10),
+  }))));
   // Version asset requests by their contents so new markup does not reuse stale browser CSS.
   // Read during rendering rather than config initialization so watch rebuilds see CSS edits.
   eleventyConfig.addFilter("assetVersion", asset => {

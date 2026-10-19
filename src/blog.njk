@@ -2,11 +2,31 @@
 layout: base.njk
 title: Blog
 section: blog
-permalink: /blog/
+tags: blogArchive
+pagination:
+  data: collections.posts
+  size: 25
+  alias: posts
+  addAllPagesToCollections: true
+  generatePageOnEmptyData: true
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
-<div class="prose">
+<div class="prose" data-blog-archive data-search-index="/blog/search-index.json">
   <h1>Blog</h1>
   <p class="intro">Notes on software, hardware, and tinkering.</p>
-  {% set posts = collections.posts %}
-  {% include "post-list.njk" %}
+  <form class="blog-search" role="search" aria-label="Search blog posts" hidden>
+    <label for="blog-query">Search posts</label>
+    <div class="blog-search-controls">
+      <input id="blog-query" name="q" type="search" placeholder="Titles and descriptions" aria-controls="blog-results" autocomplete="off">
+      <button type="reset">Clear</button>
+    </div>
+  </form>
+  <p id="blog-search-status" class="post-meta" role="status" aria-live="polite" hidden></p>
+  <div id="blog-results">{% include "post-list.njk" %}</div>
+  <nav class="archive-pagination" aria-label="Blog archive pages">
+    {% if pagination.href.next %}<a class="archive-older" href="{{ pagination.href.next }}">← Older entries</a>{% endif %}
+    <span class="archive-page-count">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length or 1 }}</span>
+    {% if pagination.href.previous %}<a class="archive-newer" href="{{ pagination.href.previous }}">Newer entries →</a>{% endif %}
+  </nav>
 </div>
+<script type="module" src="{{ "/assets/blog-search.js" | assetVersion }}"></script>

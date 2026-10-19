@@ -57,12 +57,22 @@ async function walk(directory) {
 await walk(output);
 for (const [file, document] of documents) {
   assert.equal(document.querySelectorAll("h1").length, 1, file);
-  assert.equal(document.querySelectorAll("script").length, 0, file);
-  assert.equal(document.querySelectorAll("iframe, object, embed, input, [onclick]").length, 0, file);
+  const relativeFile = path.relative(output, file).replaceAll(path.sep, "/");
+  const isArchive = relativeFile === "blog/index.html" || /^blog\/page\/[1-9][0-9]*\/index\.html$/.test(relativeFile);
+  const scripts = [...document.querySelectorAll("script")];
+  assert.equal(scripts.length, isArchive ? 1 : 0, file);
+  if (isArchive) {
+    assert.equal(scripts[0].getAttribute("type"), "module");
+    assert.match(scripts[0].getAttribute("src"), /^\/assets\/blog-search\.js\?v=[a-f0-9]{12}$/);
+    assert.equal(scripts[0].textContent, "", "Search must use a local external module");
+    assert.equal(document.querySelectorAll("input").length, 1);
+    assert.equal(document.querySelector("input").getAttribute("type"), "search");
+    assert.ok(document.querySelector('form[role="search"]').hasAttribute("hidden"), "Static browsing works without scripts");
+  } else assert.equal(document.querySelectorAll("input").length, 0, file);
+  assert.equal(document.querySelectorAll("iframe, object, embed, [onclick]").length, 0, file);
   const navigation = [...document.querySelectorAll('.page-nav a')];
   assert.deepEqual(navigation.map(link => [link.textContent, link.getAttribute("href")]),
     [["Home", "/"], ["Blog", "/blog/"], ["Projects", "/projects/"]], file);
-  const relativeFile = path.relative(output, file).replaceAll(path.sep, "/");
   if (relativeFile !== "404.html") {
     const section = relativeFile.startsWith("projects/") ? "/projects/"
       : relativeFile.startsWith("blog/") ? "/blog/" : "/";
@@ -91,7 +101,36 @@ const projectIndex = documents.get(path.join(output, "projects", "index.html"));
 assert.ok(home && blog && projectIndex, "All three tab destinations must exist");
 const postLinks = element => [...element.querySelectorAll(".post-list h2 a, .post-list h3 a")]
   .map(link => link.getAttribute("href"));
-const blogLinks = postLinks(blog);
+const archivePages = [...documents.entries()].filter(([file]) => file === path.join(output, "blog", "index.html")
+  || /^blog\/page\/[1-9][0-9]*\/index\.html$/.test(path.relative(output, file).replaceAll(path.sep, "/")))
+  .sort(([a], [b]) => {
+    const number = file => Number(file.match(/[\\/]page[\\/](\d+)/)?.[1] || 1);
+    return number(a) - number(b);
+  });
+const blogLinks = archivePages.flatMap(([, document]) => postLinks(document));
+assert.equal(new Set(blogLinks).size, blogLinks.length, "Archive pages must not repeat posts");
+assert.equal(archivePages.length, Math.max(1, Math.ceil(blogLinks.length / 25)), "Build every 25-post archive page");
+const archivePath = index => index ? `/blog/page/${index + 1}/` : "/blog/";
+const sitemapText = await readFile(path.join(output, "sitemap.xml"), "utf8");
+for (const [index, [file, document]] of archivePages.entries()) {
+  assert.equal(postLinks(document).length, Math.min(25, blogLinks.length - index * 25), file);
+  assert.equal(document.querySelector(".archive-page-count").textContent, `Page ${index + 1} of ${archivePages.length}`);
+  assert.equal(document.querySelector(".archive-older")?.getAttribute("href"), index + 1 < archivePages.length ? archivePath(index + 1) : undefined);
+  assert.equal(document.querySelector(".archive-newer")?.getAttribute("href"), index ? archivePath(index - 1) : undefined);
+  assert.ok(sitemapText.includes(`https://www.wasatchwizard.com${archivePath(index)}</loc>`), file);
+  assert.equal(document.querySelector('link[rel="canonical"]').getAttribute("href"), `https://www.wasatchwizard.com${archivePath(index)}`);
+}
+const searchIndex = JSON.parse(await readFile(path.join(output, "blog", "search-index.json"), "utf8"));
+assert.deepEqual(searchIndex.map(post => post.url), blogLinks, "Search covers the complete published archive in order");
+const archiveItems = archivePages.flatMap(([, document]) => [...document.querySelectorAll(".post-list > li")]);
+for (const [index, entry] of searchIndex.entries()) {
+  assert.deepEqual(Object.keys(entry).sort(), ["date", "summary", "title", "url"]);
+  const post = documents.get(path.join(output, entry.url, "index.html"));
+  assert.equal(entry.title, post.querySelector("h1").textContent);
+  assert.equal(entry.date, post.querySelector(".post-meta time").getAttribute("datetime"));
+  assert.equal(typeof entry.summary, "string");
+  assert.equal(entry.summary, archiveItems[index].lastElementChild.textContent, "Search descriptions match the static archive");
+}
 for (const mapping of mappings) {
   if (disabledPosts.has(mapping.newPath)) {
     assert.ok(!blogLinks.includes(mapping.newPath), `Disabled post appears in Blog: ${mapping.newPath}`);
@@ -106,7 +145,7 @@ assert.equal(new Set(homeLinks).size, homeLinks.length, "Home must not repeat pi
 for (const link of homeLinks) assert.ok(blogLinks.includes(link), "Home posts must also appear in Blog");
 const recentSection = home.querySelector("#recent-heading").parentElement;
 assert.ok(postLinks(recentSection).length <= 3, "Home shows at most three recent unpinned posts");
-const dates = [...blog.querySelectorAll(".post-list time")].map(time => time.getAttribute("datetime"));
+const dates = archivePages.flatMap(([, document]) => [...document.querySelectorAll(".post-list time")].map(time => time.getAttribute("datetime")));
 assert.deepEqual(dates, [...dates].sort().reverse(), "Blog remains chronological regardless of pinning");
 
 // Use the published archive as the expected sequence, including same-date ties.
@@ -249,9 +288,10 @@ for (const match of css.matchAll(/url\("([^"\)]+)"\)/g)) {
 for (const privatePath of ["content-export", "scripts", "node_modules", "package.json", "scss", "js"]) {
   await assert.rejects(stat(path.join(output, privatePath)), { code: "ENOENT" });
 }
-console.log(`Verified ${documents.size} static pages, local links/assets, descriptive URLs, RSS/sitemap, and no browser scripts.`);
+console.log(`Verified ${documents.size} static pages, local links/assets, descriptive URLs, RSS/sitemap, and archive-only search scripts.`);
 console.log(`Archive: ${archive.postCount} posts; public comments: ${archive.comments.count ?? archive.comments.status}.`);
 console.log(`Mapped ${mappings.length} imported posts: ${mappings.length - disabledPosts.size} published, ${disabledPosts.size} disabled.`);
 if (auditMigration) console.log("Migration audit: published mapped posts retain their original dates, titles, prose, tables, images, and code text.");
 console.log(`Navigation, pinned/recent post lists, and ${listedProjects.length} project pages verified.`);
 console.log(`Older/Newer links and neighboring titles verified across ${blogLinks.length} published posts.`);
+console.log(`${archivePages.length} archive pages (25 posts per page) and the complete metadata-only search index verified.`);

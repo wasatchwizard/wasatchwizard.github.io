@@ -6,7 +6,7 @@ steps:
   # directly also works on Windows without an npm.cmd shell wrapper.
   - exec:
       executable: node
-      arguments: [--test, scripts/project-readme.test.mjs]
+      arguments: [--test, scripts/project-readme.test.mjs, scripts/blog-search.test.mjs]
   - exec:
       executable: node
       arguments: [scripts/clean.mjs]

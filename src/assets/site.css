@@ -33,6 +33,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; }
 a { color: #245d87; text-underline-offset: 0.18em; }
 a:hover { color: #163d5a; }
@@ -166,6 +167,35 @@ li + li { margin-top: 0.35rem; }
 /* Explicit columns keep either end of the archive on its usual side. */
 .post-navigation-older { grid-column: 1; }
 .post-navigation-newer { grid-column: 2; text-align: right; }
+.blog-search { margin-block: 1.5rem; }
+.blog-search label { display: block; margin-bottom: 0.35rem; font-weight: 700; }
+.blog-search-controls { display: flex; gap: 0.5rem; }
+.blog-search input, .blog-search button {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #a3adb5;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+.blog-search input { flex: 1; min-width: 0; }
+.blog-search button { cursor: pointer; }
+.blog-search button:hover { background: #f3f5f7; }
+.post-list mark { background: #fff0a8; color: inherit; }
+.archive-pagination {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #d8dde1;
+}
+.archive-pagination a { display: block; min-height: 2.75rem; padding-block: 0.5rem; }
+.archive-older { grid-column: 1; }
+.archive-page-count { grid-column: 2; grid-row: 1; color: #59616a; font-size: 0.9rem; }
+.archive-newer { grid-column: 3; grid-row: 1; text-align: right; }
 .post-list, .project-list { margin: 0; padding: 0; list-style: none; }
 .post-list > li, .project-list > li { margin-block: 1.75rem; }
 .post-list h2, .post-list h3, .project-list h2 { margin: 0 0 0.35rem; font-size: 1.2rem; }
@@ -234,6 +264,10 @@ th, td { padding: 0.5rem; border: 1px solid #d8dde1; text-align: left; }
   main { padding-top: 1.5rem; }
   .post-navigation { grid-template-columns: minmax(0, 1fr); }
   .post-navigation-newer { grid-column: 1; text-align: left; }
+  .archive-pagination { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .archive-page-count { grid-column: 1 / -1; grid-row: 1; text-align: center; }
+  .archive-older { grid-row: 2; }
+  .archive-newer { grid-column: 2; grid-row: 2; }
   .site-footer { line-height: 1.9; }
 }
 
