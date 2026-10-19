@@ -2,6 +2,13 @@
 
 ## 2026-10-19
 
+- Added "Before You Replace PostgreSQL, Show Me the Workload," dated January 7,
+  2021, as an anonymized objection to an unevaluated IoT measurement-store
+  migration. Distinguished graph use cases from raw telemetry, cited period
+  sources for PostgreSQL, TimescaleDB, Citus, and Neo4j, and called for workload
+  evidence and accountable decisions. Omitted personal allegations and identifying
+  ownership details. Verified with `npm run verify` and focused anonymization,
+  rendered-title/date, source-link, blog-listing, RSS, and sitemap checks.
 - Added "A High-Level Plan Is Not a Blank Check," dated January 11, 2021, as a
   follow-up on incomplete architecture proposals, decision authority, and
   evaluating alternatives. Linked the earlier industry-standards post and
