@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-19
+
+- Added "One Flag, Three Prefixes. I'm Done Guessing." with the publication date
+  September 16, 2025, matching the first appearance of Resty's flag-prefix note
+  in README commit `842cc09`. Explained interchangeable prefixes and the deliberate
+  absence of bundled flags, included the parser example, and linked to Resty.
+  Verified the full site, rendered date, syntax highlighting, blog listing,
+  RSS, and sitemap with `npm run verify` and focused generated-output checks.
+
 ## 2026-10-18
 
 - Recorded the agreed responsibilities of WasatchWizard, WeekendTech, personal,
