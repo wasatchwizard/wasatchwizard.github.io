@@ -2,6 +2,13 @@
 
 ## 2026-10-19
 
+- Added "Certified in Neo4j, Still Questioning the Fit," dated March 30, 2021,
+  with the original certification screenshot and its 92% result. Distinguished
+  commitment to implementing the decision from agreement with the migration,
+  framed leadership pressure as personal experience, and linked the earlier
+  workload critique. Verified with `npm run verify` and focused title/date,
+  certificate-byte/dimension, alt-text, full-size-link, previous-post-link,
+  blog-listing, RSS, and sitemap checks.
 - Added "Grafana: Beautiful Charts, Better When They Line Up," dated March 9,
   2021, using the approved post and both original PNGs. Distinguished the original
   dashboard from the alignment markup, with descriptive alt text, captions, and
