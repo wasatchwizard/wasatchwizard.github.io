@@ -2,6 +2,12 @@
 
 ## 2026-10-19
 
+- Added "Industry Standard Is Not a Blank Check," dated January 5, 2021, as an
+  anonymized critique of architectural decisions without product-specific
+  justification or accountability. Discussed microservice tradeoffs and vendor
+  incentives with source links, omitting unsupported adoption percentages and
+  personal allegations. Verified with `npm run verify` and focused anonymization,
+  rendered-date, source-link, blog-listing, RSS, and sitemap checks.
 - Added "This Is My Life Right Now...", dated January 6, 2021, with the supplied
   Grumpy Cat bug-count meme and a short caption. Converted the image to PNG,
   preserving all decoded pixels at 639 by 320, and provided descriptive alt text.
