@@ -2,6 +2,13 @@
 
 ## 2026-10-19
 
+- Added "Building Castles with Code in ComputerCraft" (April 11, 2021), including
+  the author's dozens of helper scripts and large castle builds with an
+  illustrative custom wall-building command. Added "A Little Windows 7
+  Nostalgia, Courtesy of 7.css" (April 30, 2021), linking the framework's demo
+  without importing its styles or behavior. Verified with `npm run verify` and
+  focused title/date, command-example, source/cross-link, archive/search, RSS,
+  sitemap, and runtime-exclusion checks.
 - Added four April 2021 posts: Commodore 64 nostalgia and the confirmed Pi1541
   purchase (April 11), C64Net exploration without claiming ownership (April 12),
   evidence-based retirement of older device support (April 14), and additive
