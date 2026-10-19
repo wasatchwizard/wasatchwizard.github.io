@@ -2,6 +2,11 @@
 
 ## 2026-10-19
 
+- Added an image-source note to "This Is My Life Right Now..." linking to Swizec
+  Teller's "Why senior engineers get nothing done." Confirmed the matching meme
+  on page 4 of the saved PDF and verified the author's current article URL.
+  Verified the site with `npm run verify` and checked the rendered source link
+  and unchanged January 6, 2021 publication date.
 - Added "Industry Standard Is Not a Blank Check," dated January 5, 2021, as an
   anonymized critique of architectural decisions without product-specific
   justification or accountability. Discussed microservice tradeoffs and vendor
