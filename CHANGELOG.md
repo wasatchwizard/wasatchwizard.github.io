@@ -2,6 +2,13 @@
 
 ## 2026-10-19
 
+- Added "Teaching a Turtle to Build a Less Perfect Wall," dated March 19, 2012,
+  with exact excerpts from the author's dated `dg3` and `dg4` scripts. Explained
+  per-block random material selection and variable-length runs between accent
+  blocks, including dependencies and historical-code limitations. Linked it from
+  the April 11, 2021 ComputerCraft post without changing that post's date.
+  Verified with `npm run verify` and focused original-excerpt, Lua-highlighting,
+  publication-date, cross-link, archive/search, RSS, and sitemap checks.
 - Corrected "Star Wars, One Character at a Time" to describe renewed appreciation
   rather than a first discovery, preserving its March 19, 2021 date. Added the
   ComputerCraft adaptation with separate credit for Simon Jansen's animation

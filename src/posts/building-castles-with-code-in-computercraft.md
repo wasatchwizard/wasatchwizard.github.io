@@ -19,6 +19,8 @@ build-wall -length a -width b -inventory-block c -depth d
 
 That’s an illustration of the command style, with letters standing in for the arguments. The appeal is being able to describe the dimensions and block selection, then let a program handle the repetition.
 
+For a look at some of the actual code, see my older post, [“Teaching a Turtle to Build a Less Perfect Wall”](/blog/teaching-a-turtle-to-build-a-less-perfect-wall/), dated March 19, 2012. It walks through two of my original helpers for varying the materials in stonework.
+
 Apparently, my idea of relaxing with a game involves designing a command-line construction crew.
 
 The fun isn’t only in getting a large wall built. It’s in figuring out how to describe the job clearly enough that a program can do it. What should be configurable? Which part of the task can I reuse? What makes this helper useful for the next structure as well as the one in front of me?
