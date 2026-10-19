@@ -2,6 +2,12 @@
 
 ## 2026-10-19
 
+- Added "Grafana: Beautiful Charts, Better When They Line Up," dated March 9,
+  2021, using the approved post and both original PNGs. Distinguished the original
+  dashboard from the alignment markup, with descriptive alt text, captions, and
+  links to full-resolution images. Verified with `npm run verify` and focused
+  title/date, caption, alt-text, full-size-link, exact image-byte/dimension,
+  generated-asset, blog-listing, RSS, and sitemap checks.
 - Added two posts dated February 23, 2021: "Your Testers Need a Reset Button,"
   grounded in recurring test-account cleanup and test-data preparation, and
   "When Good People Leave, Ask What They Were Carrying," an anonymized reflection
