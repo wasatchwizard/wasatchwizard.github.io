@@ -2,6 +2,11 @@
 
 ## 2026-10-19
 
+- Added "Permission to Disagree Has to Mean Something," dated January 6, 2021,
+  using the approved anonymized draft about responding to objections and
+  supporting colleagues who speak up. Omitted identities and employer details.
+  Verified with `npm run verify` and focused anonymization, rendered-title/date,
+  blog-listing, RSS, and sitemap checks.
 - Added an image-source note to "This Is My Life Right Now..." linking to Swizec
   Teller's "Why senior engineers get nothing done." Confirmed the matching meme
   on page 4 of the saved PDF and verified the author's current article URL.
