@@ -8,7 +8,7 @@ github:
   repository: "kodybrown/filekeep"
   url: "https://github.com/kodybrown/filekeep"
   description: "Run `filekeep` to keep versioned copies of individual files, the hosts file, and environment settings. Each entry chooses its own destination, filename template, and unchanged-content policy. There is no background service or built-in schedule."
-  pushedAt: "2026-10-19T21:45:21Z"
+  pushedAt: "2026-10-20T17:15:49Z"
   language: "Rust"
   archived: false
   readmeUrl: "https://github.com/kodybrown/filekeep/blob/main/README.md"
