@@ -8,7 +8,7 @@ github:
   repository: "kodybrown/doinstall"
   url: "https://github.com/kodybrown/doinstall"
   description: "A simple console-based, cross platform installer configured via YAML."
-  pushedAt: "2026-10-20T19:53:44Z"
+  pushedAt: "2026-10-21T02:20:02Z"
   language: "Rust"
   archived: false
   readmeUrl: "https://github.com/kodybrown/doinstall/blob/main/README.md"
