@@ -1,7 +1,7 @@
 ---
 title: "Building Castles with Code in ComputerCraft"
 date: "2021-04-11"
-summary: "I absolutely love ComputerCraft. I wrote dozens of helper scripts and used them to build enormous castles—because apparently Minecraft needed a command-line construction crew."
+summary: "I absolutely love ComputerCraft. I wrote dozens of helper scripts and used them to build enormous castles, because apparently Minecraft needed a command-line construction crew."
 topics: ["Minecraft", "ComputerCraft", "Programming"]
 ---
 

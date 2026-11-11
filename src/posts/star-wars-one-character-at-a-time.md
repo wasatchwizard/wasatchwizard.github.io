@@ -1,7 +1,7 @@
 ---
 title: "Star Wars, One Character at a Time"
 date: "2021-03-19"
-summary: "Revisiting Star Wars scenes animated with text characters—and appreciating the ingenuity all over again, including a ComputerCraft adaptation."
+summary: "Revisiting Star Wars scenes animated with text characters and appreciating the ingenuity all over again, including a ComputerCraft adaptation."
 topics: ["ASCII", "Animation", "Star Wars"]
 ---
 

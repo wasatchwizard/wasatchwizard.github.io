@@ -61,4 +61,4 @@ These are excerpts from my original helpers, not complete standalone programs or
 
 Those limitations matter when reusing the scripts. The material-selection idea is still worth sharing on its own.
 
-Sometimes a few lines of code can make the repetitive part of building more interesting—and give the finished stonework a little less uniformity.
+Sometimes a few lines of code can make the repetitive part of building more interesting and give the finished stonework a little less uniformity.
