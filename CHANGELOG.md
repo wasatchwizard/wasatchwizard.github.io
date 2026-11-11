@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### 2026-11-11 Windows NT Server and Code Explorer posts
+
+- Added the July 15, 2002 Windows NT Server setup checklist with its original
+  eight-step sequence and a note about the repeated SP5 instruction. Added a
+  retrospective on mikod.com, the Code Explorer VB6 app, and the move from
+  Visual SourceSafe to CVS and Subversion.
+- Passed the 10 site tests and verified 228 static pages, including both posts'
+  dates, archive listings, search entries, and sitemap links. Verified the
+  retrospective's RSS entry and GitHub launch citation.
+
 ## 2026-10-19
 
 - Added "Teaching a Turtle to Build a Less Perfect Wall," dated March 19, 2012,
