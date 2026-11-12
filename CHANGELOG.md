@@ -30,8 +30,12 @@
 - Revised the summary and introduction to read as a November 2000 lesson.
   Described ASP in terms of IIS and corrected the server-side Perl explanation.
   Kept the original example filenames in the outline.
-- Verified the rendered wording, book titles, links, summary, and original
-  publication date. The site verifier checked 229 static pages.
+- Expanded all 85 outline items with explanations for readers following along
+  on their own. Added copyable HTML 4.01 examples for the first page, a table,
+  and a form.
+- Verified the rendered wording, outline structure, code examples, links,
+  summary, and original publication date. The site verifier checked 229 static
+  pages.
 
 ## 2026-10-19
 
