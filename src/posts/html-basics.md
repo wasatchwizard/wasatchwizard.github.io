@@ -110,9 +110,10 @@ I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI scrip
 
 ### Conclusion
 
-- good books for learning HTML
-  - Visual QuickStart Guides
-- online references
+- Good books for learning HTML
+  - HTML for the World Wide Web: Visual QuickStart Guide
+  - JavaScript for the World Wide Web: Visual QuickStart Guide
+- Online references
   - [www.w3c.org](https://www.w3.org/)
-  - Dynamic Drive (`dynamicdrive.com`) for DHTML scripts
-  - Experts Exchange (`experts-exchange.com`) was a good place to find answers in the late 1990s.
+  - [Dynamic Drive](http://www.dynamicdrive.com/): for DHTML scripts
+  - [Experts Exchange](http://www.experts-exchange.com/): a good place to find answers.
