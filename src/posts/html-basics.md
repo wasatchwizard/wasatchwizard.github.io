@@ -1,34 +1,32 @@
 ---
 title: "HTML Basics"
 date: "2000-11-01"
-summary: "My original teaching outline from 2000, from opening an HTML file in Notepad to tables, DHTML, and browser quirks."
+summary: "An introduction to writing HTML, from making your first page in Notepad to tables, forms, DHTML, and JavaScript."
 topics: ["Development", "HTML", "JavaScript"]
 ---
 
-I put together this outline in November 2000 to teach the basics of HTML. It starts with what the browser and server each do, then moves from tags and tables to DHTML and JavaScript. The list of editors takes me right back to that era.
-
-I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI script runs on the server.
+You can write your first HTML page in Notepad and open it right in your browser. We’ll start there, then get into tags, tables, and forms. At the end we’ll look at what DHTML and JavaScript can do and why the browser matters.
 
 ## Welcome to HTML Basics
 
 ### Introduction
 
-- HTML vs. JSP vs. ASP vs. CGI vs. Servlett vs. PL vs. PHP vs. XML
+- HTML vs. JSP vs. ASP vs. CGI vs. servlets vs. Perl vs. PHP vs. XML
 - Any editor will work for writing HTML, including Notepad, Word, or WordPerfect, as long as you save the file as plain text.
 - Common editors: Notepad, Visual InterDev, Adobe GoLive!, HomeSite, Macromedia Dreamweaver
 - When a web server is and is not needed
-- Common terminilogy
+- Common terminology
   - The "**client**" is the requesting browser.
   - Server-side means that the server processes the file or executable being requested before sending it to the client. It can connect to a database or file-system and build the output page dynamically, then send it to the client.
 - Definitions:
   - HTML ([HyperText Markup Language](https://www.w3.org/MarkUp/)) is plain text that provides the document and its formatting.
-  - CGI (Common Gateway Interface) a server-side solution, provides the specifications to access a script or a compiled executable from the web. These can be created using C/C++, Visual Basic, Java, Perl, Python, etc. (Every language that I can think of provides a way to create a CGI application.)
-  - PL (Perl) a CGI file, that is written in the Perl language. This type of file is not compiled, but interpretted on request by the browser.
-  - ISAPI (Internet Information Server API) a server-side solution, is Microsoft's version of CGI. It provides the framework to attach a web application directly to IIS, that creates an extremely fast (running) solution. It is designed only to run on Windows NT. You can create an ISAPI "filter" in most any Windows programming languages, Visual C++ being the most common.
-  - ASP (Active Server Pages) a server-side solution, is interpretted on the server by request. It was originally designed by and for Microsoft's IIS, but there ports that run on Apache.
-  - Servlets (Java Servlets) a server-side solution, is compiled into an actual Java class file that is called from the HTML request.
-  - JSP (JavaServer Pages) a server-side solution, is compiled by a JSP engine, into a Java Servlet.
-  - PHP (Pre HyperText Processor)
+  - CGI (Common Gateway Interface) lets a web server run a script or program to handle a request. You can write a CGI program in C, C++, Visual Basic, Java, Perl, or Python.
+  - Perl is a language you can use to write CGI scripts. The Perl interpreter runs the script on the web server when a request comes in.
+  - ISAPI lets you extend IIS with a DLL. Visual C++ is a common choice for writing an ISAPI filter.
+  - ASP (Active Server Pages) lets you put scripts in a web page. When the browser requests an `.asp` page, IIS runs the script and sends the resulting HTML back to the browser.
+  - Java servlets are classes that run on the server and handle web requests.
+  - JSP (JavaServer Pages) lets you build pages that a JSP engine turns into Java servlets.
+  - PHP is another way to run scripts on the server and generate HTML.
 
 ### HTML
 
@@ -37,7 +35,7 @@ I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI scrip
   - HTML
   - HEAD
   - BODY
-  - Sample "Hello, World!" (`helloWorld.html`, original file missing)
+  - Sample "Hello, World!" (`helloWorld.html`)
 - tags vs. attributes vs. properties
   - <span style="color: #880000">Dk Red = Tag</span> - <span style="color: #FF3333">Lt Red = Attribute</span> - <span style="color: #33AA33">Green = Property</span>
   - <code>&lt;<span style="color: #880000">body</span> <span style="color: #FF3333">bgcolor</span>="#FFFFFF"&gt;</code>
@@ -72,7 +70,7 @@ I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI scrip
            whereas normal HTML ignores them
   ```
 
-- horizontal rules (displayed to seperate sections)
+- horizontal rules (displayed to separate sections)
 - lists, combos, and radio/check boxes
 - anchors (hyperlinks, email, and named anchors)
 - images
@@ -90,7 +88,7 @@ I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI scrip
   - columns `<td>`
     - column header
     - column groupings
-  - sample (`htmlTable.html`, original file missing)
+  - sample (`htmlTable.html`)
 - text controls
 - forms
 - headers and form data
@@ -103,14 +101,14 @@ I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI scrip
 - script
 - browser events
 
-### Javascript
+### JavaScript
 
 - the DOM!
 - browser (in)compatibilities
 
 ### Conclusion
 
-- Good books for learning HTML
+- Good books for learning HTML and JavaScript
   - HTML for the World Wide Web: Visual QuickStart Guide
   - JavaScript for the World Wide Web: Visual QuickStart Guide
 - Online references

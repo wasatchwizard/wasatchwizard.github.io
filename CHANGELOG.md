@@ -21,14 +21,17 @@
   archive listing, search entry, and sitemap URL. The site verifier checked
   228 static pages.
 
-### 2026-11-12 HTML Basics editors and references
+### 2026-11-12 HTML Basics wording and references
 
 - Clarified that any editor can write HTML when saving as plain text, kept
-  GoLive and Dreamweaver in the editor list, and limited the Visual QuickStart
-  Guides recommendation to HTML. Added Dynamic Drive and Experts Exchange to
-  the online references.
-- Verified the rendered edits and the original publication date. The site
-  verifier checked 229 static pages.
+  GoLive and Dreamweaver in the editor list, and named the HTML and JavaScript
+  Visual QuickStart guides. Added Dynamic Drive and Experts Exchange to the
+  online references.
+- Revised the summary and introduction to read as a November 2000 lesson.
+  Described ASP in terms of IIS and corrected the server-side Perl explanation.
+  Kept the original example filenames in the outline.
+- Verified the rendered wording, book titles, links, summary, and original
+  publication date. The site verifier checked 229 static pages.
 
 ## 2026-10-19
 
