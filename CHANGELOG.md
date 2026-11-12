@@ -12,6 +12,15 @@
   dates, archive listings, search entries, and sitemap links. Verified the
   retrospective's RSS entry and GitHub launch citation.
 
+### 2026-11-11 HTML Basics presentation
+
+- Added the November 1, 2000 HTML Basics teaching outline with a short
+  introduction, the original examples and section order, and annotations for
+  the missing Hello World and HTML table sample files.
+- Compared the rendered outline with the original and verified the post date,
+  archive listing, search entry, and sitemap URL. The site verifier checked
+  228 static pages.
+
 ## 2026-10-19
 
 - Added "Teaching a Turtle to Build a Less Perfect Wall," dated March 19, 2012,
