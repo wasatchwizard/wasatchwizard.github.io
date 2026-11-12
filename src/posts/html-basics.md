@@ -7,15 +7,15 @@ topics: ["Development", "HTML", "JavaScript"]
 
 I put together this outline in November 2000 to teach the basics of HTML. It starts with what the browser and server each do, then moves from tags and tables to DHTML and JavaScript. The list of editors takes me right back to that era.
 
-I’ve kept the wording of the outline, including a mistake in the Perl entry. A Perl CGI script runs on the server.
+I’ve kept the outline, including a mistake in the Perl entry. A Perl CGI script runs on the server.
 
 ## Welcome to HTML Basics
 
 ### Introduction
 
 - HTML vs. JSP vs. ASP vs. CGI vs. Servlett vs. PL vs. PHP vs. XML
-- Produce basic HTML from any editor, including Notepad, Word, WP
-- Common editors: Notepad, Visual InterDev, Adobe GoLive!, HomeSite, Dreamweaver
+- Any editor will work for writing HTML, including Notepad, Word, or WordPerfect, as long as you save the file as plain text.
+- Common editors: Notepad, Visual InterDev, Adobe GoLive!, HomeSite, Macromedia Dreamweaver
 - When a web server is and is not needed
 - Common terminilogy
   - The "**client**" is the requesting browser.
@@ -110,7 +110,9 @@ I’ve kept the wording of the outline, including a mistake in the Perl entry. A
 
 ### Conclusion
 
-- good books
+- good books for learning HTML
   - Visual QuickStart Guides
 - online references
   - [www.w3c.org](https://www.w3.org/)
+  - Dynamic Drive (`dynamicdrive.com`) for DHTML scripts
+  - Experts Exchange (`experts-exchange.com`) was a good place to find answers in the late 1990s.
