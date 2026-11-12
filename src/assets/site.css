@@ -167,10 +167,10 @@ li + li { margin-top: 0.35rem; }
 /* Explicit columns keep either end of the archive on its usual side. */
 .post-navigation-older { grid-column: 1; }
 .post-navigation-newer { grid-column: 2; text-align: right; }
-.blog-search { margin-block: 1.5rem; }
-.blog-search label { display: block; margin-bottom: 0.35rem; font-weight: 700; }
-.blog-search-controls { display: flex; gap: 0.5rem; }
-.blog-search input, .blog-search button {
+.site-search { margin-block: 1.5rem; }
+.site-search label { display: block; margin-bottom: 0.35rem; font-weight: 700; }
+.site-search-controls { display: flex; gap: 0.5rem; }
+.site-search input, .site-search button {
   min-height: 2.75rem;
   padding: 0.5rem 0.75rem;
   border: 1px solid #a3adb5;
@@ -179,10 +179,10 @@ li + li { margin-top: 0.35rem; }
   color: inherit;
   font: inherit;
 }
-.blog-search input { flex: 1; min-width: 0; }
-.blog-search button { cursor: pointer; }
-.blog-search button:hover { background: #f3f5f7; }
-.post-list mark { background: #fff0a8; color: inherit; }
+.site-search input { flex: 1; min-width: 0; }
+.site-search button { cursor: pointer; }
+.site-search button:hover { background: #f3f5f7; }
+.post-list mark, .project-list mark { background: #fff0a8; color: inherit; }
 .archive-pagination {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);

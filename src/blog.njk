@@ -14,9 +14,9 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 <div class="prose" data-blog-archive data-search-index="/blog/search-index.json">
   <h1>Blog</h1>
   <p class="intro">Notes on software, hardware, and tinkering.</p>
-  <form class="blog-search" role="search" aria-label="Search blog posts" hidden>
+  <form class="site-search" role="search" aria-label="Search blog posts" hidden>
     <label for="blog-query">Search posts</label>
-    <div class="blog-search-controls">
+    <div class="site-search-controls">
       <input id="blog-query" name="q" type="search" placeholder="Titles and descriptions" aria-controls="blog-results" autocomplete="off">
       <button type="reset">Clear</button>
     </div>
@@ -29,4 +29,4 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
     {% if pagination.href.previous %}<a class="archive-newer" href="{{ pagination.href.previous }}">Newer entries →</a>{% endif %}
   </nav>
 </div>
-<script type="module" src="{{ "/assets/blog-search.js" | assetVersion }}"></script>
+<script type="module" src="{{ "/assets/site-search.js" | assetVersion }}"></script>

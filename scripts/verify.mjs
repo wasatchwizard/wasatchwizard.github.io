@@ -59,15 +59,19 @@ for (const [file, document] of documents) {
   assert.equal(document.querySelectorAll("h1").length, 1, file);
   const relativeFile = path.relative(output, file).replaceAll(path.sep, "/");
   const isArchive = relativeFile === "blog/index.html" || /^blog\/page\/[1-9][0-9]*\/index\.html$/.test(relativeFile);
+  const hasSearch = isArchive || (relativeFile === "projects/index.html" && !!document.querySelector(".project-list > li"));
   const scripts = [...document.querySelectorAll("script")];
-  assert.equal(scripts.length, isArchive ? 1 : 0, file);
-  if (isArchive) {
+  assert.equal(scripts.length, hasSearch ? 1 : 0, file);
+  if (hasSearch) {
     assert.equal(scripts[0].getAttribute("type"), "module");
-    assert.match(scripts[0].getAttribute("src"), /^\/assets\/blog-search\.js\?v=[a-f0-9]{12}$/);
+    assert.match(scripts[0].getAttribute("src"), /^\/assets\/site-search\.js\?v=[a-f0-9]{12}$/);
     assert.equal(scripts[0].textContent, "", "Search must use a local external module");
     assert.equal(document.querySelectorAll("input").length, 1);
-    assert.equal(document.querySelector("input").getAttribute("type"), "search");
+    const input = document.querySelector("input");
+    assert.equal(input.getAttribute("type"), "search");
     assert.ok(document.querySelector('form[role="search"]').hasAttribute("hidden"), "Static browsing works without scripts");
+    assert.ok(document.querySelector(`label[for="${input.id}"]`), "The search input has a label");
+    assert.ok(document.getElementById(input.getAttribute("aria-controls")), "Search identifies its results");
   } else assert.equal(document.querySelectorAll("input").length, 0, file);
   assert.equal(document.querySelectorAll("iframe, object, embed, [onclick]").length, 0, file);
   const navigation = [...document.querySelectorAll('.page-nav a')];
@@ -288,7 +292,7 @@ for (const match of css.matchAll(/url\("([^"\)]+)"\)/g)) {
 for (const privatePath of ["content-export", "scripts", "node_modules", "package.json", "scss", "js"]) {
   await assert.rejects(stat(path.join(output, privatePath)), { code: "ENOENT" });
 }
-console.log(`Verified ${documents.size} static pages, local links/assets, descriptive URLs, RSS/sitemap, and archive-only search scripts.`);
+console.log(`Verified ${documents.size} static pages, local links/assets, descriptive URLs, RSS/sitemap, and search on the Blog and Projects lists.`);
 console.log(`Archive: ${archive.postCount} posts; public comments: ${archive.comments.count ?? archive.comments.status}.`);
 console.log(`Mapped ${mappings.length} imported posts: ${mappings.length - disabledPosts.size} published, ${disabledPosts.size} disabled.`);
 if (auditMigration) console.log("Migration audit: published mapped posts retain their original dates, titles, prose, tables, images, and code text.");

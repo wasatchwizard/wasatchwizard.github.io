@@ -1,13 +1,11 @@
-// Static archive pages remain the default. Fetch metadata only when a query is
-// present, then render just the matches rather than putting the entire index in DOM.
 export function searchTerms(query) {
   return [...new Set(query.trim().split(/\s+/u).filter(Boolean))]
     .map(term => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
 }
 
-export function findPosts(posts, terms) {
+export function findEntries(entries, terms) {
   const patterns = terms.map(term => new RegExp(term, "iu"));
-  return posts.filter(post => patterns.every(pattern => pattern.test(`${post.title}\n${post.summary}`)));
+  return entries.filter(entry => patterns.every(pattern => pattern.test(`${entry.title}\n${entry.summary}`)));
 }
 
 export function highlightText(element, text, terms) {
@@ -16,6 +14,7 @@ export function highlightText(element, text, terms) {
   // Longest terms first keep overlapping matches intact. Every source/query
   // character is inserted as text, never HTML, including punctuation and markup.
   const pattern = new RegExp([...terms].sort((a, b) => b.length - a.length).join("|"), "giu");
+  element.replaceChildren();
   let offset = 0;
   for (const match of text.matchAll(pattern)) {
     element.append(document.createTextNode(text.slice(offset, match.index)));
@@ -27,10 +26,57 @@ export function highlightText(element, text, terms) {
   element.append(document.createTextNode(text.slice(offset)));
 }
 
+function bindSearch(form, browser, render, invalidate = () => {}) {
+  const input = form.querySelector("input");
+  let timer;
+
+  function search() {
+    clearTimeout(timer);
+    const query = input.value.trim();
+    const url = new URL(browser.location.href);
+    const hadQuery = url.searchParams.has("q");
+    if (query) url.searchParams.set("q", query);
+    else url.searchParams.delete("q");
+    // Keep typing out of history, but retain a Back destination for the initial
+    // search and for clearing it. Keep the current page and any other parameters.
+    const method = query && hadQuery ? "replaceState" : "pushState";
+    if (url.href !== browser.location.href) browser.history[method](null, "", url.href);
+    return render(query);
+  }
+
+  function restoreQuery() {
+    clearTimeout(timer);
+    input.value = new URL(browser.location.href).searchParams.get("q") || "";
+    return render(input.value.trim());
+  }
+
+  input.addEventListener("input", () => {
+    invalidate();
+    clearTimeout(timer);
+    if (!input.value.trim()) search();
+    else timer = setTimeout(search, 150);
+  });
+  form.addEventListener("submit", event => { event.preventDefault(); search(); });
+  form.addEventListener("reset", event => {
+    event.preventDefault();
+    input.value = "";
+    search();
+    input.focus();
+  });
+  browser.addEventListener("popstate", restoreQuery);
+  form.hidden = false;
+  return restoreQuery();
+}
+
+function showSearchStatus(status, query, count, noun) {
+  status.hidden = !query;
+  status.textContent = !query ? ""
+    : count ? `${count} result${count === 1 ? "" : "s"} for “${query}”.`
+      : `No ${noun} match “${query}”.`;
+}
+
 export function initBlogSearch(archive, browser = window) {
   const document = archive.ownerDocument;
-  const form = archive.querySelector("form");
-  const input = form.querySelector("input");
   const results = archive.querySelector("#blog-results");
   const status = archive.querySelector("#blog-search-status");
   const paging = archive.querySelector(".archive-pagination");
@@ -38,7 +84,6 @@ export function initBlogSearch(archive, browser = window) {
   const formatDate = new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" });
   let indexPromise;
   let revision = 0;
-  let timer;
 
   function restoreArchive() {
     results.replaceChildren(...staticResults);
@@ -48,17 +93,7 @@ export function initBlogSearch(archive, browser = window) {
     status.textContent = "";
   }
 
-  function setQueryUrl(query) {
-    const url = new URL(browser.location.href);
-    const hadQuery = url.searchParams.has("q");
-    if (query) url.searchParams.set("q", query);
-    else url.searchParams.delete("q");
-    // Keep typing out of history, but retain a Back destination for the initial
-    // search and for clearing it. The originating archive page stays in the URL.
-    const method = query && hadQuery ? "replaceState" : "pushState";
-    if (url.href !== browser.location.href) browser.history[method](null, "", url.href);
-  }
-
+  // Paginated archives fetch the full index only when a query needs it.
   function loadIndex() {
     if (!indexPromise) {
       indexPromise = browser.fetch(archive.dataset.searchIndex, { cache: "no-cache" })
@@ -77,9 +112,8 @@ export function initBlogSearch(archive, browser = window) {
     return indexPromise;
   }
 
-  async function renderSearch() {
+  async function renderSearch(query) {
     const current = ++revision;
-    const query = input.value.trim();
     if (!query) { restoreArchive(); return; }
     results.setAttribute("aria-busy", "true");
     status.hidden = false;
@@ -88,7 +122,7 @@ export function initBlogSearch(archive, browser = window) {
       const posts = await loadIndex();
       if (current !== revision) return;
       const terms = searchTerms(query);
-      const matches = findPosts(posts, terms);
+      const matches = findEntries(posts, terms);
       const list = document.createElement("ol");
       list.className = "post-list";
       for (const post of matches) {
@@ -112,8 +146,7 @@ export function initBlogSearch(archive, browser = window) {
       results.replaceChildren(list);
       results.removeAttribute("aria-busy");
       paging.hidden = true;
-      status.textContent = matches.length ? `${matches.length} result${matches.length === 1 ? "" : "s"} for “${query}”.`
-        : `No posts match “${query}”.`;
+      showSearchStatus(status, query, matches.length, "posts");
     } catch {
       if (current !== revision) return;
       restoreArchive();
@@ -122,36 +155,37 @@ export function initBlogSearch(archive, browser = window) {
     }
   }
 
-  function search() {
-    clearTimeout(timer);
-    setQueryUrl(input.value.trim());
-    return renderSearch();
+  // Invalidate an in-flight query immediately, even during debounce.
+  return bindSearch(archive.querySelector("form"), browser, renderSearch, () => { ++revision; });
+}
+
+export function initProjectSearch(catalog, browser = window) {
+  const status = catalog.querySelector("#project-search-status");
+  const entries = [...catalog.querySelectorAll("#project-results > li")].map(item => {
+    const link = item.querySelector("h2 a");
+    const description = item.querySelector(".project-summary");
+    return { item, link, description, title: link.textContent, summary: description.textContent };
+  });
+
+  function renderSearch(query) {
+    const terms = searchTerms(query);
+    const matches = new Set(findEntries(entries, terms));
+    // Keep the existing links, metadata and order by filtering the static list.
+    for (const entry of entries) {
+      entry.item.hidden = !matches.has(entry);
+      if (entry.item.hidden) continue;
+      highlightText(entry.link, entry.title, terms);
+      highlightText(entry.description, entry.summary, terms);
+    }
+    showSearchStatus(status, query, matches.size, "projects");
   }
 
-  input.addEventListener("input", () => {
-    ++revision; // Invalidate an in-flight query immediately, even during debounce.
-    clearTimeout(timer);
-    if (!input.value.trim()) search();
-    else timer = setTimeout(search, 150);
-  });
-  form.addEventListener("submit", event => { event.preventDefault(); search(); });
-  form.addEventListener("reset", event => {
-    event.preventDefault();
-    input.value = "";
-    search();
-    input.focus();
-  });
-  browser.addEventListener("popstate", () => {
-    clearTimeout(timer);
-    input.value = new URL(browser.location.href).searchParams.get("q") || "";
-    renderSearch();
-  });
-  form.hidden = false;
-  input.value = new URL(browser.location.href).searchParams.get("q") || "";
-  return renderSearch();
+  return bindSearch(catalog.querySelector("form"), browser, renderSearch);
 }
 
 if (typeof document !== "undefined") {
   const archive = document.querySelector("[data-blog-archive]");
   if (archive) initBlogSearch(archive);
+  const catalog = document.querySelector("[data-project-catalog]");
+  if (catalog) initProjectSearch(catalog);
 }

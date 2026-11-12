@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { parseHTML } from "linkedom";
-import { findPosts, highlightText, initBlogSearch, searchTerms } from "../src/assets/blog-search.js";
+import { findEntries, highlightText, initBlogSearch, searchTerms } from "../src/assets/site-search.js";
 
 const tick = () => new Promise(resolve => setImmediate(resolve));
 const entry = (title, index = 0, summary = "Example description") => ({
@@ -35,12 +35,12 @@ function fixture(fetch, href = "https://example.com/blog/page/2/") {
 
 test("search is literal and case-insensitive, requiring every word across title and description", () => {
   const posts = [entry("C# and .NET", 1, "Windows tools"), entry("C++", 2, "Linux tools"), entry("Café [notes]", 3)];
-  assert.deepEqual(findPosts(posts, searchTerms("c# .net WINDOWS")), [posts[0]]);
-  assert.deepEqual(findPosts(posts, searchTerms("C++")), [posts[1]]);
-  assert.deepEqual(findPosts(posts, searchTerms("CAFÉ [notes]")), [posts[2]]);
-  assert.deepEqual(findPosts(posts, searchTerms(".*")), []);
+  assert.deepEqual(findEntries(posts, searchTerms("c# .net WINDOWS")), [posts[0]]);
+  assert.deepEqual(findEntries(posts, searchTerms("C++")), [posts[1]]);
+  assert.deepEqual(findEntries(posts, searchTerms("CAFÉ [notes]")), [posts[2]]);
+  assert.deepEqual(findEntries(posts, searchTerms(".*")), []);
   const large = Array.from({ length: 10000 }, (_, i) => entry(i % 100 === 0 ? "Rare match" : "Unrelated", i));
-  assert.equal(findPosts(large, searchTerms("rare match")).length, 100);
+  assert.equal(findEntries(large, searchTerms("rare match")).length, 100);
 });
 
 test("highlighting preserves text/case and never interprets HTML or regex input", () => {

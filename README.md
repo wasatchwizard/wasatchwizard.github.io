@@ -5,8 +5,8 @@ Technical notes, experiments, and tinkering, published at
 
 Eleventy builds Markdown and small Nunjucks layouts into static HTML. There is
 no Bootstrap, jQuery, Sass, or external font request in the published site.
-Blog archive pages use one small local JavaScript module for optional search;
-ordinary browsing and all article/project pages work as static HTML.
+The Blog archive and Projects list share a small local JavaScript module for
+optional search. Ordinary browsing and all detail pages work as static HTML.
 The original blue header, wordmark, and profile-link layout are
 retained. Headings use Merriweather and body text uses Oxygen, matching the
 existing public site; licensed WOFF2 files are served locally.
@@ -224,6 +224,12 @@ the title keeps the URL. Filenames match repository names, such as `fixeol.md`;
 renaming a Markdown file changes its URL. Automatic repository-rename handling
 is not needed for this project.
 
+The Projects search matches all terms across published project titles and
+descriptions, highlights matches, and keeps the latest-push order. It filters
+the existing list without fetching an index. Like Blog search, it supports
+shared `?q=...` links, Back/Forward, and a Clear button. The complete list stays
+available when JavaScript is disabled.
+
 Three initial entries (dotask, FixEOL, and gostatic) were created manually from
 their public GitHub metadata. Refresh project metadata explicitly with the
 native dotask task copied from dotask's `examples/github-projects/` example:
@@ -433,11 +439,11 @@ old blog. Comments are archived but are not rendered as a new comments system.
 ## Verify
 
 `npm run verify` performs a clean build and checks local page/asset references,
-descriptive URLs, archive/mapping completeness, image references, RSS/sitemap output, and
-the archive-only local search module and the absence of accidentally published
-source directories. Search tests cover literal matching, safe highlighting,
-lazy/cached loading, all-results rendering, history restoration, stale requests,
-and download failures. Archive checks cover page sizes, complete ordered
+descriptive URLs, archive/mapping completeness, image references, RSS/sitemap
+output, the search module on the Blog and Projects lists, and the absence of
+accidentally published source directories. Search tests cover literal matching,
+safe highlighting, lazy/cached loading, all-results rendering, history
+restoration, stale requests, and download failures. Archive checks cover page sizes, complete ordered
 coverage, canonical URLs, navigation, sitemap entries, and the search index.
 It also checks shared navigation, home-list separation, project ordering,
 project-page links, and sitemap coverage.

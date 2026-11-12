@@ -37,6 +37,15 @@
   summary, and original publication date. The site verifier checked 229 static
   pages.
 
+### 2026-11-12 Projects search
+
+- Added search to the Projects list. It matches every term across titles and
+  descriptions, highlights matches, and keeps the latest-push order. It shares
+  the Blog's Clear button and query URL behavior and filters the list already on
+  the page.
+- Passed all 10 site tests and verified 228 generated pages. Checked filtering,
+  highlighting, Clear, query links, and browser history in Edge.
+
 ## 2026-10-19
 
 - Added "Teaching a Turtle to Build a Less Perfect Wall," dated March 19, 2012,
