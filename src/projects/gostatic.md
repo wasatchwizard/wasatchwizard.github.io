@@ -8,8 +8,8 @@ github:
   repository: "kodybrown/gostatic"
   url: "https://github.com/kodybrown/gostatic"
   description: "A **very** simple static HTTP server written in Go."
-  pushedAt: "2026-10-23T19:34:07Z"
-  language: "Rust"
+  pushedAt: "2026-10-29T19:22:50Z"
+  language: "Go"
   archived: false
   readmeUrl: "https://github.com/kodybrown/gostatic/blob/develop/README.md"
   readmeDownloadUrl: "https://raw.githubusercontent.com/kodybrown/gostatic/develop/README.md"
