@@ -5,7 +5,7 @@ summary: "A complete online sales website for Feature Films for Families and its
 topics: ["Development", "Web Development", "E-commerce", "ASP"]
 ---
 
-I’ve completed an online sales website for **Feature Films for Families**, bringing its catalog of family-friendly movies to the web. I called the project “Family Films Online.”
+I’ve completed an online sales website for **[Feature Films for Families](http://www.familytv.com/)**, bringing its catalog of family-friendly movies to the web. I called the project “Family Films Online.”
 
 There’s a lot to connect in a storefront. A customer needs to find a movie, read about it, choose a quantity, add it to a cart, and complete an order. Each step needs to carry the right information into the next.
 
@@ -19,8 +19,4 @@ The broader outline also includes customer help and ideas for a children’s act
 
 It’s satisfying to put together a complete sales website where the pages, data, and ordering process all have to work together. A movie listing is only the beginning of what it takes to let someone buy it.
 
-## Update — November 12, 2026
-
-The familyfilmsonline.com domain now redirects to BYUtv, so the original storefront I built is no longer available there. [Visit familyfilmsonline.com](https://familyfilmsonline.com/).
-
-Thinking back, I believe the original domain for my site was actually `familytv.com`.
+Check it out! [Visit Family Films Online](http://www.familytv.com/)
